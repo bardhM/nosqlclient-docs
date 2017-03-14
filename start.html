@@ -1,170 +1,489 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if IE 8]>
+<html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"> <!--<![endif]-->
 <head>
-    <title>Responsive website template for documentations</title>
+    <title>Mongoclient Documentation</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="assets/plugins/prism/prism.css">
     <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
-    
+
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-</head> 
+
+</head>
 
 <body class="body-green">
-    <div class="page-wrapper">
-        <!-- ******Header****** -->
-        <header id="header" class="header">
-            <div class="container">
-                <div class="branding">
-                    <h1 class="logo">
-                        <a href="index.html">
-                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                            <span class="text-highlight">Pretty</span><span class="text-bold">Docs</span>
-                        </a>
-                    </h1>
-                </div><!--//branding-->
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Quick Start</li>
-                </ol>
-            </div><!--//container-->
-        </header><!--//header-->
-        <div class="doc-wrapper">
-            <div class="container">
-                <div id="doc-header" class="doc-header text-center">
-                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
-                    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: Jan 25th, 2016</div>
-                </div><!--//doc-header-->
-                <div class="doc-body">
-                    <div class="doc-content">
-                        <div class="content-inner">
-                            <section id="download-section" class="doc-section">
-                                <h2 class="section-title">Download</h2>
-                                <div class="section-block">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec imperdiet turpis. Curabitur aliquet pulvinar ultrices. Etiam at posuere leo. Proin ultrices ex et dapibus feugiat <a href="#">link example</a> aenean purus leo, faucibus at elit vel, aliquet scelerisque dui. Etiam quis elit euismod, imperdiet augue sit amet, imperdiet odio. Aenean sem erat, hendrerit  eu gravida id, dignissim ut ante. Nam consequat porttitor libero euismod congue. 
-                                    </p>
-                                    <a href="http://themes.3rdwavemedia.com" class="btn btn-green" target="_blank"><i class="fa fa-download"></i> Download PrettyDocs</a>
-                                </div>
-                            </section><!--//doc-section-->
-                            <section id="installation-section" class="doc-section">
-                                <h2 class="section-title">Installation</h2>
-                                <div id="step1"  class="section-block">
-                                    <h3 class="block-title">Step One</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-                                    </p>
-                                    <div class="code-block">
-                                        <h6>Default code example:</h6>
-                                        <p><code>bower install &lt;package&gt;</code></p>
-                                        <p><code>npm install &lt;package&gt;</code></p>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="step2"  class="section-block">
-                                    <h3 class="block-title">Step Two</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>Un-ordered list example</h6>
-                                            <ul class="list">
-        										<li>Lorem ipsum dolor sit amet.</li>
-        										<li>Aliquam tincidunt mauris.</li>
-        										<li>Ultricies eget vel aliquam libero.
-        											<ul>
-        												<li>Turpis pulvinar</li>
-        												<li>Feugiat scelerisque</li>
-        												<li>Ut tincidunt</li>
-        											</ul>
-        										</li>
-        										<li>Pellentesque habitant morbi.</li>
-        										<li>Praesent dapibus, neque id.</li>
-        									</ul>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>Ordered list example</h6>
-                                            <ol class="list">
-        										<li>Lorem ipsum dolor sit amet.</li>
-        										<li>Aliquam tincidunt mauris.</li>
-        										<li>Ultricies eget vel aliquam libero.
-        											<ul>
-        												<li>Turpis pulvinar</li>
-        												<li>Feugiat scelerisque</li>
-        												<li>Ut tincidunt</li>
-        											</ul>
-        										</li>
-        										<li>Pellentesque habitant morbi.</li>
-        										<li>Praesent dapibus, neque id.</li>
-        									</ol>
-                                        </div>
-                                    </div><!--//row-->
-                                </div><!--//section-block-->
-                                <div id="step3"  class="section-block">
-                                    <h3 class="block-title">Step Three</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-                                    </p>
-                                </div><!--//section-block-->
-                            </section><!--//doc-section-->
-                            
-                            <section id="code-section" class="doc-section">
-                                <h2 class="section-title">Code</h2>
-                                <div class="section-block">
-                                    <p>
-                                        <a href="http://prismjs.com/" target="_blank">PrismJS</a> is used as the syntax highlighter here. You can <a href="http://prismjs.com/download.html" target="_blank">build your own version</a> via their website should you need to.
-                                    </p>
-                                    
-                                </div><!--//section-block-->
-                                <div id="html" class="section-block">
-                                    
-                                    <div class="callout-block callout-success">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Useful Tip:</h4>
-                                            <p>You can use this online <a href="https://mothereff.in/html-entities" target="_blank">HTML entity encoder/decoder</a> to generate your code examples.</p>
-                                        </div><!--//content-->
+<div class="page-wrapper">
+    <!-- ******Header****** -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                        <span class="text-highlight">Mongo</span><span class="text-bold">Client</span>
+                    </a>
+                </h1>
+            </div><!--//branding-->
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Quick Start</li>
+            </ol>
+        </div><!--//container-->
+    </header><!--//header-->
+    <div class="doc-wrapper">
+        <div class="container">
+            <div id="doc-header" class="doc-header text-center">
+                <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                <div class="meta"><i class="fa fa-clock-o"></i> Version 2.0.0</div>
+            </div><!--//doc-header-->
+            <div class="doc-body">
+                <div class="doc-content">
+                    <div class="content-inner">
+                        <section id="download-section" class="doc-section">
+                            <h2 class="section-title">Download</h2>
+                            <div class="section-block">
+                                <p>
+                                    Desktop distributions are electron applications and you can start
+                                    Mongoclient without installation thanks to electron. <b>It's recommended to use
+                                    desktop distributions
+                                    if
+                                    you're a new developer and don't
+                                    want to do anything else but a few clicks.</b>
+                                    <br/>
+                                    But if you already have <b>docker</b>, it's better to use <b>docker build</b>, so
+                                    that you can use latest features all the time.
+                                </p>
+                                <a class="btn btn-green btn-cta"
+                                   href="https://github.com/rsercano/mongoclient/releases/latest"
+                                   target="_blank"><i
+                                        class="fa fa-download"></i> Desktop App</a>
+                                <a style="margin-left: 5px" class="btn btn-green btn-cta" href="#docker"
+                                   target="_self"><i
+                                        class="fa fa-file-text"></i> Docker</a>
+                                <a style="margin-left: 5px" class="btn btn-green btn-cta" href="#compile"
+                                   target="_self"><i
+                                        class="fa fa-file-text"></i> Web (Compile)</a>
+                            </div>
+                        </section><!--//doc-section-->
+                        <section id="installation-section" class="doc-section">
+                            <h2 class="section-title">Installation</h2>
+                            <div id="docker" class="section-block">
+                                <h3 class="block-title">Docker</h3>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>TL;DR</h6>
+                                        <code>docker run -d -p 3000:3000 -v &lt;path&gt;:/data/db
+                                            mongoclient/mongoclient</code>
                                     </div>
-                                    <div class="code-block">
-                                        <h6>HTML Code Example</h6>
-                                        <pre><code class="language-markup">&lt;!DOCTYPE html&gt; 
-&lt;html lang=&quot;en&quot;&gt; 
+                                </div>
+                                <div style="margin-top: 30px" class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Docker is one of the best ways to quickly start using a Mongoclient instance.
+                                            Mongoclient offers a pre-built docker container which you can just pull and
+                                            start using. The
+                                            container
+                                            depends below frameworks, but you don't have to explicitly setup these, it
+                                            comes
+                                            with these frameworks.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>Dependencies</h6>
+                                        <ul class="list">
+                                            <li>Ubuntu 16.04 as base image
+                                                <ul>
+                                                    <li>curl</li>
+                                                    <li>ca-certificates</li>
+                                                    <li>bzip2</li>
+                                                    <li>build-essential</li>
+                                                    <li>numactl</li>
+                                                    <li>python</li>
+                                                    <li>git</li>
+                                                    <li>wget (to get gosu)</li>
+                                                    <li>libc6</li>
+                                                    <li><a target="_blank"
+                                                           href="https://github.com/tianon/gosu">gosu</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="https://nodejs.org/en/">NodeJS</a> >= 4.7.0</li>
+                                            <li><a href="https://www.mongodb.com/">MongoDB</a> >= 3.2.0</li>
+                                            <li><a href="https://www.meteor.com/">MeteorJS</a> >= 1.4.3.1</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p>The container itself comes along with its dependencies, but you can define most of
+                                    them explicitly with environment variables</p>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>Environment Variables</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Variable</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>ROOT_URL</td>
+                                                    <td>Useful to start mongoclient from another base URL, <b>by default
+                                                        uses root</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>MONGO_URL</td>
+                                                    <td>Set an external mongodb URL to use for mongoclient, <b>by
+                                                        default an internal mongodb is being used</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>MONGO_OPLOG_URL</td>
+                                                    <td>To track mongoclient's mongo operations set an external mongodb
+                                                        URL, <b>by
+                                                            default there's no tracking</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>STARTUP_DELAY</td>
+                                                    <td>Delay container's startup to let everything startup, <b>by
+                                                        default there's no delay</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>MONGO_VERSION</td>
+                                                    <td>If <b>MONGO_URL</b> is not set, the container downloads this
+                                                        version to
+                                                        use, <b>by
+                                                            default it's set to 3.4.0</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td>MONGO_MAJOR</td>
+                                                    <td>Has to be set with <b>MONGO_VERSION</b> to define OS
+                                                        repository's version
+                                                        to download mongodb, <b>by
+                                                            default it's set to 3.4</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">7</th>
+                                                    <td>MONGO_PACKAGE</td>
+                                                    <td>Can be set with <b>MONGO_VERSION</b> and <b>MONGO_PACKAGE</b> to
+                                                        define OS repository
+                                                        to download mongodb, <b>by
+                                                            default it's set to mongodb-org</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">8</th>
+                                                    <td>PORT</td>
+                                                    <td>Change port of mongoclient inside of the container, <b>by
+                                                        default it's set to 3000</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">9</th>
+                                                    <td>APP_SOURCE_DIR</td>
+                                                    <td>Mongoclient source directory at inside of the container, <b>by
+                                                        default it's set to /opt/meteor/src</b>. <b>Don't change</b> if
+                                                        you
+                                                        don't know what you're doing
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">10</th>
+                                                    <td>APP_BUNDLE_DIR</td>
+                                                    <td>Mongoclient bundle directory at inside of the container, <b>by
+                                                        default it's set to /opt/meteor/dist</b>. <b>Don't change</b> if
+                                                        you
+                                                        don't know what you're doing
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">11</th>
+                                                    <td>BUILD_SCRIPTS_DIR</td>
+                                                    <td>Docker build scripts directory, <b>by
+                                                        default it's set to /opt/build_scripts</b>. <b>Don't change</b>
+                                                        if you
+                                                        don't know what you're doing
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">12</th>
+                                                    <td>MONGOCLIENT_AUTH</td>
+                                                    <td>Enable basic authentication for Mongoclient, <b>by
+                                                        default it's set to false</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">13</th>
+                                                    <td>MONGOCLIENT_USERNAME</td>
+                                                    <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                        <b>by
+                                                            default there's no username</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">14</th>
+                                                    <td>MONGOCLIENT_PASSWORD</td>
+                                                    <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                        and <b>MONGOCLIENT_USERNAME</b>, <b>by
+                                                            default there's no password</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">15</th>
+                                                    <td>NODE_VERSION</td>
+                                                    <td>Define NodeJS version to download, <b>by default
+                                                        it's set to 4.7.0</b>, this's minimum version
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">16</th>
+                                                    <td>GOSU_VERSION</td>
+                                                    <td>Define Gosu version to download, <b>by default
+                                                        it's set to 1.10</b>, this's minimum version
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div><!--//table-responsive-->
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>Available Tags</h6>
+                                        <p>Each released version is being tagged at docker hub to be used as stable
+                                            releases. But it's okay to use <code>latest</code> tag everytime.</p>
+                                        <ul class="list">
+                                            <li>latest</li>
+                                            <li>2.0.0</li>
+                                            <li>1.5.0</li>
+                                            <li>1.4.0 (deprecated)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="code-block">
+                                    <h6>Example Docker Run Commands</h6>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Example</th>
+                                                <th>Description</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td><code>docker pull mongoclient/mongoclient</code></td>
+                                                <td>Runs master branch</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td><code>docker pull mongoclient/mongoclient:2.0.0</code></td>
+                                                <td>Runs version 2.0.0</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td><code>docker run -d -p 3000:3000 \<br/> -v &lt;path&gt;:/data/db \
+                                                    <br/>mongoclient/mongoclient</code>
+                                                </td>
+                                                <td>Bind an extra volume to <b>/data/db</b> to keep your connections,
+                                                    settings persistent
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td><code>docker run -d -p 3000:3000 \<br/>
+                                                    -e ROOT_URL=http://example.com/mongoclient \<br/>
+                                                    mongoclient/mongoclient</code>
+                                                </td>
+                                                <td>
+                                                    Set <b>ROOT_URL</b> environment variable to start Mongoclient from
+                                                    another base url
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="compile" class="section-block">
+                                <h3 class="block-title">Compile as Meteor Application (WEB)</h3>
+                                <p>This is a hard way to start using Mongoclient, but if you're already a <a
+                                        href="https://www.meteor.com/">MeteorJS</a> developer and want to try some
+                                    experimental stuff that you've implemented you can choose this way
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>TL;DR</h6>
+                                        <ol class="list">
+                                            <li>Install <a href="https://www.meteor.com/"> MeteorJS</a> (supports all
+                                                platforms)
+                                            </li>
+                                            <li>Download latest <a
+                                                    href="https://github.com/rsercano/mongoclient/archive/master.zip">
+                                                Mongoclient source</a></li>
+                                            <li>Unzip source code and navigate into <b>mongoclient-master</b></li>
+                                            <li>Execute <code>meteor npm install</code></li>
+                                            <li>Execute <code>meteor --port 3000</code></li>
+                                            <li>All set, now you can reach Mongoclient from your browser <b>localhost:3000</b>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div><!--//row-->
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Mongoclient uses MeteorJS version 1.4.3.1 as of version 2.0.0. To read
+                                            complete MeteorJS guide you can follow <a href="http://docs.meteor.com/">
+                                                this link</a>. To read more about code guideline, and how to contribute,
+                                            you can <a
+                                                    href="components.html">check here</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>Available Environment Variables</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Environment Variable</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>ROOT_URL</td>
+                                                    <td>Useful to start mongoclient from another base URL, <b>by default
+                                                        uses root</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>MONGO_URL</td>
+                                                    <td>Set an external mongodb URL to use for mongoclient, <b>by
+                                                        default an internal mongodb is being used by meteor itself</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>PORT</td>
+                                                    <td>Change port of meteor, can be also set by <b>--port</b> argument
+                                                        at startup <b>by
+                                                            default it's set to 3000</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>MONGOCLIENT_AUTH</td>
+                                                    <td>Enable basic authentication for Mongoclient, <b>by
+                                                        default it's set to false</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>MONGOCLIENT_USERNAME</td>
+                                                    <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                        <b>by
+                                                            default there's no username</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td>MONGOCLIENT_PASSWORD</td>
+                                                    <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                        and <b>MONGOCLIENT_USERNAME</b>, <b>by
+                                                            default there's no password</b>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div><!--//row-->
+                            </div><!--//section-block-->
+                        </section><!--//doc-section-->
+
+                        <section id="deployments-section" class="doc-section">
+                            <h2 class="section-title">Other Deployment Options</h2>
+                            <div class="section-block">
+                                <p>
+                                    If you're not using Docker and don't want to struggle with compiling Mongoclient as
+                                    MeteorJS application you can consider using one of these deployment options, all of
+                                    them lets you to deploy Mongoclient platform as a service. (PaaS)
+                                </p>
+
+                            </div><!--//section-block-->
+
+                            <!--TODO Sandstorm, Cloudron, Heroku, Aliyun, AWS,-->
+                            <!--TODO Digital Ocean, Meteor Galaxy, GCP, Hyper.sh, IBM Bluemix, Sloppy.io, Cloud Flare -->
+                            <div id="html" class="section-block">
+                                <div class="callout-block callout-success">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </div><!--//icon-holder-->
+                                    <div class="content">
+                                        <h4 class="callout-title">Useful Tip:</h4>
+                                        <p>You can use this online <a href="https://mothereff.in/html-entities"
+                                                                      target="_blank">HTML entity encoder/decoder</a> to
+                                            generate your code examples.</p>
+                                    </div><!--//content-->
+                                </div>
+                                <div class="code-block">
+                                    <h6>HTML Code Example</h6>
+                                    <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
     ...
-    &lt;div class=&quot;jumbotron&quot;&gt; 
-        &lt;h1&gt;Hello, world!&lt;/h1&gt; 
-        &lt;p&gt;...&lt;/p&gt; 
-        &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;&lt;/p&gt; 
+    &lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;p&gt;...&lt;/p&gt;
+        &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;jumbotron&quot;&gt; 
-        &lt;h1&gt;Hello, world!&lt;/h1&gt; 
-        &lt;p&gt;...&lt;/p&gt; 
-        &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;&lt;/p&gt; 
+    &lt;div class=&quot;jumbotron&quot;&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;p&gt;...&lt;/p&gt;
+        &lt;p&gt;&lt;a class=&quot;btn btn-primary btn-lg&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Learn more&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;
     ...
 &lt;/html&gt;</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="css" class="section-block">
-                                    <div class="code-block">
-                                        <h6>CSS Code Example</h6>
-                                        <pre><code class="language-css">/* ======= Base Styling ======= */
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="css" class="section-block">
+                                <div class="code-block">
+                                    <h6>CSS Code Example</h6>
+                                    <pre><code class="language-css">/* ======= Base Styling ======= */
 body {
     font-family: 'Open Sans', arial, sans-serif; 
     color: #333; 
@@ -172,12 +491,12 @@ body {
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale; 
 }</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="less" class="section-block">
-                                    <div class="code-block">
-                                        <h6>LESS Code Example</h6>
-                                        <pre><code class="language-css">/*
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="less" class="section-block">
+                                <div class="code-block">
+                                    <h6>LESS Code Example</h6>
+                                    <pre><code class="language-css">/*
 * Template Name: prettyDocs - Responsive Website Template for documentations 
 * Version: 1.0 
 * Author: Xiaoying Riley 
@@ -191,12 +510,12 @@ body {
 @import &quot;doc.less&quot;; 
 @import &quot;landing.less&quot;; 
 @import &quot;responsive.less&quot;;</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="sass" class="section-block">
-                                    <div class="code-block">
-                                        <h6>Sass Code Example</h6>
-                                        <pre><code class="language-sass">#main {
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="sass" class="section-block">
+                                <div class="code-block">
+                                    <h6>Sass Code Example</h6>
+                                    <pre><code class="language-sass">#main {
     $width: 5em; 
     width: $width; 
 }
@@ -204,24 +523,24 @@ body {
 #sidebar { 
     width: $width; 
 }</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="javascript" class="section-block">
-                                    <div class="code-block">
-                                        <h6>JavaScript Code Example</h6>
-                                        <pre><code class="language-javascript">&lt;script&gt; 
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="javascript" class="section-block">
+                                <div class="code-block">
+                                    <h6>JavaScript Code Example</h6>
+                                    <pre><code class="language-javascript">&lt;script&gt;
     function myFunction(a, b) { 
         return a * b; 
     } 
     
     document.getElementById(&quot;demo&quot;).innerHTML = myFunction(4, 3); 
 &lt;/script&gt;</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="python" class="section-block">
-                                    <div class="code-block">
-                                        <h6>Python Code Example</h6>
-                                        <pre><code class="language-python">&gt;&gt;&gt; x = int(input(&quot;
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="python" class="section-block">
+                                <div class="code-block">
+                                    <h6>Python Code Example</h6>
+                                    <pre><code class="language-python">&gt;&gt;&gt; x = int(input(&quot;
 Please enter an integer: &quot;)) Please enter an integer: 42 
 &gt;&gt;&gt; if x &lt; 0: 
 ... x = 0 
@@ -233,12 +552,12 @@ Please enter an integer: &quot;)) Please enter an integer: 42
 ... else: 
 ... print('More') 
 ... More</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="php" class="section-block">
-                                    <div class="code-block">
-                                        <h6>PHP Code Example</h6>
-                                        <pre><code class="language-php">&lt;?php 
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="php" class="section-block">
+                                <div class="code-block">
+                                    <h6>PHP Code Example</h6>
+                                    <pre><code class="language-php">&lt;?php
 $txt = &quot;Hello world!&quot;; 
 $x = 5; 
 $y = 10.5; 
@@ -249,12 +568,12 @@ echo $x;
 echo &quot;&lt;br&gt;&quot;; 
 echo $y; 
 ?&gt;</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                                <div id="handlebars" class="section-block">
-                                    <div class="code-block">
-                                        <h6>Handlebars Code Example</h6>
-                                        <pre><code class="language-handlebars">Handlebars.registerHelper('list', function(items, options) { 
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                            <div id="handlebars" class="section-block">
+                                <div class="code-block">
+                                    <h6>Handlebars Code Example</h6>
+                                    <pre><code class="language-handlebars">Handlebars.registerHelper('list', function(items, options) {
   var out = &quot;&lt;ul&gt;&quot;; 
   
   for(var i=0, l=items.length; i&lt;l; i++) { 
@@ -263,322 +582,375 @@ echo $y;
   
   return out + &quot;&lt;/ul&gt;&quot;; 
 });</code></pre>
-                                    </div><!--//code-block-->
-                                    <div class="code-block">
-                                        <h6>Git Code Example</h6>
-                                        <pre><code class="language-git">$ git add Documentation.txt</code></pre>
-                                    </div><!--//code-block-->
-                                </div><!--//section-block-->
-                            </section><!--//doc-section-->
-                            <section id="callouts-section" class="doc-section">
-                                <h2 class="section-title">Callouts</h2>
-                                <div class="section-block">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. 
-                                    </p>
-                                </div>
+                                </div><!--//code-block-->
+                                <div class="code-block">
+                                    <h6>Git Code Example</h6>
+                                    <pre><code class="language-git">$ git add Documentation.txt</code></pre>
+                                </div><!--//code-block-->
+                            </div><!--//section-block-->
+                        </section><!--//doc-section-->
+                        <section id="callouts-section" class="doc-section">
+                            <h2 class="section-title">Callouts</h2>
+                            <div class="section-block">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                                    quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                                    nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                                    justo.
+                                </p>
+                            </div>
 
-                                <div class="section-block">
-                                    <div class="callout-block callout-info">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-info-circle"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Aenean imperdiet</h4>
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <code>&lt;code&gt;</code> , Nemo enim ipsam voluptatem quia voluptas <a href="#">link example</a> sit aspernatur aut odit aut fugit.</p>
-                                        </div><!--//content-->
-                                    </div><!--//callout-block-->
-                                    
-                                    <div class="callout-block callout-warning">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-bug"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Morbi posuere</h4>
-                                            <p>Nunc hendrerit odio quis dignissim efficitur. Proin ut finibus libero. Morbi posuere fringilla felis eget sagittis. Fusce sem orci, cursus in tortor <a href="#">link example</a> tellus vel diam viverra elementum.</p>
-                                        </div><!--//content-->
-                                    </div><!--//callout-block-->
-                                    
-                                    <div class="callout-block callout-success">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Lorem ipsum dolor sit amet</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Link example</a> aenean commodo ligula eget dolor.</p>
-                                        </div><!--//content-->
-                                    </div><!--//callout-block-->
-                                    
-                                    <div class="callout-block callout-danger">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-exclamation-triangle"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Interdum et malesuada</h4>
-                                            <p>Morbi eget interdum sapien. Donec sed turpis sed nulla lacinia accumsan vitae ut tellus. Aenean vestibulum <a href="#">Link example</a> maximus ipsum vel dignissim. Morbi ornare elit sit amet massa feugiat, viverra dictum ipsum pellentesque. </p>
-                                        </div><!--//content-->
-                                    </div><!--//callout-block-->
-                                </div>
-                            </section><!--//doc-section-->
-                            <section id="tables-section" class="doc-section">
-                                <h2 class="section-title">Tables</h2>
-                                <div class="section-block">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.
-                                    </p>
-                                </div>
-                                <div class="section-block">
-                                    <h6>Basic Table</h6>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>First Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Username</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div><!--//table-responsive-->
-                                    <h6>Bordered Table</h6>
-                                    <div class="table-responsive">
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>First Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Username</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div><!--//table-responsive-->
-                                    <h6>Striped Table</h6>
-                                    <div class="table-responsive">
-                                        <table class="table table-bordered">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>First Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Username</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div><!--//table-responsive-->
-                                </div><!--//section-block-->
-                            </section><!--//doc-section-->
-                            <section id="buttons-section" class="doc-section">
-                                <h2 class="section-title">Buttons</h2>
-                                <div class="section-block">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec imperdiet turpis. Curabitur aliquet pulvinar ultrices. Etiam at posuere leo. Proin ultrices ex et dapibus feugiat <a href="#">link example</a> aenean purus leo, faucibus at elit vel, aliquet scelerisque dui. Etiam quis elit euismod, imperdiet augue sit amet, imperdiet odio. Aenean sem erat, hendrerit  eu gravida id, dignissim ut ante. Nam consequat porttitor libero euismod congue. 
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>Basic Buttons</h6>
-                                            <ul class="list list-unstyled">
-                                                <li><a href="#" class="btn btn-primary">Primary Button</a></li>
-                                                <li><a href="#" class="btn btn-green">Green Button</a></li>
-                                                <li><a href="#" class="btn btn-blue">Blue Button</a></li>
-                                                <li><a href="#" class="btn btn-orange">Orange Button</a></li>
-                                                <li><a href="#" class="btn btn-red">Red Button</a></li>
-                                            </ul>
+                            <div class="section-block">
+                                <div class="callout-block callout-info">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-info-circle"></i>
+                                    </div><!--//icon-holder-->
+                                    <div class="content">
+                                        <h4 class="callout-title">Aenean imperdiet</h4>
+                                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            <code>&lt;code&gt;</code> , Nemo enim ipsam voluptatem quia voluptas <a
+                                                    href="#">link example</a> sit aspernatur aut odit aut fugit.</p>
+                                    </div><!--//content-->
+                                </div><!--//callout-block-->
+
+                                <div class="callout-block callout-warning">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-bug"></i>
+                                    </div><!--//icon-holder-->
+                                    <div class="content">
+                                        <h4 class="callout-title">Morbi posuere</h4>
+                                        <p>Nunc hendrerit odio quis dignissim efficitur. Proin ut finibus libero. Morbi
+                                            posuere fringilla felis eget sagittis. Fusce sem orci, cursus in tortor <a
+                                                    href="#">link example</a> tellus vel diam viverra elementum.</p>
+                                    </div><!--//content-->
+                                </div><!--//callout-block-->
+
+                                <div class="callout-block callout-success">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-thumbs-up"></i>
+                                    </div><!--//icon-holder-->
+                                    <div class="content">
+                                        <h4 class="callout-title">Lorem ipsum dolor sit amet</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <a href="#">Link
+                                            example</a> aenean commodo ligula eget dolor.</p>
+                                    </div><!--//content-->
+                                </div><!--//callout-block-->
+
+                                <div class="callout-block callout-danger">
+                                    <div class="icon-holder">
+                                        <i class="fa fa-exclamation-triangle"></i>
+                                    </div><!--//icon-holder-->
+                                    <div class="content">
+                                        <h4 class="callout-title">Interdum et malesuada</h4>
+                                        <p>Morbi eget interdum sapien. Donec sed turpis sed nulla lacinia accumsan vitae
+                                            ut tellus. Aenean vestibulum <a href="#">Link example</a> maximus ipsum vel
+                                            dignissim. Morbi ornare elit sit amet massa feugiat, viverra dictum ipsum
+                                            pellentesque. </p>
+                                    </div><!--//content-->
+                                </div><!--//callout-block-->
+                            </div>
+                        </section><!--//doc-section-->
+                        <section id="tables-section" class="doc-section">
+                            <h2 class="section-title">Tables</h2>
+                            <div class="section-block">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus. Donec quam felis.
+                                </p>
+                            </div>
+                            <div class="section-block">
+                                <h6>Basic Table</h6>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!--//table-responsive-->
+                                <h6>Bordered Table</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!--//table-responsive-->
+                                <h6>Striped Table</h6>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div><!--//table-responsive-->
+                            </div><!--//section-block-->
+                        </section><!--//doc-section-->
+                        <section id="buttons-section" class="doc-section">
+                            <h2 class="section-title">Buttons</h2>
+                            <div class="section-block">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec imperdiet turpis.
+                                    Curabitur aliquet pulvinar ultrices. Etiam at posuere leo. Proin ultrices ex et
+                                    dapibus feugiat <a href="#">link example</a> aenean purus leo, faucibus at elit vel,
+                                    aliquet scelerisque dui. Etiam quis elit euismod, imperdiet augue sit amet,
+                                    imperdiet odio. Aenean sem erat, hendrerit eu gravida id, dignissim ut ante. Nam
+                                    consequat porttitor libero euismod congue.
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <h6>Basic Buttons</h6>
+                                        <ul class="list list-unstyled">
+                                            <li><a href="#" class="btn btn-primary">Primary Button</a></li>
+                                            <li><a href="#" class="btn btn-green">Green Button</a></li>
+                                            <li><a href="#" class="btn btn-blue">Blue Button</a></li>
+                                            <li><a href="#" class="btn btn-orange">Orange Button</a></li>
+                                            <li><a href="#" class="btn btn-red">Red Button</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <h6>CTA Buttons</h6>
+                                        <ul class="list list-unstyled">
+                                            <li><a href="#" class="btn btn-primary btn-cta"><i
+                                                    class="fa fa-download"></i> Download Now</a></li>
+                                            <li><a href="#" class="btn btn-green btn-cta"><i
+                                                    class="fa fa-code-fork"></i> Fork Now</a></li>
+                                            <li><a href="#" class="btn btn-blue btn-cta"><i
+                                                    class="fa fa-play-circle"></i> Find Out Now</a></li>
+                                            <li><a href="#" class="btn btn-orange btn-cta"><i class="fa fa-bug"></i>
+                                                Report Bugs</a></li>
+                                            <li><a href="#" class="btn btn-red btn-cta"><i
+                                                    class="fa fa-exclamation-circle"></i> Submit Issues</a></li>
+                                        </ul>
+                                    </div>
+                                </div><!--//row-->
+                            </div><!--//section-block-->
+                        </section><!--//doc-section-->
+                        <section id="video-section" class="doc-section">
+                            <h2 class="section-title">Video</h2>
+                            <div class="section-block">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <h6>Responsive Video 16:9</h6>
+                                        <!-- 16:9 aspect ratio -->
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item"
+                                                    src="https://www.youtube.com/embed/ejBkOjEG6F0?rel=0&amp;controls=0&amp;showinfo=0"
+                                                    frameborder="0" allowfullscreen></iframe>
                                         </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>CTA Buttons</h6>
-                                            <ul class="list list-unstyled">
-                                                <li><a href="#" class="btn btn-primary btn-cta"><i class="fa fa-download"></i> Download Now</a></li>
-                                                <li><a href="#" class="btn btn-green btn-cta"><i class="fa fa-code-fork"></i> Fork Now</a></li>
-                                                <li><a href="#" class="btn btn-blue btn-cta"><i class="fa fa-play-circle"></i> Find Out Now</a></li>
-                                                <li><a href="#" class="btn btn-orange btn-cta"><i class="fa fa-bug"></i> Report Bugs</a></li>
-                                                <li><a href="#" class="btn btn-red btn-cta"><i class="fa fa-exclamation-circle"></i> Submit Issues</a></li>
-                                            </ul>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <h6>Responsive Video 4:3</h6>
+                                        <!-- 4:3 aspect ratio -->
+                                        <div class="embed-responsive embed-responsive-4by3">
+                                            <iframe class="embed-responsive-item"
+                                                    src="https://www.youtube.com/embed/ejBkOjEG6F0?rel=0&amp;controls=0&amp;showinfo=0"
+                                                    frameborder="0" allowfullscreen></iframe>
                                         </div>
-                                    </div><!--//row-->
-                                </div><!--//section-block-->
-                            </section><!--//doc-section-->
-                            <section id="video-section" class="doc-section">
-                                <h2 class="section-title">Video</h2>
-                                <div class="section-block">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>Responsive Video 16:9</h6>
-                                            <!-- 16:9 aspect ratio -->
-                                            <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ejBkOjEG6F0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <h6>Responsive Video 4:3</h6>
-                                            <!-- 4:3 aspect ratio -->
-                                            <div class="embed-responsive embed-responsive-4by3">
-                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ejBkOjEG6F0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div><!--//row-->
-                                </div><!--//section-block-->
+                                    </div>
+                                </div><!--//row-->
+                            </div><!--//section-block-->
                             <section id="icons-section" class="doc-section">
                                 <h2 class="section-title">Icons</h2>
                                 <div class="section-block">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec imperdiet turpis. Curabitur aliquet pulvinar ultrices. Etiam at posuere leo. Proin ultrices ex et dapibus feugiat <a href="#">link example</a> aenean purus leo, faucibus at elit vel, aliquet scelerisque dui. Etiam quis elit euismod, imperdiet augue sit amet, imperdiet odio. Aenean sem erat, hendrerit  eu gravida id, dignissim ut ante. Nam consequat porttitor libero euismod congue. 
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec imperdiet
+                                        turpis. Curabitur aliquet pulvinar ultrices. Etiam at posuere leo. Proin
+                                        ultrices ex et dapibus feugiat <a href="#">link example</a> aenean purus leo,
+                                        faucibus at elit vel, aliquet scelerisque dui. Etiam quis elit euismod,
+                                        imperdiet augue sit amet, imperdiet odio. Aenean sem erat, hendrerit eu gravida
+                                        id, dignissim ut ante. Nam consequat porttitor libero euismod congue.
                                     </p>
                                 </div><!--//section-block-->
                                 <div class="section-block">
                                     <h6>Elegant Icon Font</h6>
-                                    <a href="https://www.elegantthemes.com/blog/resources/elegant-icon-font" target="_blank"><img class="img-responsive" src="assets/images/demo/elegant-icon-font.jpg" alt="elegant icons" /></a>
+                                    <a href="https://www.elegantthemes.com/blog/resources/elegant-icon-font"
+                                       target="_blank"><img class="img-responsive"
+                                                            src="assets/images/demo/elegant-icon-font.jpg"
+                                                            alt="elegant icons"/></a>
                                 </div><!--//section-block-->
                                 <div class="section-block">
                                     <h6>FontAwesome Icon Font</h6>
-                                    <a href="https://fortawesome.github.io/Font-Awesome/" target="_blank"><img class="img-responsive" src="assets/images/demo/fontawesome-icons.png" alt="fontawesome" /></a>
+                                    <a href="https://fortawesome.github.io/Font-Awesome/" target="_blank"><img
+                                            class="img-responsive" src="assets/images/demo/fontawesome-icons.png"
+                                            alt="fontawesome"/></a>
                                 </div><!--//section-block-->
-                                
+
                             </section><!--//doc-section-->
-                            
-                            </section><!--//doc-section-->
-                        </div><!--//content-inner-->
-                    </div><!--//doc-content-->
-                    <div class="doc-sidebar hidden-xs">
-                        <nav id="doc-nav">
-                            <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
-                                <li><a class="scrollto" href="#download-section">Download</a></li>
-                                <li>
-                                    <a class="scrollto" href="#installation-section">Installation</a>
-                                    <ul class="nav doc-sub-menu">
-                                        <li><a class="scrollto" href="#step1">Step One</a></li>
-                                        <li><a class="scrollto" href="#step2">Step Two</a></li>
-                                        <li><a class="scrollto" href="#step3">Step Three</a></li>
-                                    </ul><!--//nav-->
-                                </li>
-                                <li>
-                                    <a class="scrollto" href="#code-section">Code</a>
-                                    <ul class="nav doc-sub-menu">
-                                        <li><a class="scrollto" href="#html">HTML</a></li>
-                                        <li><a class="scrollto" href="#css">CSS</a></li>
-                                        <li><a class="scrollto" href="#less">LESS</a></li>
-                                        <li><a class="scrollto" href="#sass">Sass</a></li>
-                                        <li><a class="scrollto" href="#javascript">JavaScript</a></li>
-                                        <li><a class="scrollto" href="#python">Python</a></li>
-                                        <li><a class="scrollto" href="#php">PHP</a></li>
-                                        <li><a class="scrollto" href="#handlebars">Handlebars</a></li>
-                                    </ul><!--//nav-->
-                                </li>
-                                <li><a class="scrollto" href="#callouts-section">Callouts</a></li>
-                                <li><a class="scrollto" href="#tables-section">Tables</a></li>
-                                <li><a class="scrollto" href="#buttons-section">Buttons</a></li>
-                                <li><a class="scrollto" href="#video-section">Video</a></li>
-                                <li><a class="scrollto" href="#icons-section">Icons</a></li>
-                            </ul><!--//doc-menu-->
-                        </nav>
-                    </div><!--//doc-sidebar-->
-                </div><!--//doc-body-->              
-            </div><!--//container-->
-        </div><!--//doc-wrapper-->
-        
-        <div id="promo-block" class="promo-block">
-            <div class="container">
-                <div class="promo-block-inner">
-                    <h3 class="promo-title text-center"><i class="fa fa-heart"></i> <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank">AppKit - Bootstrap Angular Admin Theme for Developers</a></h3>
-                    <div class="row">
-                        <div class="figure-holder col-md-5 col-sm-6 col-xs-12">
-                            <div class="figure-holder-inner">
-                                <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm" target="_blank"><img class="img-responsive" src="assets/images/demo/appkit-widgets-thumb.jpg" alt="AppKit Theme" /></a>
-                                <a class="mask" href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm"><i class="icon fa fa-heart pink"></i></a>
-                                
-                            </div>
-                        </div><!--//figure-holder-->
-                        <div class="content-holder col-md-7 col-sm-6 col-xs-12">
-                            <div class="content-holder-inner">
-                                <div class="desc">
-                                    <h4 class="content-title"><strong>Love this free documentation theme?</strong></h4>
-                                    <p>Check out AppKit - an Angular admin theme I created with my developer friend <a href="https://twitter.com/tnajdek">Tom Najdek</a> for developers. AppKit uses modern front-end technologies and is packed with useful components and widgets to speed up your app development.</p>
-                                    <p><strong class="highlight">[Tip for developers]:</strong> If your project is Open Source, you can use this area to promote your other projects or hold third party adverts like Bootstrap and FontAwesome do!</p>
-                                </div><!--//desc-->
-                                <div class="author"><a href="http://themes.3rdwavemedia.com">Xiaoying Riley</a></div>
-                            </div><!--//content-holder-inner-->
-                        </div><!--//content-holder-->
-                    </div><!--//row-->
-                </div><!--//promo-block-inner-->  
-            </div><!--//container-->
-        </div><!--//promo-block-->
-        
-    </div><!--//page-wrapper-->
-    
-    <footer id="footer" class="footer text-center">
-        <div class="container">
-            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com/" targe="_blank">Xiaoying Riley</a> for developers</small>
-            
+
+                        </section><!--//doc-section-->
+                    </div><!--//content-inner-->
+                </div><!--//doc-content-->
+                <div class="doc-sidebar hidden-xs">
+                    <nav id="doc-nav">
+                        <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
+                            <li><a class="scrollto" href="#download-section">Download</a></li>
+                            <li>
+                                <a class="scrollto" href="#installation-section">Installation</a>
+                                <ul class="nav doc-sub-menu">
+                                    <li><a class="scrollto" href="#docker">Docker</a></li>
+                                    <li><a class="scrollto" href="#compile">Compile Source</a></li>
+                                </ul><!--//nav-->
+                            </li>
+                            <li>
+                                <a class="scrollto" href="#deployments-section">Other Deployments</a>
+                                <ul class="nav doc-sub-menu">
+                                    <li><a class="scrollto" href="#html">HTML</a></li>
+                                    <li><a class="scrollto" href="#css">CSS</a></li>
+                                    <li><a class="scrollto" href="#less">LESS</a></li>
+                                    <li><a class="scrollto" href="#sass">Sass</a></li>
+                                    <li><a class="scrollto" href="#javascript">JavaScript</a></li>
+                                    <li><a class="scrollto" href="#python">Python</a></li>
+                                    <li><a class="scrollto" href="#php">PHP</a></li>
+                                    <li><a class="scrollto" href="#handlebars">Handlebars</a></li>
+                                </ul><!--//nav-->
+                            </li>
+                            <li><a class="scrollto" href="#callouts-section">Callouts</a></li>
+                            <li><a class="scrollto" href="#tables-section">Tables</a></li>
+                            <li><a class="scrollto" href="#buttons-section">Buttons</a></li>
+                            <li><a class="scrollto" href="#video-section">Video</a></li>
+                            <li><a class="scrollto" href="#icons-section">Icons</a></li>
+                        </ul><!--//doc-menu-->
+                    </nav>
+                </div><!--//doc-sidebar-->
+            </div><!--//doc-body-->
         </div><!--//container-->
-    </footer><!--//footer-->
-    
-     
-    <!-- Main Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
-    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>                                                                
-    <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    
+    </div><!--//doc-wrapper-->
+
+    <div id="promo-block" class="promo-block">
+        <div class="container">
+            <div class="promo-block-inner">
+                <h3 class="promo-title text-center"><i class="fa fa-heart"></i> <a
+                        href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm"
+                        target="_blank">AppKit - Bootstrap Angular Admin Theme for Developers</a></h3>
+                <div class="row">
+                    <div class="figure-holder col-md-5 col-sm-6 col-xs-12">
+                        <div class="figure-holder-inner">
+                            <a href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm"
+                               target="_blank"><img class="img-responsive"
+                                                    src="assets/images/demo/appkit-widgets-thumb.jpg"
+                                                    alt="AppKit Theme"/></a>
+                            <a class="mask"
+                               href="https://wrapbootstrap.com/theme/admin-appkit-admin-theme-angularjs-WB051SCJ1?ref=3wm"><i
+                                    class="icon fa fa-heart pink"></i></a>
+
+                        </div>
+                    </div><!--//figure-holder-->
+                    <div class="content-holder col-md-7 col-sm-6 col-xs-12">
+                        <div class="content-holder-inner">
+                            <div class="desc">
+                                <h4 class="content-title"><strong>Love this free documentation theme?</strong></h4>
+                                <p>Check out AppKit - an Angular admin theme I created with my developer friend <a
+                                        href="https://twitter.com/tnajdek">Tom Najdek</a> for developers. AppKit uses
+                                    modern front-end technologies and is packed with useful components and widgets to
+                                    speed up your app development.</p>
+                                <p><strong class="highlight">[Tip for developers]:</strong> If your project is Open
+                                    Source, you can use this area to promote your other projects or hold third party
+                                    adverts like Bootstrap and FontAwesome do!</p>
+                            </div><!--//desc-->
+                            <div class="author"><a href="http://themes.3rdwavemedia.com">Xiaoying Riley</a></div>
+                        </div><!--//content-holder-inner-->
+                    </div><!--//content-holder-->
+                </div><!--//row-->
+            </div><!--//promo-block-inner-->
+        </div><!--//container-->
+    </div><!--//promo-block-->
+
+</div><!--//page-wrapper-->
+
+<footer id="footer" class="footer text-center">
+    <div class="container">
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com/"
+                                                                                 targe="_blank">Xiaoying Riley</a> for
+            developers
+        </small>
+
+    </div><!--//container-->
+</footer><!--//footer-->
+
+
+<!-- Main Javascript -->
+<script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+
 </body>
 </html> 
 
