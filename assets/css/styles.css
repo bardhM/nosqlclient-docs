@@ -87,8 +87,8 @@ a.btn .fa {
 
 .btn-primary,
 a.btn-primary {
-    background: #40babd;
-    border: 1px solid #40babd;
+    background: #a5dd37;
+    border: 1px solid #a5dd37;
     color: #fff !important;
 }
 
@@ -309,7 +309,7 @@ select {
 }
 
 #topcontrol {
-    background: #40babd;
+    background: #a5dd37;
     color: #fff;
     text-align: center;
     display: inline-block;
@@ -349,7 +349,7 @@ select {
 .header {
     background: #494d55;
     color: rgba(255, 255, 255, 0.85);
-    border-top: 5px solid #40babd;
+    border-top: 5px solid #a5dd37;
     padding: 30px 0;
 }
 
@@ -373,7 +373,7 @@ select {
 }
 
 .branding .text-highlight {
-    color: #40babd;
+    color: #a5dd37;
 }
 
 .body-green .branding .text-highlight {
@@ -407,7 +407,7 @@ select {
 
 .branding .icon {
     font-size: 24px;
-    color: #40babd;
+    color: #a5dd37;
 }
 
 .body-green .branding .icon {
@@ -468,7 +468,7 @@ select {
 }
 
 .footer a {
-    color: #40babd;
+    color: #a5dd37;
 }
 
 .footer .fa-heart {
@@ -490,7 +490,7 @@ select {
 }
 
 .doc-header .doc-title {
-    color: #40babd;
+    color: #a5dd37;
     margin-top: 0;
     font-size: 36px;
 }
@@ -965,7 +965,7 @@ select {
 
 .doc-menu > li > a:hover,
 .doc-menu > li > a:focus {
-    color: #40babd;
+    color: #a5dd37;
     text-decoration: none;
     background: none;
 }
@@ -1002,8 +1002,8 @@ select {
 
 .doc-menu > li.active > a {
     background: none;
-    border-left: 4px solid #40babd;
-    color: #40babd;
+    border-left: 4px solid #a5dd37;
+    color: #a5dd37;
     font-weight: 600;
 }
 
@@ -1060,7 +1060,7 @@ select {
 }
 
 .doc-sub-menu > li > a:hover {
-    color: #40babd;
+    color: #a5dd37;
     text-decoration: none;
     background: none;
 }
@@ -1095,7 +1095,7 @@ select {
 
 .doc-sub-menu > li.active > a {
     background: none;
-    color: #40babd;
+    color: #a5dd37;
 }
 
 .body-green .doc-sub-menu > li.active > a {
@@ -1332,7 +1332,7 @@ select {
 
 .landing-page .branding .icon {
     font-size: 32px;
-    color: #40babd;
+    color: #a5dd37;
 }
 
 .landing-page .tagline {
@@ -1447,7 +1447,7 @@ select {
 }
 
 .cards-section .item-primary .item-inner {
-    border-top: 3px solid #40babd;
+    border-top: 3px solid #a5dd37;
 }
 
 .cards-section .item-primary .item-inner:hover .title {
@@ -1455,7 +1455,7 @@ select {
 }
 
 .cards-section .item-primary .icon {
-    color: #40babd;
+    color: #a5dd37;
 }
 
 .cards-section .item-green .item-inner {
