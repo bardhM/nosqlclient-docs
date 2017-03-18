@@ -6,7 +6,7 @@
 <!--[if !IE]><!-->
 <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Mongoclient Documentation</title>
+    <title>Mongoclient Documentation - Quick Start</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -309,7 +309,7 @@
                                             complete MeteorJS guide you can follow <a href="http://docs.meteor.com/">
                                                 this link</a>. To read more about code guideline, and how to contribute,
                                             you can <a
-                                                    href="components.html">check here</a></p>
+                                                    href="user_manual.html">check here</a></p>
                                     </div>
                                 </div>
 
@@ -595,7 +595,7 @@
 
                                         <div class="row">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <h6>Environment Variables</h6>
+                                                <h6>Environment Variables (over galaxy)</h6>
                                                 <div class="table-responsive">
                                                     <table class="table">
                                                         <thead>
@@ -621,6 +621,29 @@
                                                                 settings
                                                             </td>
                                                         </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>MONGOCLIENT_AUTH</td>
+                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                                default it's set to false</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">4</th>
+                                                            <td>MONGOCLIENT_USERNAME</td>
+                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                                <b>by
+                                                                    default there's no username</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">5</th>
+                                                            <td>MONGOCLIENT_PASSWORD</td>
+                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                                and <b>MONGOCLIENT_USERNAME</b>, <b>by
+                                                                    default there's no password</b>
+                                                            </td>
+                                                        </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -630,8 +653,218 @@
                                 </div>
                             </div><!--//section-block-->
 
+                            <div id="gcp" class="section-block">
+                                <h3 class="block-title">Google Compute Engine (GCP)</h3>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>TL;DR</h6>
+                                        <ol class="list">
+                                            <li>Create a compute instance with a linux image, ubuntu preferred
+                                            </li>
+                                            <li>Install docker with <code>sudo wget -qO- https://get.docker.com/ |
+                                                sh</code>
+                                            </li>
+                                            <li>Install and run mongodb docker image <code>sudo docker run --name db -d
+                                                mongo
+                                                --smallfiles</code></li>
+                                            <li>Install and run Mongoclient docker image <code>docker run --name
+                                                mongoclient -d -p
+                                                3000:3000 -e MONGO_URL=mongodb://localhost:27017/meteor
+                                                mongoclient/mongoclient</code>
+                                            </li>
+                                            <li>From GCP web iterface choose your instance and click <b>Edit</b>
+                                            </li>
+                                            <li>Add custom metadata:
+                                                <ul>
+                                                    <li>key: "startup-script"</li>
+                                                    <li>value "sudo docker start db; sudo docker start mongoclient"</li>
+
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 30px" class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>GCP offers a flexibility to setup a server instance with a few
+                                            clicks. And then you can just manage your mongoclient with docker, even can
+                                            set nginx and letsencrypt for SSL</p>
+
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <h6>Environment Variables (docker)</h6>
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Configuration</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>ROOT_URL</td>
+                                                            <td>If you want to change base url of Mongoclient you can
+                                                                use this parameter.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>MONGO_URL</td>
+                                                            <td>This has to be set, since Mongoclient
+                                                                depends on a MongoDB instance to persist connections and
+                                                                settings, and you're setting up an another container for
+                                                                mongodb.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>MONGOCLIENT_AUTH</td>
+                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                                default it's set to false</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">4</th>
+                                                            <td>MONGOCLIENT_USERNAME</td>
+                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                                <b>by
+                                                                    default there's no username</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">5</th>
+                                                            <td>MONGOCLIENT_PASSWORD</td>
+                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                                and <b>MONGOCLIENT_USERNAME</b>, <b>by
+                                                                    default there's no password</b>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//section-block-->
+
+                            <div id="aws" class="section-block">
+                                <h3 class="block-title">Amazon Web Services (AWS)</h3>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>TL;DR</h6>
+                                        <ol class="list">
+                                            <li>Create EC2 instance (ubuntu 16.04 preferred) as <b>t2.micro</b>
+                                            </li>
+                                            <li>Follow 2nd, 3rd, 4th elements <a class="scrollto" href="#gcp"> from
+                                                here</a></li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 30px" class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Since docker is best way to isolate system from Mongoclient, all manual
+                                            deployments should be done via docker, regardless of the hosting service
+                                            (GCP, AWS...)</p>
+
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <h6>Environment Variables (docker)</h6>
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Configuration</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>ROOT_URL</td>
+                                                            <td>If you want to change base url of Mongoclient you can
+                                                                use this parameter.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>MONGO_URL</td>
+                                                            <td>This has to be set, since Mongoclient
+                                                                depends on a MongoDB instance to persist connections and
+                                                                settings, and you're setting up an another container for
+                                                                mongodb.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>MONGOCLIENT_AUTH</td>
+                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                                default it's set to false</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">4</th>
+                                                            <td>MONGOCLIENT_USERNAME</td>
+                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                                <b>by
+                                                                    default there's no username</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">5</th>
+                                                            <td>MONGOCLIENT_PASSWORD</td>
+                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                                and <b>MONGOCLIENT_USERNAME</b>, <b>by
+                                                                    default there's no password</b>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//section-block-->
 
                         </section><!--//doc-section-->
+
+                        <section id="healthcheck-section" class="doc-section">
+                            <h2 class="section-title">Health Check</h2>
+                            <div class="section-block">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>TL;DR</h6>
+                                        <code>http(s)://&lt;ROOT_URL&gt;:&lt;PORT&gt;/healthcheck</code>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 30px" class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>
+                                            Mongoclient has a very simple single health check endpoint.
+                                            You can simply navigate to
+                                            <code>http(s)://&lt;ROOT_URL&gt;:&lt;PORT&gt;/healthcheck</code> and expect
+                                            to get
+                                            <b>200 HTTP OK</b>, If so, everything is alright. Such simple endpoint makes
+                                            it easy
+                                            to deploy Mongoclient with third party deployment tools such as <a
+                                                href="https://github.com/mesosphere/marathon">marathon</a> without
+                                            worrying
+                                            about deployment errors.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div><!--//section-block-->
+                        </section><!--//doc-section-->
+
                     </div><!--//content-inner-->
                 </div><!--//doc-content-->
                 <div class="doc-sidebar hidden-xs">
@@ -651,7 +884,12 @@
                                     <li><a class="scrollto" href="#heroku">Heroku</a></li>
                                     <li><a class="scrollto" href="#cloud-foundry">Cloud Foundry</a></li>
                                     <li><a class="scrollto" href="#galaxy">Meteor Galaxy</a></li>
+                                    <li><a class="scrollto" href="#gcp">Google Compute Engine</a></li>
+                                    <li><a class="scrollto" href="#aws">Amazon Web Services</a></li>
                                 </ul><!--//nav-->
+                            </li>
+                            <li>
+                                <a class="scrollto" href="#healthcheck-section">Health Check</a>
                             </li>
                         </ul><!--//doc-menu-->
                     </nav>

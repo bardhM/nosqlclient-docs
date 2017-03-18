@@ -87,8 +87,8 @@ a.btn .fa {
 
 .btn-primary,
 a.btn-primary {
-    background: #a5dd37;
-    border: 1px solid #a5dd37;
+    background: #88c20d;
+    border: 1px solid #88c20d;
     color: #fff !important;
 }
 
@@ -109,8 +109,8 @@ a.btn-primary.hover {
 
 .btn-green,
 a.btn-green {
-    background: #75c181;
-    border: 1px solid #75c181;
+    background: #88c20d;
+    border: 1px solid #88c20d;
     color: #fff !important;
 }
 
@@ -309,7 +309,7 @@ select {
 }
 
 #topcontrol {
-    background: #a5dd37;
+    background: #88c20d;
     color: #fff;
     text-align: center;
     display: inline-block;
@@ -349,7 +349,7 @@ select {
 .header {
     background: #494d55;
     color: rgba(255, 255, 255, 0.85);
-    border-top: 5px solid #a5dd37;
+    border-top: 5px solid #88c20d;
     padding: 30px 0;
 }
 
@@ -373,11 +373,11 @@ select {
 }
 
 .branding .text-highlight {
-    color: #a5dd37;
+    color: #88c20d;
 }
 
 .body-green .branding .text-highlight {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .body-blue .branding .text-highlight {
@@ -407,11 +407,11 @@ select {
 
 .branding .icon {
     font-size: 24px;
-    color: #a5dd37;
+    color: #88c20d;
 }
 
 .body-green .branding .icon {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .body-blue .branding .icon {
@@ -468,7 +468,7 @@ select {
 }
 
 .footer a {
-    color: #a5dd37;
+    color: #88c20d;
 }
 
 .footer .fa-heart {
@@ -490,13 +490,13 @@ select {
 }
 
 .doc-header .doc-title {
-    color: #a5dd37;
+    color: #88c20d;
     margin-top: 0;
     font-size: 36px;
 }
 
 .body-green .doc-header .doc-title {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .body-blue .doc-header .doc-title {
@@ -687,7 +687,7 @@ select {
 }
 
 .callout-success {
-    background: #75c181;
+    background: #88c20d;
     color: #fff;
 }
 
@@ -871,11 +871,11 @@ select {
 
 /* Color Schemes */
 .body-green .header {
-    border-color: #75c181;
+    border-color: #88c20d;
 }
 
 .body-green a {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .body-green a:hover {
@@ -965,14 +965,14 @@ select {
 
 .doc-menu > li > a:hover,
 .doc-menu > li > a:focus {
-    color: #a5dd37;
+    color: #88c20d;
     text-decoration: none;
     background: none;
 }
 
 .body-green .doc-menu > li > a:hover,
 .body-green .doc-menu > li > a:focus {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .body-blue .doc-menu > li > a:hover,
@@ -1002,14 +1002,14 @@ select {
 
 .doc-menu > li.active > a {
     background: none;
-    border-left: 4px solid #a5dd37;
-    color: #a5dd37;
+    border-left: 4px solid #88c20d;
+    color: #88c20d;
     font-weight: 600;
 }
 
 .body-green .doc-menu > li.active > a {
-    color: #75c181;
-    border-color: #75c181;
+    color: #88c20d;
+    border-color: #88c20d;
 }
 
 .body-blue .doc-menu > li.active > a {
@@ -1060,13 +1060,13 @@ select {
 }
 
 .doc-sub-menu > li > a:hover {
-    color: #a5dd37;
+    color: #88c20d;
     text-decoration: none;
     background: none;
 }
 
 .body-green .doc-sub-menu > li > a:hover {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .body-blue .doc-sub-menu > li > a:hover {
@@ -1095,11 +1095,11 @@ select {
 
 .doc-sub-menu > li.active > a {
     background: none;
-    color: #a5dd37;
+    color: #88c20d;
 }
 
 .body-green .doc-sub-menu > li.active > a {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .body-blue .doc-sub-menu > li.active > a {
@@ -1332,7 +1332,7 @@ select {
 
 .landing-page .branding .icon {
     font-size: 32px;
-    color: #a5dd37;
+    color: #88c20d;
 }
 
 .landing-page .tagline {
@@ -1447,7 +1447,7 @@ select {
 }
 
 .cards-section .item-primary .item-inner {
-    border-top: 3px solid #a5dd37;
+    border-top: 3px solid #88c20d;
 }
 
 .cards-section .item-primary .item-inner:hover .title {
@@ -1455,11 +1455,11 @@ select {
 }
 
 .cards-section .item-primary .icon {
-    color: #a5dd37;
+    color: #5cc2be;
 }
 
 .cards-section .item-green .item-inner {
-    border-top: 3px solid #75c181;
+    border-top: 3px solid #88c20d;
 }
 
 .cards-section .item-green .item-inner:hover .title {
@@ -1467,7 +1467,7 @@ select {
 }
 
 .cards-section .item-green .icon {
-    color: #75c181;
+    color: #88c20d;
 }
 
 .cards-section .item-blue .item-inner {
