@@ -116,13 +116,18 @@
                                         <p>Also since it isolates your environment from container it gives you to
                                             advantage of using Mongoclient regardless of your system and hosting service
                                             (AWS, Digital Ocean etc...)</p>
+
+                                        <p>Inside of image, there's a new user named <b>node</b>, to apply best
+                                            practices of docker (not starting with root) node user is capable of
+                                            managing mongodb that's installed to inside of container as well as managing
+                                            builded Mongoclient application</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6>Dependencies</h6>
                                         <ul class="list">
-                                            <li>Ubuntu 16.04 as base image
+                                            <li>Debian 8 as base image
                                                 <ul>
                                                     <li>curl</li>
                                                     <li>ca-certificates</li>
@@ -132,13 +137,12 @@
                                                     <li>python</li>
                                                     <li>git</li>
                                                     <li>wget (to get gosu)</li>
-                                                    <li>libc6</li>
                                                     <li><a target="_blank"
                                                            href="https://github.com/tianon/gosu">gosu</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="https://nodejs.org/en/">NodeJS</a> >= 4.7.0</li>
-                                            <li><a href="https://www.mongodb.com/">MongoDB</a> >= 3.2.0</li>
+                                            <li><a href="https://nodejs.org/en/">NodeJS</a> >= 4.7.3</li>
+                                            <li><a href="https://www.mongodb.com/">MongoDB</a> >= 3.4.2</li>
                                             <li><a href="https://www.meteor.com/">MeteorJS</a> >= 1.4.3.2</li>
                                         </ul>
                                     </div>
@@ -662,7 +666,7 @@
     <div class="container">
         <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
         <small class="copyright">Designed by <a href="http://themes.3rdwavemedia.com/"
-                                                                                 targe="_blank">Xiaoying Riley</a>
+                                                targe="_blank">Xiaoying Riley</a>
         </small>
 
     </div><!--//container-->
