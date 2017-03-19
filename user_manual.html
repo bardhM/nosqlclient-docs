@@ -66,7 +66,7 @@
                             <div class="section-block">
                                 <p>
                                     This guide covers, <b>how to</b> contribute/use Mongoclient. Each section in here is
-                                    marked as one of <b>Beginner/Novice/Advanced</b> levels, based on how deep knowledge
+                                    marked as one of <b>Novice/Proficient/Expert</b> levels, based on how deep knowledge
                                     is required to understand section content.
                                 </p>
                                 <p>Therefore if you think, you don't need to read everything just use <b>CTRL+F</b>,
@@ -76,16 +76,21 @@
                                     to <a href="mailto:info@mongoclient.com" target="_top">info@mongoclient.com</a></p>
                             </div>
                         </section><!--//doc-section-->
+
                         <section id="keywords-section" class="doc-section">
-                            <h2 class="section-title">Keywords in Mongoclient</h2>
+                            <h2 class="section-title">Keywords in MongoDB and Mongoclient</h2>
                             <div class="section-block">
-                                <h6>Beginner Section</h6>
+                                <h6>Novice Section</h6>
                                 <p>
-                                    There're some words you need to know before using Mongoclient to understand
+                                    There're some keywords you need to know before using Mongoclient and before reading
+                                    this guide to understand
                                     fully
                                     what you're doing. This section is more likely for beginners, if you wish, you can
                                     pass to <a class="scrollto" href="#design-section"> next section</a>
                                 </p>
+                                <p>The explanations here are partially excerpt from <a href="https://docs.mongodb.com">
+                                    MongoDB official documentation.</a> It's
+                                    highly recommended to read detailed explanation from there.</p>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <div class="table-responsive">
@@ -109,6 +114,158 @@
                                                             etc.</i>
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Bson</td>
+                                                    <td>
+                                                        MongoDB represents JSON documents in binary-encoded format
+                                                        called BSON behind the scenes. <b>BSON extends the JSON
+                                                        model</b> to
+                                                        provide additional data types, ordered fields, and to be
+                                                        efficient for encoding and decoding within different languages.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Extended Json</td>
+                                                    <td>
+                                                        JSON can only represent a subset of the types supported by <b>BSON</b>.
+                                                        To preserve type information, MongoDB adds some
+                                                        extensions to the JSON format, and <b>Mongoclient takes
+                                                        advantage
+                                                        of these extensions for queries.</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Document</td>
+                                                    <td>
+                                                        MongoDB stores data records as BSON documents, a document is
+                                                        analogous to a <b>row</b> in <b>relational databases</b>.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>Collection</td>
+                                                    <td>
+                                                        MongoDB stores documents in collections. Collections are
+                                                        analogous to <b>tables</b> in <b>relational databases</b>.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td>Shell</td>
+                                                    <td>
+                                                        The mongo shell is an interactive JavaScript interface to
+                                                        MongoDB. As some people may prefer to work with shell,
+                                                        Mongoclient
+                                                        offers <b>the same shell with auto completion feature</b>.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">7</th>
+                                                    <td>Aggregation</td>
+                                                    <td>
+                                                        Aggregation operations process data records and return computed
+                                                        results. Mongoclient offers a nice intuitive tool to
+                                                        <b>combine/reorder and execute
+                                                            aggregation stages of MongoDB</b> in a nice UI.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">8</th>
+                                                    <td>Indexes</td>
+                                                    <td>
+                                                        Indexes support the efficient execution of queries in MongoDB.
+                                                        Without indexes, MongoDB must perform a collection scan, i.e.
+                                                        scan every document in a collection, to select those documents
+                                                        that match the query statement. You can easily <b>see and manage
+                                                        your indexes (with their usages)</b> via Mongoclient.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">9</th>
+                                                    <td>Administration</td>
+                                                    <td>
+                                                        Mongoclient has a section for <b>administration operations</b>
+                                                        in
+                                                        MongoDB, these are <i>user management, dump/restore/import, and
+                                                        some sort of administration queries</i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">10</th>
+                                                    <td>Database Stats</td>
+                                                    <td>
+                                                        If you have the required privileges, Mongoclient offers nicely
+                                                        designed charts to show your operations, memory, active
+                                                        read/writes and some other statistics</i> These are explained
+                                                        more briefly in
+                                                        below sections. <b>You may prefer to skip these, if you're not
+                                                        familiar with administration</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">11</th>
+                                                    <td>Schemaless</td>
+                                                    <td>
+                                                        MongoDB is a JSON-style data store. The documents stored in the
+                                                        database can have varying sets of fields, with different types
+                                                        for each field. You can <a
+                                                            href="https://www.mongodb.com/blog/post/why-schemaless">
+                                                        read more here</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">12</th>
+                                                    <td>Schema Analyze</td>
+                                                    <td>
+                                                        Since MongoDB is a schemaless database, you may want to know
+                                                        what's the structure of your collection, and the distribution of
+                                                        the fields and their types. Mongoclient uses <a
+                                                            href="https://github.com/variety/variety"> variety</a> to
+                                                        show these to you.
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">12</th>
+                                                    <td>Stored Functions</td>
+                                                    <td>
+                                                        There is a special system collection named system.js that can
+                                                        store JavaScript functions for reuse, here you can use
+                                                        <b>Mongoclient to manage these functions with a few clicks.</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">13</th>
+                                                    <td>Query</td>
+                                                    <td>
+                                                        Mongoclient lets you to pick one of the queries regarding your
+                                                        wish whenever you choose a collection from left panel, some of
+                                                        these are <b>find, findOne, updateMany, delete, count,
+                                                        insertMany...</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">14</th>
+                                                    <td>Query Option</td>
+                                                    <td>
+                                                        Most of the queries has it's own options that you can pick in
+                                                        Mongoclient. For
+                                                        example <b>find</b> query includes options such as <i>sort,
+                                                        projection, limit etc</i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">15</th>
+                                                    <td>Selector</td>
+                                                    <td>
+                                                        Most of the queries like <b>find, update</b> needs a document or
+                                                        array of documents to match your query from the collection,
+                                                        selector is a document or array of documents regarding the
+                                                        selected query.
+                                                    </td>
+                                                </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -116,6 +273,20 @@
                                 </div>
                             </div>
                         </section><!--//doc-section-->
+
+                        <section id="design-section" class="doc-section">
+                            <h2 class="section-title">Mongoclient's Design Structure</h2>
+                            <div class="section-block">
+                                <h6>Novice Section</h6>
+                                <p>
+                                    Mongoclient has been designed by emphasising on end user's need, so it offers an
+                                    intuitive design and lets you to query your database with a few clicks. There's not
+                                    over-thought-out buttons or labels anywhere.
+                                </p>
+                            </div>
+                        </section>
+
+
                     </div><!--//content-inner-->
                 </div><!--//doc-content-->
                 <div class="doc-sidebar hidden-xs">
