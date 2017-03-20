@@ -833,6 +833,91 @@
                                 </div>
                             </div><!--//section-block-->
 
+                            <div id="jelastic" class="section-block">
+                                <h3 class="block-title">Jelastic</h3>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>TL;DR</h6>
+                                        <ol class="list">
+                                            <li>Create a new <b>Docker</b> environment
+                                            </li>
+                                            <li>Click <b>Select Container</b>, type mongoclient, and choose <b>mongoclient/mongoclient</b>
+                                                which will come as first in the list
+                                            </li>
+                                            <li>Enter container via <a
+                                                    href="https://docs.jelastic.com/ssh-access">SSH</a></li>
+                                            <li>Start MongoDB <code>/opt/mongodb/bin/mongod</code></li>
+                                            <li>Start Mongoclient <code>node /opt/meteor/dist/bundle/main.js</code></li>
+                                            <li>Create an endpoint for your environment and select <b>3000</b> as
+                                                private port
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 30px" class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <h6>Environment Variables (from jelastic console)</h6>
+                                                <div class="table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Configuration</th>
+                                                            <th>Description</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>ROOT_URL</td>
+                                                            <td>If you want to change base url of Mongoclient you can
+                                                                use this parameter.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>MONGO_URL</td>
+                                                            <td>This has to be set, since Mongoclient
+                                                                depends on a MongoDB instance to persist connections and
+                                                                settings, you can create an another app on jelastic and
+                                                                change <b>Mongoclient's MongoDB</b> to there with this URL.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>MONGOCLIENT_AUTH</td>
+                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                                default it's set to false</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">4</th>
+                                                            <td>MONGOCLIENT_USERNAME</td>
+                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                                <b>by
+                                                                    default there's no username</b>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">5</th>
+                                                            <td>MONGOCLIENT_PASSWORD</td>
+                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                                and <b>MONGOCLIENT_USERNAME</b>, <b>by
+                                                                    default there's no password</b>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--//section-block-->
+
                         </section><!--//doc-section-->
 
                         <section id="healthcheck-section" class="doc-section">
@@ -886,6 +971,7 @@
                                     <li><a class="scrollto" href="#galaxy">Meteor Galaxy</a></li>
                                     <li><a class="scrollto" href="#gcp">Google Compute Engine</a></li>
                                     <li><a class="scrollto" href="#aws">Amazon Web Services</a></li>
+                                    <li><a class="scrollto" href="#jelastic">Jelastic</a></li>
                                 </ul><!--//nav-->
                             </li>
                             <li>
