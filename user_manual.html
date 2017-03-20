@@ -355,107 +355,107 @@
                                             list, a <b>Create New</b> button to create connections, and <b>Connect
                                                 Now</b> button to connect to your database instance.</p>
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6 id="create_connection">Add Connection</h6>
-                                            <p>As soon as you press the <b>Create New</b> button on <a
-                                                    href="#connections" class="scrollto">connections modal</a>
-                                                You'll see a new modal window that lets you to create a new connection.
-                                                In this window there're two fields at the very top of the modal window,
-                                                and there's a tab view below them
-                                            </p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="create_connection">Add Connection</h6>
+                                        <p>As soon as you press the <b>Create New</b> button on <a
+                                                href="#connections" class="scrollto">connections modal</a>
+                                            You'll see a new modal window that lets you to create a new connection.
+                                            In this window there're two fields at the very top of the modal window,
+                                            and there's a tab view below them
+                                        </p>
 
-                                            <p>Below, you can find explanation of the tabs that's placed in this modal
-                                                window.</p>
+                                        <p>Below, you can find explanation of the tabs that's placed in this modal
+                                            window.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="screenshot-holder">
+                                            <a href="assets/images/screenshots/add_connection.png"
+                                               data-title="Add Connection Modal Window" data-toggle="lightbox"><img
+                                                    class="img-responsive"
+                                                    src="assets/images/screenshots/add_connection.png"
+                                                    alt="screenshot"></a>
+                                            <a class="mask" href="assets/images/screenshots/add_connection.png"
+                                               data-title="Add Connection Modal Window" data-toggle="lightbox"><i
+                                                    class="icon fa fa-search-plus"></i></a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
-                                            <div class="screenshot-holder">
-                                                <a href="assets/images/screenshots/add_connection.png"
-                                                   data-title="Add Connection Modal Window" data-toggle="lightbox"><img
-                                                        class="img-responsive"
-                                                        src="assets/images/screenshots/add_connection.png"
-                                                        alt="screenshot"></a>
-                                                <a class="mask" href="assets/images/screenshots/add_connection.png"
-                                                   data-title="Add Connection Modal Window" data-toggle="lightbox"><i
-                                                        class="icon fa fa-search-plus"></i></a>
-                                            </div>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>Content of Add Connection Modal Window</h6>
+                                        <ol class="list">
+                                            <li><a class="scrollto" href="#connection_name_url_tab">Connection Name
+                                                & Url</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#connection_tab">Connection Tab</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#authentication_tab">Authentication
+                                                Tab</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#ssl_tab">SSL Tab</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#ssh_tab">SSH Tab</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#options_tab">Options Tab</a>
+                                            </li>
+                                        </ol>
                                     </div>
+                                </div>
 
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6>Content of Add Connection Modal Window</h6>
-                                            <ol class="list">
-                                                <li><a class="scrollto" href="#connection_name_url_tab">Connection Name
-                                                    & Url</a>
-                                                </li>
-                                                <li><a class="scrollto" href="#connection_tab">Connection Tab</a>
-                                                </li>
-                                                <li><a class="scrollto" href="#authentication_tab">Authentication
-                                                    Tab</a>
-                                                </li>
-                                                <li><a class="scrollto" href="#ssl_tab">SSL Tab</a>
-                                                </li>
-                                                <li><a class="scrollto" href="#ssh_tab">SSH Tab</a>
-                                                </li>
-                                                <li><a class="scrollto" href="#options_tab">Options Tab</a>
-                                                </li>
-                                            </ol>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="connection_name_url_tab">Connection Name & Url</h6>
+                                        <p><b>Connection Name</b> is just like a reminder for you, it will be shown
+                                            in the table of
+                                            <a href="#connections" class="scrollto">connections</a> modal
+                                            window. But it's <b>optional</b> to giving a name to your connection.
+                                        </p>
+
+                                        <p><a href="#keywords-18" class="scrollto"> <b>Connection URL</b></a> lets
+                                            you to use your URL instead of entering all parameters to connect to
+                                            your instance. As a huge flexibility, <b>Mongoclient</b> fills
+                                            possible parameters as read-only in the tabs whenever you enter the
+                                            connection url. There's an example URL below that will fill the options
+                                            in the list after it.
+                                            <br/>
+                                            <br/>
+                                            <code>mongodb://db1.example.net,db2.example.net:2500/?replicaSet=test&connectTimeoutMS=300000</code>
+                                            <br/>
+                                        <ol class="list">
+                                            <li>Host <code>db1.example.net</code> with port <code>27017</code>
+                                            </li>
+                                            <li>Host <code>db2.example.net</code> with port <code>2500</code></li>
+                                            <li>Replica set name as <code>test</code></li>
+                                            <li>Connection timeout as <code>300000</code></li>
+                                        </ol>
+
                                     </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6 id="connection_name_url_tab">Connection Name & Url</h6>
-                                            <p><b>Connection Name</b> is just like a reminder for you, it will be shown
-                                                in the table of
-                                                <a href="#connections" class="scrollto">connections</a> modal
-                                                window. But it's <b>optional</b> to giving a name to your connection.
-                                            </p>
-
-                                            <p><a href="#keywords-18" class="scrollto"> <b>Connection URL</b></a> lets
-                                                you to use your URL instead of entering all parameters to connect to
-                                                your instance. As a huge flexibility, <b>Mongoclient</b> fills
-                                                possible parameters as read-only in the tabs whenever you enter the
-                                                connection url. There's an example URL below that will fill the options
-                                                in the list after it.
-                                                <br/>
-                                                <br/>
-                                                <code>mongodb://db1.example.net,db2.example.net:2500/?replicaSet=test&connectTimeoutMS=300000</code>
-                                                <br/>
-                                            <ol class="list">
-                                                <li>Host <code>db1.example.net</code> with port <code>27017</code>
-                                                </li>
-                                                <li>Host <code>db2.example.net</code> with port <code>2500</code></li>
-                                                <li>Replica set name as <code>test</code></li>
-                                                <li>Connection timeout as <code>300000</code></li>
-                                            </ol>
-
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <h6 id="connection_tab">Connection Tab</h6>
-                                            <p>
-                                                <b>Host</b> is the server address that <a class="scrollto"
-                                                                                          href="#keywords-17">mongod</a>
-                                                instance is running on
-                                            </p>
-                                            <p>
-                                                <b>Port</b> is the port of server address that <a class="scrollto"
-                                                                                                  href="#keywords-17">mongod</a>
-                                                instance is running on, <b>by default it's 27017</b>
-                                            </p>
-                                            <p>
-                                                <b>Database Name</b> is database that you want to connect, <b>it's
-                                                required for Mongoclient</b> since Mongoclient depends on this name for
-                                                some features. You can switch to another database anytime after you connect.
-                                            </p>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="connection_tab">Connection Tab</h6>
+                                        <p>
+                                            <b>Host</b> is the server address that <a class="scrollto"
+                                                                                      href="#keywords-17">mongod</a>
+                                            instance is running on
+                                        </p>
+                                        <p>
+                                            <b>Port</b> is the port of server address that <a class="scrollto"
+                                                                                              href="#keywords-17">mongod</a>
+                                            instance is running on, <b>by default it's 27017</b>
+                                        </p>
+                                        <p>
+                                            <b>Database Name</b> is database that you want to connect, <b>it's
+                                            required for Mongoclient</b> since Mongoclient depends on this name for
+                                            some features. You can switch to another database anytime after you connect.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
