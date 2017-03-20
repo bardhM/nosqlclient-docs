@@ -390,17 +390,19 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <h6>Content of Add Connection Modal Window</h6>
                                             <ol class="list">
-                                                <li><a href="connection_name_url_tab">Connection Name & Url</a>
+                                                <li><a class="scrollto" href="#connection_name_url_tab">Connection Name
+                                                    & Url</a>
                                                 </li>
-                                                <li><a href="connection_tab">Connection Tab</a>
+                                                <li><a class="scrollto" href="#connection_tab">Connection Tab</a>
                                                 </li>
-                                                <li><a href="authentication_tab">Authentication Tab</a>
+                                                <li><a class="scrollto" href="#authentication_tab">Authentication
+                                                    Tab</a>
                                                 </li>
-                                                <li><a href="ssl_tab">SSL Tab</a>
+                                                <li><a class="scrollto" href="#ssl_tab">SSL Tab</a>
                                                 </li>
-                                                <li><a href="ssh_tab">SSH Tab</a>
+                                                <li><a class="scrollto" href="#ssh_tab">SSH Tab</a>
                                                 </li>
-                                                <li><a href="options_tab">Options Tab</a>
+                                                <li><a class="scrollto" href="#options_tab">Options Tab</a>
                                                 </li>
                                             </ol>
                                         </div>
@@ -419,7 +421,8 @@
                                                 you to use your URL instead of entering all parameters to connect to
                                                 your instance. As a huge flexibility, <b>Mongoclient</b> fills
                                                 possible parameters as read-only in the tabs whenever you enter the
-                                                connection url. There's an example URL below that will fill the options in the list after it.
+                                                connection url. There's an example URL below that will fill the options
+                                                in the list after it.
                                                 <br/>
                                                 <br/>
                                                 <code>mongodb://db1.example.net,db2.example.net:2500/?replicaSet=test&connectTimeoutMS=300000</code>
@@ -438,9 +441,20 @@
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <h6 id="connection_tab">Connection Tab</h6>
                                             <p>
+                                                <b>Host</b> is the server address that <a class="scrollto"
+                                                                                          href="#keywords-17">mongod</a>
+                                                instance is running on
                                             </p>
-
-
+                                            <p>
+                                                <b>Port</b> is the port of server address that <a class="scrollto"
+                                                                                                  href="#keywords-17">mongod</a>
+                                                instance is running on, <b>by default it's 27017</b>
+                                            </p>
+                                            <p>
+                                                <b>Database Name</b> is database that you want to connect, <b>it's
+                                                required for Mongoclient</b> since Mongoclient depends on this name for
+                                                some features. You can switch to another database anytime after you connect.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
