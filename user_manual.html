@@ -298,7 +298,7 @@
                         </section><!--//doc-section-->
 
                         <section id="design-section" class="doc-section">
-                            <h2 class="section-title">Mongoclient's Design Structure</h2>
+                            <h2 class="section-title">Mongoclient's Application Structure</h2>
                             <div class="section-block">
                                 <h6>Novice Section</h6>
                                 <p>
@@ -594,13 +594,158 @@
                                                 mongodb</a> instance is running on.</p>
 
                                         <p><b>Authentication</b>, you can select either connecting via a private key or
-                                        password.</p>
+                                            password.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="options_tab">6. Options Tab</h6>
+                                        <p>
+                                            These are the options for connection, such as connection/socket timeout,
+                                            replica set name etc...
+                                        </p>
+
+                                        <p><b>Connection Timeout</b> is the time in milliseconds to attempt a connection
+                                            before timing out. <b>This overrides Mongoclient's default</b> <a
+                                                    class="scrollto" href="#settings">settings</a>
+
+                                        <p><b>Socket Timeout</b> is the time in milliseconds to attempt a send or
+                                            receive on a socket before the attempt times out. <b>This overrides
+                                                Mongoclient's default</b> <a
+                                                    class="scrollto" href="#settings">settings</a>
+
+                                        <p><b>Username</b> is the username that you want to use while connecting to
+                                            server that <a class="scrollto"
+                                                           href="#keywords-17">
+                                                mongodb</a> instance is running on.</p>
+
+                                        <p><b>Replica Name</b>, if you're trying to connect to a replica set, you <b>must</b>
+                                            enter this to make Mongoclient aware of it.</p>
+
+                                        <p><b>Read Preference</b> field specifies the replica set read preference for
+                                            this connection.<b>By default it's set to primary</b>
+                                        </p>
+
+                                        <p><b>Connect With No Primary</b>, this flag lets you to connect your replica
+                                            set even if there's no primary is up at the moment</p>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h6 id="settings">Settings</h6>
+                                    <p>Mongoclient has its own settings which can be set when either you're connected to
+                                        a <a
+                                                href="#connections" class="scrollto">connection</a> or disconnected</p>
+
+                                    <ul class="list">
+                                        <li><b>Max allowed fetch size for FIND query</b>
+                                        </li>
+                                        <p>With this settings you can prevent no limit <b>FIND</b> queries, and
+                                            restrict these queries to given size as <b>MB</b>, <b>0 = No restriction</b>
+                                        </p>
+                                        <li><b>Socket timeout</b></li>
+                                        <p>This settings is the time in milliseconds to attempt a send or
+                                            receive on a socket before the attempt times out, and is being used for
+                                            every connection unless it's overriden by the <a href="#options_tab"
+                                                                                             class="scrollto">connection
+                                                options</a>, <b>0=No timeout</b></p>
+
+                                        <li><b>Connection timeout</b></li>
+                                        <p>This settings is is the time in milliseconds to attempt a connection before
+                                            timing out, and is being used for
+                                            every connection unless it's overriden by the <a href="#options_tab"
+                                                                                             class="scrollto">connection
+                                                options </a><b>0=No timeout</b></p>
+
+                                        <li><b>Database statistics scheduler</b></li>
+                                        <p>Mongoclient populates <a href="#db_stats" class="scrollto">database stats</a>
+                                            charts at this interval it's in <b>miliseconds</b></p>
+
+                                        <li><b>Size information in</b></li>
+                                        <p>At certain sections, Mongoclient shows size information, you can switch these
+                                            information between <b>KB, MB or bytes.</b></p>
+
+                                        <li><b>Default result view</b></li>
+                                        <p>Mongoclient uses JSONEditor and ACEEditor to show result views, you can
+                                            change the default result view with this setting </p>
+
+                                        <li><b>Autocomplete feature for selectors</b></li>
+                                        <p>Enable/disable autocomplete feature on queries, it can cause trouble on huge
+                                            collections, since Mongoclient needs to scan collection fields for
+                                            autocompletion</p>
+
+                                        <li><b>Single tab for results</b></li>
+                                        <p>By default each query execution opens another tab, you can change this
+                                            behaviour by enabling this</p>
+
+                                        <li><b>Show live chat</b></li>
+                                        <p>Enable live support from inside of Mongoclient !</p>
+
+                                        <li><b>Show database statistics</b></li>
+                                        <p>To prevent querying database at regular intervals at the <a href="db_stats"
+                                                                                                       class="scrollto">database
+                                            stats page</a> for statistics, you can
+                                            disable this feature</p>
+
+                                        <li><b>Local dump path</b></li>
+                                        <p>Mongoclient saves dumps to your local machine if you use the <a
+                                                href="dump_restore" class="scrollto">dump</a> section, you can specify
+                                            the main path with this setting </p>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h6 id="mongoclient_data">Import/Export Mongoclient Data</h6>
+                                    <p>If you prefer to use <a href="start.html#download-section"
+                                                               target="_blank">desktop distribution</a> of Mongoclient,
+                                        you may want to keep your connections and settings for each update of
+                                        Mongoclient. With <b>Export Mongoclient Data</b> button you can export your
+                                        connections and settings, and import them to another version by choosing <b>Import
+                                            Mongoclient Data</b> <a href="start.html#docker"
+                                                                    target="_blank">Docker </a> build is always a better
+                                        choice to use Mongoclient</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h6 id="db_stats">Database Stats</h6>
+                                    <p>Mongoclient queries your database at regular intervals to populate performance
+                                        charts and tables at the <b>Database Stats</b> page</p> This feature can be
+                                    disabled, or regular interval can be configured at <a class="scrollto"
+                                                                                          href="#settings">settings</a>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/screenshots/db_stats.png"
+                                                   data-title="Database Stats" data-toggle="lightbox"><img
+                                                        class="img-responsive"
+                                                        src="assets/images/screenshots/db_stats.png"
+                                                        alt="screenshot"></a>
+                                                <a class="mask" href="assets/images/screenshots/db_stats.png"
+                                                   data-title="Database Stats" data-toggle="lightbox"><i
+                                                        class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>You can find detailed information about how these charts are being populated
+                                        below.</p>
+                                    <ul class="list">
+                                        <li><b>Memory Usage</b>
+                                        </li>
+                                        <p>
+
+                                        </p>
+                                </div>
+                            </div>
+
                         </section>
-
-
                     </div><!--//content-inner-->
                 </div><!--//doc-content-->
                 <div class="doc-sidebar hidden-xs">
@@ -608,9 +753,14 @@
                         <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
                             <li><a class="scrollto" href="#toc-section">Table of Contents</a></li>
                             <li><a class="scrollto" href="#keywords-section">Keywords</a></li>
-                            <li><a class="scrollto" href="#design-section">Design Structure</a>
+                            <li><a class="scrollto" href="#design-section">Application Structure</a>
                                 <ul class="nav doc-sub-menu">
                                     <li><a class="scrollto" href="#connections">Connections</a></li>
+                                    <li><a class="scrollto" href="#settings">Settings</a></li>
+                                    <li><a class="scrollto" href="#mongoclient_data">Import/Export Mongoclient Data</a>
+                                    </li>
+                                    <li><a class="scrollto" href="#db_stats">Database Stats</a>
+                                    </li>
                                 </ul><!--//nav-->
                             </li>
                         </ul><!--//doc-menu-->
