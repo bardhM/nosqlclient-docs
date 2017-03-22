@@ -66,7 +66,7 @@
                             <h2 class="section-title">Table of Contents</h2>
                             <div class="section-block">
                                 <p>
-                                    This guide covers, <b>how to</b> contribute/use Mongoclient. Each section in here is
+                                    This guide covers, <b>how to</b> use Mongoclient. Each section in here is
                                     marked as one of <b>Novice/Proficient/Expert</b> levels, based on how deep knowledge
                                     is required to understand section content.
                                 </p>
@@ -411,7 +411,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h6 id="connection_name_url_tab">Connection Name & Url</h6>
+                                        <h6 id="connection_name_url_tab">1. Connection Name & Url</h6>
                                         <p><b>Connection Name</b> is just like a reminder for you, it will be shown
                                             in the table of
                                             <a href="#connections" class="scrollto">connections</a> modal
@@ -440,7 +440,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h6 id="connection_tab">Connection Tab</h6>
+                                        <h6 id="connection_tab">2. Connection Tab</h6>
                                         <p>
                                             <b>Host</b> is the server address that <a class="scrollto"
                                                                                       href="#keywords-17">mongod</a>
@@ -461,9 +461,140 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h6 id="authentication_tab">Authentication Tab</h6>
+                                        <h6 id="authentication_tab">3. Authentication Tab</h6>
                                         <p>
+                                            MongoDB supports a few authentiation types, and Mongoclient supports all of
+                                            them including <b>enterprise authentication types</b>
                                         </p>
+
+                                        <ol class="list">
+                                            <li><a class="scrollto" href="#authentication_scram">Scram SHA-1</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#authentication_cr">Mongodb-CR</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#authentication_x509">X509</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#authentication_gssapi">Kerberos (GSSAPI)</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#authentication_ldap">LDAP (Plain)</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="authentication_scram">3.1. Scram SHA-1</h6>
+                                        <p>SCRAM-SHA-1 is the default authentication mechanism for MongoDB >= 3.0.
+                                            There're three fields to fill for this authentication type</p>
+                                        <p>
+                                            <b>Username</b>, <b>password</b> and <b>authentication database</b>. <b>Authentication
+                                            DB</b>
+                                            is the database where the user was created, and
+                                            together with the user’s name, serves to identify the user. You can
+                                            leave it
+                                            empty
+                                            if user is defined in the database that you wish to connect
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="authentication_cr">3.2. MongoDB CR</h6>
+                                        <p>MongoDB CR was the default authentication mechanism for MongoDB < 3.0.
+                                            There're three fields to fill for this authentication type just like <a
+                                                    href="#authentication_scram" class="scrollto">Scram-SHA-1</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="authentication_x509">3.3. X509</h6>
+                                        <p>Starting from version MongoDB >= 2.6, MongoDB supports x.509 certificate
+                                            authentication for client authentication and internal authentication of the
+                                            members of replica sets and sharded clusters. X.509 certificate
+                                            authentication requires a secure <b>TLS/SSL connection</b>, and <b>Mongoclient</b>
+                                            provides secure connection.</p>
+
+                                        <p><b>Username</b> field indicates the subject from the certificate</p>
+
+                                        <p><b>Root CA File</b> field keeps the certificate that should be used to
+                                            validate
+                                            server certificate.</p>
+
+                                        <p><b>Certificate</b> is for the presenting current client certificate</p>
+
+                                        <p><b>Passphrase</b> should be filled if client's certificate has one, otherwise
+                                            can be empty</p>
+
+                                        <p><b>Certificate Key File</b> is for the private key if client has one</p>
+
+                                        <p><b>Disable Hostname Verification</b>, by default, <b>Mongoclient</b> ensures
+                                            that the
+                                            hostname included in the server’s SSL certificate(s) matches the hostname(s)
+                                            provided in the URI connection string. If you need to disable the hostname
+                                            verification, but otherwise validate the server’s certificate check this.
+                                            This behaviour comes from <b>NodeJS MongoDB Driver</b></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="authentication_gssapi">3.4. Kerberos (GSSAPI)</h6>
+                                        <p>Contact us by sending a mail to <a href="mailto:sales@mongoclient.com">sales@mongoclient.com</a>
+                                            for more info about this enterprise type authentication
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="authentication_ldap">3.5. LDAP (Plain)</h6>
+                                        <p>Contact us by sending a mail to <a href="mailto:sales@mongoclient.com">sales@mongoclient.com</a>
+                                            for more info about this enterprise type authentication
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="ssl_tab">4. SSL Tab</h6>
+                                        <p>
+                                            MongoDB & Mongoclient supports using SSL even without X509 authentication.
+                                            <b>If you're already using X509 authentication this tab will be disabled
+                                                automatically since internally it will use SSL for X509</b> Fields
+                                            that's placed here
+                                            are the same as <a href="#authentication_x509">X509 authentication</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="ssh_tab">5. SSH Tab</h6>
+                                        <p>
+                                            Mongoclient supports SSH tunneling for your connections, but in SSH
+                                            tunneling connections you can't use <b>Dump</b>
+                                            section for now. Enabling SSH tunnel changes nothing for the other options,
+                                            so you need to fill other connection options and tabs just like you're
+                                            connecting to your <b>local</b> mongodb instance.
+                                        </p>
+
+                                        <p><b>Hostname</b> is the server address that <a class="scrollto"
+                                                                                         href="#keywords-17">
+                                            mongodb</a> instance is running on.</p>
+                                        <p><b>Port</b> is the port of the server address that <a class="scrollto"
+                                                                                                 href="#keywords-17">
+                                            mongodb</a> instance is running on.</p>
+
+                                        <p><b>Username</b> is the username that you want to use while connecting to
+                                            server that <a class="scrollto"
+                                                           href="#keywords-17">
+                                                mongodb</a> instance is running on.</p>
+
+                                        <p>Authentication</p>, you can select either connecting via a private key or
+                                        password.
                                     </div>
                                 </div>
                             </div>
