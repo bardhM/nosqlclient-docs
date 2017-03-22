@@ -300,16 +300,18 @@
                         <section id="design-section" class="doc-section">
                             <h2 class="section-title">Mongoclient's Application Structure</h2>
                             <div class="section-block">
-                                <h6>Novice Section</h6>
+                                <h6>Multiple Levels Section (Novice/Proficient/Expert)</h6>
                                 <p>
                                     Mongoclient has been designed by emphasising on end user's need, so it offers an
                                     intuitive design and lets you to query your database with a few clicks. There's no
                                     over-thought-out buttons or labels anywhere.
                                 </p>
+                                <p>This section includes multiple level information about Mongoclient, you can see these
+                                    levels near the title of the corresponding section </p>
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h6 id="connections">Connections</h6>
+                                        <h6 id="connections">Connections (Novice Level)</h6>
                                         <p>When you first <a class="scrollto" href="start.html#installation-section">
                                             deploy, install</a>
                                             or open Mongoclient an empty screen with two
@@ -635,11 +637,14 @@
 
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h6 id="settings">Settings</h6>
+                                    <h6 id="settings">Settings (Proficient Level)</h6>
                                     <p>Mongoclient has its own settings which can be set when either you're connected to
                                         a <a
                                                 href="#connections" class="scrollto">connection</a> or disconnected</p>
 
+                                    <p>You may want to change nothing here if you're a <a href="#design-section"
+                                                                                          class="scrollto">beginner</a>
+                                    </p>
                                     <ul class="list">
                                         <li><b>Max allowed fetch size for FIND query</b>
                                         </li>
@@ -700,7 +705,7 @@
 
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h6 id="mongoclient_data">Import/Export Mongoclient Data</h6>
+                                    <h6 id="mongoclient_data">Import/Export Mongoclient Data (Novice Level)</h6>
                                     <p>If you prefer to use <a href="start.html#download-section"
                                                                target="_blank">desktop distribution</a> of Mongoclient,
                                         you may want to keep your connections and settings for each update of
@@ -735,13 +740,87 @@
                                     </div>
 
                                     <p>You can find detailed information about how these charts are being populated
-                                        below.</p>
+                                        below. All charts data comes from <a
+                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/"
+                                                target="_blank">serverStatus</a> query of mongodb</p>
                                     <ul class="list">
                                         <li><b>Memory Usage</b>
                                         </li>
                                         <p>
+                                            <i>Virtual line</i> indicates <a
+                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.virtual"
+                                                target="_blank">mem.virtual</a> value
+                                            <br/>
+                                            <i>Mapped line</i> indicates <a
+                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.mapped"
+                                                target="_blank">mem.mapped</a> value
+                                            <br/>
+                                            <i>Current line</i> indicates <a
+                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.resident"
+                                                target="_blank">mem.resident</a> value</p>
 
+                                        <li><b>Queued Read/Write </b></li>
+                                        <p>
+                                            <i>Readers line</i> indicates <a target="_blank"
+                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.currentQueue.readers">globalLock.currentQueue.readers</a>
+                                            value
+                                            <br/>
+                                            <i>Writers line</i> indicates <a target="_blank"
+                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.currentQueue.writers">globalLock.currentQueue.writers</a>
+                                            value
                                         </p>
+
+                                        <li><b>Active Read/Write </b></li>
+                                        <p>
+                                            <i>Readers line</i> indicates <a target="_blank"
+                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.readers">globalLock.activeClients.readers</a>
+                                            value
+                                            <br/>
+                                            <i>Writers line</i> indicates <a target="_blank"
+                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.writers">globalLock.activeClients.writers</a>
+                                            value
+                                            <br/>
+                                            <i>Total text</i> indicates <a target="_blank"
+                                                                           href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.total">globalLock.activeClients.total</a>
+                                            value
+                                        </p>
+
+                                        <li><b>Connections</b></li>
+                                        <p>
+                                            <i>Active line</i> indicates <a target="_blank"
+                                                                            href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.current">connections.current</a>
+                                            value
+                                            <br/>
+                                            <i>Total Created line</i> indicates <a target="_blank"
+                                                                                   href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.totalCreated">connections.totalCreated</a>
+                                            value
+                                            <br/>
+                                            <i>Available text</i> indicates <a target="_blank"
+                                                                               href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.available">connections.available</a>
+                                            value
+                                            <br/>
+                                        </p>
+
+                                        <li><b>Network</b></li>
+                                        <p>
+                                            <i>Incoming line</i> indicates <a target="_blank"
+                                                                              href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.bytesIn">network.bytesIn</a>
+                                            value
+                                            <br/>
+                                            <i>Outgoing line</i> indicates <a target="_blank"
+                                                                              href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.bytesOut">network.bytesOut</a>
+                                            value
+                                            <br/>
+                                            <i>Total Requests text</i> indicates <a target="_blank"
+                                                                                    href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.numRequests">network.numRequests</a>
+                                            value
+                                        </p>
+
+                                        <li><b>Operation Counters</b></li>
+                                        <p>These values comes from <a target="_blank"
+                                                                      href="https://docs.mongodb.com/manual/reference/command/serverStatus/#opcounters">opCounters</a>
+                                            object</p>
+                                    </ul>
                                 </div>
                             </div>
 
