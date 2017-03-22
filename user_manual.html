@@ -311,7 +311,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h6 id="connections">Connections (Novice Level)</h6>
+                                        <h4 id="connections">Connections (Novice Level)</h4>
                                         <p>When you first <a class="scrollto" href="start.html#installation-section">
                                             deploy, install</a>
                                             or open Mongoclient an empty screen with two
@@ -637,7 +637,7 @@
 
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h6 id="settings">Settings (Proficient Level)</h6>
+                                    <h4 id="settings">Settings (Proficient Level)</h4>
                                     <p>Mongoclient has its own settings which can be set when either you're connected to
                                         a <a
                                                 href="#connections" class="scrollto">connection</a> or disconnected</p>
@@ -705,7 +705,7 @@
 
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h6 id="mongoclient_data">Import/Export Mongoclient Data (Novice Level)</h6>
+                                    <h4 id="mongoclient_data">Import/Export Mongoclient Data (Novice Level)</h4>
                                     <p>If you prefer to use <a href="start.html#download-section"
                                                                target="_blank">desktop distribution</a> of Mongoclient,
                                         you may want to keep your connections and settings for each update of
@@ -719,7 +719,7 @@
 
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h6 id="db_stats">Database Stats</h6>
+                                    <h4 id="db_stats">Database Stats (Expert Level)</h4>
                                     <p>Mongoclient queries your database at regular intervals to populate performance
                                         charts and tables at the <b>Database Stats</b> page</p> This feature can be
                                     disabled, or regular interval can be configured at <a class="scrollto"
@@ -822,10 +822,25 @@
                                             object</p>
                                     </ul>
 
-                                    <p><b>Collections Read/Write table</b>  </p>
+                                    <p><b>Collections Read/Write table</b> shows calculated data that comes from <a
+                                            href="https://docs.mongodb.com/manual/reference/command/top/"
+                                            target="_blank">top query</a> by Mongoclient.
+                                        <br/>
+                                        <b>Read</b> column is being calculated with the following formula:
+                                        <b>(readTime - previousReadTime) / (readCount - previousReadCount)</b>
+                                        <br/>
+                                        <b>Write</b> column is being calculated with the following formula:
+                                        <b>(writeTime - previousWriteTime) / (writeCount - previousWriteCount)</b>
+                                    </p>
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h5 id="user_management">User Management (Proficient Level)</h5>
+                                    <p></p>
+                                </div>
+                            </div>
                         </section>
                     </div><!--//content-inner-->
                 </div><!--//doc-content-->
@@ -842,6 +857,7 @@
                                     </li>
                                     <li><a class="scrollto" href="#db_stats">Database Stats</a>
                                     </li>
+                                    <li><a class="scrollto" href="#user_management">User Management</a></li>
                                 </ul><!--//nav-->
                             </li>
                         </ul><!--//doc-menu-->
