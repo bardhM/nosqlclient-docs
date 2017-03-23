@@ -1220,7 +1220,9 @@
                                     <h4 id="index_management">Index Management (Expert Level)</h4>
                                     <p>Mongoclient has a very unique way to manage indexes. Each index type is being
                                         coloured differently and you can add new indexes with a few click without
-                                        struggling design obstacles and queries. </p>
+                                        struggling design obstacles and queries. Changing collection from the combobox
+                                        refreshes the indexes list. These collections comes from the <b>active database
+                                            connection</b></p>
 
                                     <div class="row">
                                         <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
@@ -1239,10 +1241,77 @@
                                     <p>You can find what's happening behind the scenes for this section at below.</p>
                                     <ul class="list">
                                         <li><b>Listing indexes</b>
-                                            <p></p>
+                                            <p>Mongoclient executes <b>three</b> queries to populate whole data of index
+                                                management section. These are <a
+                                                        href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
+                                                        target="_blank">getIndexes</a> to get index names and
+                                                properties, <a
+                                                        href="https://docs.mongodb.com/manual/reference/method/db.stats/"
+                                                        target="_blank">stats</a> to get index sizes,
+                                                <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/indexStats/">indexStats
+                                                    aggregation</a> to get index usage statistics <b>(MongoDB >=
+                                                    3.2)</b></p>
+                                        </li>
+
+                                        <li id="view_index"><b>Viewing an index</b>
+                                            <p>After selecting an index from table and clicking <i
+                                                    class="fa fa-book"></i> button, you'll be able to see the details of
+                                                the index in an another window. Mongoclient executes <a
+                                                        href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
+                                                        target="_blank">getIndexes</a> with the selected index name to
+                                                fetch these details.</p>
+                                        </li>
+
+                                        <li><b>Viewing index as raw</b>
+                                            <p>
+                                                This works same as <a href="#view_index" class="scrollto">viewing an
+                                                index</a>, except instead of populating UI, shows the raw JSON data.
+                                                You can reach this raw json by clicking <i class="fa fa-leaf"></i>
+                                                button after selecting an index from the table
+                                            </p>
+                                        </li>
+
+                                        <li><b>Dropping index</b>
+                                            <p>
+                                                If you click <i class="fa fa-remove"></i> button, Mongoclient executes
+                                                <a href="https://docs.mongodb.com/manual/reference/method/db.collection.dropIndex/"
+                                                   target="_blank">dropIndex</a> to drop the selected index.
+                                            </p>
+                                        </li>
+
+                                        <li><b>Adding index</b>
+                                            <p>
+                                                <b>Add Index</b> button that's placed at the very bottom of the page,
+                                                lets you to add a new index. In the opened window there are <b>four
+                                                tabs</b>. And only general has two fields that are required, all other
+                                                tabs have optional options.
+                                                <br/>
+                                                <b>General</b> tab lets you to specify <b>index name</b> (required),
+                                                select <b>fields
+                                                with their types</b> (at least one field is required), and select <b>index
+                                                properties</b> (optional).
+                                                <br/>
+                                                <b>Text Options</b> tab has the options for the <b>text</b> index, if
+                                                you've selected one in the <b>General tab</b>
+                                                <br/>
+                                                <b>Geo Options</b> tab has three sections for three types of geo indexes
+                                                of MongoDB (2D, 2D Sphere, Geo Haystack), each section has related
+                                                options and only valid if you've selected the corresponding type of
+                                                index from the <b>General tab</b>
+                                                <br/>
+                                                <b>Collation</b> is valid only for <b>MongoDB >=3.4</b>, you can read
+                                                more <a href="https://docs.mongodb.com/manual/reference/collation/"
+                                                        target="_blank">from here</a>
+                                            </p>
                                         </li>
                                     </ul>
+                                </div>
+                            </div>
 
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="admin_queries">Admin Queries (Expert Level)</h4>
+                                    <p></p>
                                 </div>
                             </div>
 
@@ -1266,6 +1335,7 @@
                                     <li><a class="scrollto" href="#dump_restore_import">Dump/Restore/Import</a></li>
                                     <li><a class="scrollto" href="#file_management">File Management</a></li>
                                     <li><a class="scrollto" href="#index_management">Index Management</a></li>
+                                    <li><a class="scrollto" href="#admin_queries">Admin Queries</a></li>
                                 </ul><!--//nav-->
                             </li>
                         </ul><!--//doc-menu-->
