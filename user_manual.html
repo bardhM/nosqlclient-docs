@@ -837,16 +837,266 @@
 
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h5 id="user_management">User Management (Proficient Level)</h5>
-                                    <p>You can either manage your <b>admin</b> or connected database's users in
+                                    <h4 id="user_management">User Management (Proficient Level)</h4>
+                                    <p>You can either manage your <code>admin</code> or <b>connected database's</b>
+                                        users/roles in
                                         Mongoclient. If you check <b>right upper corner checkbox</b>, and click <b>Refresh</b>
                                         button at the very bottom of the page, it means you've switched to <b>admin</b>
-                                        database instead of the current </p>
-
-                                    <p>Mongoclient crawls latest documentation for you from the MongoDB official
+                                        database instead of the current. User management tree is being populated via
+                                        executing command <code>{
+                                            usersInfo: 1,
+                                            showCredentials: true
+                                            }</code> on the mentioned database. You can read more about this command by
+                                        following <a
+                                                href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
+                                                target="_blank">here</a>
+                                        <br/>
+                                        Mongoclient crawls latest documentation for you from the MongoDB official
                                         documentation whenever you click one of the <b>role, resource or privilege</b>
-                                        element from the tree. So you don't have to search MongoDB documentation all the time.
+                                        elements from the tree. So you don't have to search MongoDB documentation all
+                                        the time.
                                     </p>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/screenshots/user_management.png"
+                                                   data-title="User Management" data-toggle="lightbox"><img
+                                                        class="img-responsive"
+                                                        src="assets/images/screenshots/user_management.png"
+                                                        alt="screenshot"></a>
+                                                <a class="mask" href="assets/images/screenshots/user_management.png"
+                                                   data-title="User Management" data-toggle="lightbox"><i
+                                                        class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>There will be <b>different menus at the right upper corner</b> regarding the
+                                        selected element from the user tree.</p>
+
+                                    <ul class="list">
+                                        <li><b>Selecting database <i class="fa fa-database"></i></b>
+                                        </li>
+                                        <p>
+                                            With this selection you can see and use <a href="#manage_roles"
+                                                                                       class="scrollto">Manage Roles</a>,
+                                            and <a href="#manage_users" class="scrollto">Manage Users</a> buttons
+                                        </p>
+                                        <li><b>Selecting user <i class="fa fa-user"></i></b>
+                                        </li>
+                                        <p>
+                                            With this selection you can see and use <a href="#edit_user"
+                                                                                       class="scrollto">Edit User</a>
+                                            button
+                                        </p>
+                                    </ul>
+
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Useful Tip</h4>
+                                            <p>You can add custom values to most of the comboboxes in user management
+                                                section by typing your value in the combobox's input and pressing <b>Enter</b>.
+                                                Also you can de-select a value by pressing <i class="fa fa-remove"></i>
+                                            </p>
+                                        </div><!--//content-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h6 id="manage_roles">Manage Roles</h6>
+                                    <p>To populate table that's placed in the <b>Manage Roles</b> window,
+                                        Mongoclient executes <code>{ rolesInfo: 1, showBuiltinRoles: true }</code> on
+                                        the database (admin/selected). <a
+                                                href="https://docs.mongodb.com/manual/reference/command/rolesInfo/"
+                                                target="_blank">Click here</a> for more info about this command.</p>
+                                    <p>In this section, you can do following actions.</p>
+
+                                    <ul class="list">
+                                        <li id="edit_custom_role"><b>Edit custom role</b>, (built-in roles can not be
+                                            edited)
+                                            <p>
+                                                You can add new, delete or edit existing privileges within this section.
+                                                Whenever you click the <i class="fa fa-edit"></i> icon for a custom
+                                                role,
+                                                Mongoclient executes <code>{ rolesInfo: {role: roleName, db: dbName},
+                                                showPrivileges: true}</code> command on the selected database. This
+                                                section
+                                                have two tabs, <b>privileges</b> and <b>roles to inherit</b>
+                                            </p>
+                                            <h6>Privileges</h6>
+                                            <p>
+                                                If you click one of the <b>Add Privilege</b> or <i
+                                                    class="fa fa-edit"></i>
+                                                (Edit Privilege) buttons, you'll see another window that includes three
+                                                comboboxes.
+                                                <br/>
+                                                <b>DB / Resource</b> combobox is being filled by <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
+                                                    target="_blank">list databases</a> command which is being executed
+                                                against <b>admin</b>
+                                                <br/>
+                                                <b>Collection</b> combobox is being filled whenever a database is
+                                                selected
+                                                from <b>DB / Resource</b> combobox by list collections command.
+                                                <br/>
+                                                <b>Actions</b> combobox is being filled by <b>crawling</b> <a
+                                                    href="https://docs.mongodb.org/manual/reference/privilege-actions"
+                                                    target="_blank">MongoDB official documentation</a>, but no worries,
+                                                this
+                                                crawling operation happens once, and Mongoclient caches these actions in
+                                                it's MongoDB to show afterwards.
+                                            </p>
+                                            <h6>Roles to Inherit</h6>
+                                            <p>Every role in MongoDB can inherit multiple roles, by clicking <b>Add Role
+                                                to Inherit</b> button you'll see another window that has two comboboxes.
+                                                <br/>
+                                                <b>Database</b> combobox is being filled by <a
+                                                        href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
+                                                        target="_blank">list databases</a> command which is being
+                                                executed
+                                                against <b>admin</b>
+                                                <br/>
+                                                <b>Role</b> combobox is being filled by executing command <code>{
+                                                    rolesInfo: 1,
+                                                    showBuiltinRoles: true
+                                                    }</code> on the mentioned database.
+                                                <br/>
+                                                When you click <b>Add</b> at <b>Add Role to Inherit</b> window, you'll
+                                                realize window won't disappear, that's because you can select and add
+                                                more roles on-the-fly and nothing will be saved unless you close this
+                                                window and click <b>Save</b> in the previous window.
+                                            </p>
+                                        </li>
+
+                                        <li><b>Delete custom role</b>, (built-in roles can not be deleted)
+                                            <p>
+                                                Mongoclient executes <code>{dropRole: roleName}</code> on the mentioned
+                                                database to drop role, you can read more about this command by <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/dropRole/#dbcmd.dropRole"
+                                                    target="_blank">clicking here</a>. To delete a role you need to
+                                                select a role from the table and click <i class="fa fa-remove"></i>
+                                                button.
+                                            </p>
+                                        </li>
+
+                                        <li><b>Add custom role</b>
+                                            <p>
+                                                This section is same as <a href="#edit_custom_role" class="scrollto">editing
+                                                a custom role</a> except in here you can <b> add a new role</b> instead
+                                                of <b>editing existing one.</b> To reach this section, you need to click
+                                                <b>Add Role</b> button from the <b>Manage Roles</b> window
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h6 id="manage_users">Manage Users</h6>
+                                    <p>To populate table that's placed in the <b>Manage Users</b>,
+                                        Mongoclient executes <code>{ usersInfo: 1, showCredentials: true}</code> on
+                                        the database (admin/selected). <a
+                                                href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
+                                                target="_blank">Click here</a> for more info about this command.</p>
+                                    <p>In this section, you can do following actions.</p>
+
+                                    <ul class="list">
+                                        <li id="edit_user"><b>Edit user</b>
+                                            <p>
+                                                Editing user is possible either clicking <i class="fa fa-edit"></i>
+                                                after selecting a user from the table that's placed in the <b>Edit
+                                                User</b> window, or selecting user from the <a href="#user_management"
+                                                                                               class="scrollto">user
+                                                tree</a> and clicking <b>Edit User</b> button from the right upper
+                                                corner. You can edit user's roles or custom data as it's placed in
+                                                different tabs in the <b>Edit User</b> window.
+                                                <br/>
+                                                Changes in this section will be applied after you click the <b>Save</b>
+                                                button, Mongoclient executes <code>updateUser</code> command to save
+                                                user. <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/updateUser/"
+                                                    target="_blank"> Click here </a>for more info.
+                                            </p>
+                                            <h6>Username & Password</h6>
+                                            <p>To change the username or password of selected user you need to fill
+                                                input fields at the top of <b>Edit User</b> window. If you <b>leave
+                                                    password input empty</b>, password won't be updated by Mongoclient
+                                            </p>
+
+                                            <h6>Roles</h6>
+                                            <p>
+                                                You can delete existing roles of user by selecting a role from the table
+                                                and clicking <i class="fa fa-remove"></i>.
+                                                <br/>
+                                                <b>Add Role</b> button shows a new window that lets you to add a role
+                                                either by selecting from a table or selecting database and role from the
+                                                top of window. In this section, table and top two comboboxes (database,
+                                                role) are being populated by commands <code>rolesInfo</code> and <code>listDatabases</code>,
+                                                <a href="https://docs.mongodb.com/manual/reference/command/rolesInfo/"
+                                                   target="_blank">click here </a> for rolesInfo, and <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
+                                                    target="_blank">
+                                                click here </a>for listDatabases.
+                                            </p>
+                                            <h6>Custom Data</h6>
+                                            <p>
+                                                You can assign a custom data object to user, custom data objects valid
+                                                for
+                                                <b>MongoDB >= 2.6</b>
+                                            </p>
+                                        </li>
+                                        <li><b>Show custom data</b>
+                                            <p>
+                                                If you don't need to change anything of user, you can
+                                                see user's custom data by clicking <i
+                                                    class="fa fa-book"></i> after selecting a user from the table in the
+                                                <b>Manage Users</b> window
+                                            </p>
+                                        </li>
+                                        <li><b>Delete user</b>
+                                            <p>
+                                                Mongoclient executes <code>{dropUser: userName}</code> on the mentioned
+                                                database to drop user, you can read more about this command by <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/dropUser"
+                                                    target="_blank">clicking here</a>. To delete a user you need to
+                                                select a user from the table and click <i class="fa fa-remove"></i>
+                                                button.
+                                            </p>
+                                        </li>
+
+                                        <li><b>Add new user</b>
+                                            <p>
+                                                This section is same as <a href="#edit_user" class="scrollto">editing
+                                                a user</a> except in here you can <b> add a new user</b> instead
+                                                of <b>editing existing one.</b> To reach this section, you need to click
+                                                <b>Add User</b> button from the <b>Manage Users</b> window
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="dump_restore_import">Dump/Restore/Import (Novice Level)</h4>
+                                    <div class="callout-block callout-danger">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-warning"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Warning</h4>
+                                            <p>This section is <b>not for PRODUCTION</b> use as of current version of
+                                                Mongoclient, it's experimantal and can be used on <b>TEST</b>
+                                                environments
+                                            </p>
+                                        </div><!--//content-->
+                                    </div>
+                                    <p></p>
                                 </div>
                             </div>
                         </section>
@@ -866,6 +1116,7 @@
                                     <li><a class="scrollto" href="#db_stats">Database Stats</a>
                                     </li>
                                     <li><a class="scrollto" href="#user_management">User Management</a></li>
+                                    <li><a class="scrollto" href="#dump_restore_import">Dump/Restore/Import</a></li>
                                 </ul><!--//nav-->
                             </li>
                         </ul><!--//doc-menu-->
