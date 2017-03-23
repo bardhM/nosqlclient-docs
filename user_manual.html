@@ -1090,15 +1090,130 @@
                                         </div><!--//icon-holder-->
                                         <div class="content">
                                             <h4 class="callout-title">Warning</h4>
-                                            <p>This section is <b>not for PRODUCTION</b> use as of current version of
-                                                Mongoclient, it's experimantal and can be used on <b>TEST</b>
-                                                environments
+                                            <p>This section is <b>NOT FOR PRODUCTION USE </b> as of current version of
+                                                Mongoclient, and can be used on <b>TEST</b> or <b>LOCAL</b>
+                                                environments.
                                             </p>
                                         </div><!--//content-->
                                     </div>
-                                    <p></p>
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/screenshots/dump_restore.png"
+                                                   data-title="Dump/Restore/Import" data-toggle="lightbox"><img
+                                                        class="img-responsive"
+                                                        src="assets/images/screenshots/dump_restore.png"
+                                                        alt="screenshot"></a>
+                                                <a class="mask" href="assets/images/screenshots/dump_restore.png"
+                                                   data-title="Dump/Restore/Import" data-toggle="lightbox"><i
+                                                        class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>This section consists of two parts.</p>
+                                    <ul class="list">
+                                        <li><b>Import Data</b>
+                                            <p>
+                                                If you have an extended JSON file which has been exported via <a
+                                                    href="https://docs.mongodb.com/manual/reference/program/mongoexport/"
+                                                    target="_blank">mongoexport</a>
+                                                with <b>--jsonArray</b> flag, you can use this section to import this
+                                                extended JSON into one of your collections.
+                                            </p>
+                                        </li>
+
+                                        <li><b>Dump/Restore</b>
+                                            <p>
+                                                If you want to take a dump of your currently connected database, you can
+                                                simply click <b>Take Dump</b> button. The local path that dump is
+                                                written can be changed from <a class="scrollto"
+                                                                               href="#settings">settings</a>
+                                                <br/>
+                                                Since dump process uses a <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/parallelCollectionScan/"
+                                                    target="_blank">paralel scan of collections</a> , it's always good
+                                                not to use this feature on production.
+                                            </p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="file_management">File Management (Novice Level)</h4>
+                                    <p>
+                                        Mongoclient comes with ease of managing your GridFS collections with a few
+                                        clicks, instead of queries. At the file management section, you can <b>download,
+                                        upload, delete, filter</b> your files with the buttons.
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/screenshots/file_managemnet.png"
+                                                   data-title="File Management" data-toggle="lightbox"><img
+                                                        class="img-responsive"
+                                                        src="assets/images/screenshots/file_managemnet.png"
+                                                        alt="screenshot"></a>
+                                                <a class="mask" href="assets/images/screenshots/file_managemnet.png"
+                                                   data-title="File Management" data-toggle="lightbox"><i
+                                                        class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>In this section you can delete multiple files that match with the entered
+                                        selector by clicking <b>Delete</b> button, or refresh file list which has been
+                                        populated at the below table by clicking <b>Refresh</b> button. Following
+                                        actions happening here at the behind
+                                        the scenes.</p>
+                                    <ul class="list">
+                                        <li id="listing_filtering_files"><b>Listing and filtering files</b>
+                                            <p>To fetch and filter files, Mongoclient executes <b>find</b> query on the
+                                                <code>selectedBucket.files</code> collection</p>
+                                        </li>
+                                        <li><b>Showing and editing file information</b>
+                                            <p>
+                                                This works exactly same as <a href="#listing_filtering_files"
+                                                                              class="scrollto">listing and filtering
+                                                files </a> , so when you try to see a file information by selecting a
+                                                file from table and clicking <i class="fa fa-book"></i> Mongoclient
+                                                executes <b>findOne</b> and for the save process executes
+                                                <b>updateOne</b> queries.
+                                            </p>
+                                        </li>
+                                        <li><b>Deleting a file</b>
+                                            <p>Differently from above operations, Mongoclient calls <code>delete</code>
+                                                operation for the selected file's id on GridFS level, so you don't have
+                                                to worry about <b>.files and .chunks</b> collections. To delete a file
+                                                you need to select a file from table and click <i
+                                                        class="fa fa-remove"></i> button</p></li>
+
+                                        <li><b>Downloading a file</b>
+                                            <p>Mongoclient sends you to a new route <b>download</b> with the parameters
+                                                <b>fileId</b> and <b>bucket name</b> and starts piping bytes to you
+                                                to download a file. This is a low level operation and uses streams
+                                                behind the scenes. To download a file you need to click <i
+                                                        class="fa fa-download"></i> button after selecting a file from
+                                                the table</p>
+                                        </li>
+
+                                        <li><b>Upload a file</b>
+                                            <p>
+                                                To use <b>Upload</b> button you need to select a file from the input
+                                                first. After you'll see a message which asks you, if you want
+                                                to keep uplaoding or not. If you answer this question <b>yes</b> then
+                                                you can manually fill other informations of your <b>GridFS</b> file
+                                                before uploading it. Mongoclient pipes stream to your database's <b>GridFS</b>
+                                                bucket to upload a file. Before uploading you can fill <b>fileName,
+                                                contentType, metaData, aliases</b> information.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </section>
                     </div><!--//content-inner-->
                 </div><!--//doc-content-->
@@ -1117,6 +1232,7 @@
                                     </li>
                                     <li><a class="scrollto" href="#user_management">User Management</a></li>
                                     <li><a class="scrollto" href="#dump_restore_import">Dump/Restore/Import</a></li>
+                                    <li><a class="scrollto" href="#file_management">File Management</a></li>
                                 </ul><!--//nav-->
                             </li>
                         </ul><!--//doc-menu-->
