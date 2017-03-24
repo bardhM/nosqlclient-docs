@@ -298,7 +298,7 @@
                         </section><!--//doc-section-->
 
                         <section id="design-section" class="doc-section">
-                            <h2 class="section-title">Mongoclient's Application Structure</h2>
+                            <h2 class="section-title">Mongoclient Feature Details</h2>
                             <div class="section-block">
                                 <h6>Multiple Levels Section (Novice/Proficient/Expert)</h6>
                                 <p>
@@ -306,8 +306,9 @@
                                     intuitive design and lets you to query your database with a few clicks. There's no
                                     over-thought-out buttons or labels anywhere.
                                 </p>
-                                <p>This section includes multiple level information about Mongoclient, you can see these
-                                    levels near the title of the corresponding section </p>
+                                <p>This section includes multiple level information about Mongoclient and MongoDB, you
+                                    can see these
+                                    levels near the title of the corresponding section. </p>
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -700,6 +701,38 @@
                                                 href="dump_restore" class="scrollto">dump</a> section, you can specify
                                             the main path with this setting </p>
                                     </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="switch_db">Switch Database (Novice Level)</h4>
+                                    <p>Mongoclient depends on database name for especially user management section,
+                                        therefore you can connect to only one database at once. But switching to another
+                                        database is just two click away from you after connecting to your <a
+                                                href="#keywords-1" class="scrollto">connection</a>.</p>
+                                    <div class="row">
+                                        <div class="col-md-offset-5 col-sm-offset-5 col-xs-offset-5 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/screenshots/switch_db.png"
+                                                   data-title="Switch Database" data-toggle="lightbox"><img
+                                                        class="img-responsive"
+                                                        src="assets/images/screenshots/switch_db.png"
+                                                        alt="screenshot"></a>
+                                                <a class="mask" href="assets/images/screenshots/switch_db.png"
+                                                   data-title="Switch Database" data-toggle="lightbox"><i
+                                                        class="icon fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>After clicking <b><i class="fa fa-chevron-circle-down"></i> More -> <i
+                                            class="fa fa-database"></i> Switch Database</b>
+                                        button you'll be able to select any of the databeses from the table, or you can
+                                        write down a new database name to input field below of the table. <b>Mongoclient
+                                            uses input field's value.</b> To fetch databases Mongoclient executes <a
+                                                href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
+                                                target="_blank">listDatabases</a> query.</p>
                                 </div>
                             </div>
 
@@ -1311,10 +1344,131 @@
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <h4 id="admin_queries">Admin Queries (Expert Level)</h4>
-                                    <p></p>
+                                    <p>Mongoclient separates queries as <b>Admin</b> and <b>Normal</b> queries. If
+                                        you're a developer and want to just query your database, you have nothing to do
+                                        with this section.</p>
+                                    <p>These queries can only be executed if you have the necessary privileges. Some of
+                                        these queries can be executed on the <code>admin</code> database instead of the
+                                        currently connected database. To do that you simply need to check right upper
+                                        corner checkbox. <b>Checked = execute on the admin database</b></p>
+                                    <p>If you don't like <b>JsonEditor</b>, you can switch to <b>AceEditor</b> instead,
+                                        by clicking <i
+                                                class="fa fa-exchange"></i> button that's placed at the right upper
+                                        corner. Default result view can be changed via <a href="#settings"
+                                                                                          class="scrollto">settings</a>
+                                    </p>
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <p>Below, you can find following MongoDB queries that Mongoclient executes for the
+                                        corresponding <b>admin query</b>.</p>
+                                    <h6>Queries</h6>
+                                    <ul class="list">
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/method/db.createUser/">addUser</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/command/buildInfo/">buildInfo</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/method/db.runCommand/">command</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/command/listDatabases/">listDatabases</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/method/db.getProfilingStatus/">profilingInfo</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/method/db.removeUser/">removeUser</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/command/replSetGetStatus/">replSetGetStatus</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/command/buildInfo/">serverInfo</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/command/serverStatus/">serverStatus</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/method/db.setProfilingLevel/">setProfilingLevel</a>
+                                        </li>
+                                        <li><a target="_blank"
+                                               href="https://docs.mongodb.com/manual/reference/method/db.collection.validate/">validateCollection</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="shell">Shell (Novice Level)</h4>
+                                    <p>MongoDB offers a nice shell if you're familiar with linux or mac terminal, it's a
+                                        nice feature to have such a tool. But lack of syntax highlighting and auto
+                                        completion can be a huge disadvantage, Mongoclient changes this disadvantage to
+                                        advantage for its users.</p>
+                                    <p><b>CTRL+SPACE</b> on the shell can be used for auto completion.
+                                        <br/>
+                                        <b>ENTER</b> button executes the query.
+                                    </p>
+
+                                    <p>Mongoclient internally brings MongoDB shell (for linux/windows/osx) for this
+                                        feature, and current version
+                                        of the shell is <b>v3.4.2</b></p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="aggregate">Aggregate (Proficient Level)</h4>
+                                    <p>Aggregation pipeline of MongoDB is a combination of the stages which you can read
+                                        more about them <a
+                                                href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/"
+                                                target="_blank">here</a></p>
+
+                                    <p>Mongoclient comes with a tool that lets you to execute your aggregation pipeline
+                                        at any stage level, re-order stages and add as many as stages you wish.
+                                        <br/>
+                                        <br/>To <b>add a new stage</b>, you need to select a collection and a stage from
+                                        the
+                                        comboboxes that's placed at the very top of the page.</br>
+                                        To <b>re-order</b> stages you can drag & drop a stage panel between all stages.
+                                        <br/>
+                                        To <b>remove a stage</b>, you can click <i class="fa fa-remove"></i> button
+                                        that's placed at the right upper corner of the corresponding stage panel. </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="stored_functions">Stored Functions (Proficient Level)</h4>
+                                    <p>There is a special system collection named <code>system.js</code> that can store
+                                        JavaScript
+                                        functions for reuse in MongoDB. With Mongoclient you can manage your functions
+                                        easily.</p>
+                                    <p>Mongoclient lists all current functions via executing <code>find</code> query on
+                                        collection <b>system.js</b>, to add functions calls <b>insertMany</b>, to update
+                                        functions calls <b>updateOne</b>, and
+                                        to delete them calls <b>delete</b> queries internally.</p>
+                                    <p>A basic function seems like: <code>{ "_id" : "myAddFunction", "value" : { "code"
+                                        : "function (x, y){ return x + y; }" } }</code> in your database.</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h4 id="schema_analyzer">Schema Analyzer (Proficient Level)</h4>
+                                    <p>Since MongoDB is <a href="#keywords-11" class="scrollto">schemaless</a>, you may
+                                        want to analyze your collection's schema and see what data types have your
+                                        fields. Mongoclient uses <a href="https://github.com/variety/variety"
+                                                                    target="_blank">variety.js</a> to present
+                                        you this feature.</p>
+                                    <p>It's always good <b>not to use this on huge collections</b>.</p>
+                                </div>
+                            </div>
                         </section>
                     </div><!--//content-inner-->
                 </div><!--//doc-content-->
@@ -1323,10 +1477,11 @@
                         <ul id="doc-menu" class="nav doc-menu" data-spy="affix">
                             <li><a class="scrollto" href="#toc-section">Table of Contents</a></li>
                             <li><a class="scrollto" href="#keywords-section">Keywords</a></li>
-                            <li><a class="scrollto" href="#design-section">Application Structure</a>
+                            <li><a class="scrollto" href="#design-section">Feature Details</a>
                                 <ul class="nav doc-sub-menu">
                                     <li><a class="scrollto" href="#connections">Connections</a></li>
                                     <li><a class="scrollto" href="#settings">Settings</a></li>
+                                    <li><a class="scrollto" href="#switch_db">Switch Database</a></li>
                                     <li><a class="scrollto" href="#mongoclient_data">Import/Export Mongoclient Data</a>
                                     </li>
                                     <li><a class="scrollto" href="#db_stats">Database Stats</a>
@@ -1336,8 +1491,13 @@
                                     <li><a class="scrollto" href="#file_management">File Management</a></li>
                                     <li><a class="scrollto" href="#index_management">Index Management</a></li>
                                     <li><a class="scrollto" href="#admin_queries">Admin Queries</a></li>
+                                    <li><a class="scrollto" href="#shell">Shell</a></li>
+                                    <li><a class="scrollto" href="#aggregate">Aggregate</a></li>
+                                    <li><a class="scrollto" href="#stored_functions">Stored Functions</a></li>
+                                    <li><a class="scrollto" href="#schema_analyzer">Schema Analyzer</a></li>
                                 </ul><!--//nav-->
                             </li>
+                            <li></li>
                         </ul><!--//doc-menu-->
                     </nav>
                 </div><!--//doc-sidebar-->
