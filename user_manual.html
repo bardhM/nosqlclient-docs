@@ -441,6 +441,7 @@
 
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="connection_tab">2. Connection Tab</h6>
@@ -634,842 +635,953 @@
                                             set even if there's no primary is up at the moment</p>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="settings">Settings (Proficient Level)</h4>
-                                    <p>Mongoclient has its own settings which can be set when either you're connected to
-                                        a <a
-                                                href="#connections" class="scrollto">connection</a> or disconnected</p>
-
-                                    <p>You may want to change nothing here if you're a <a href="#design-section"
-                                                                                          class="scrollto">beginner</a>
-                                    </p>
-                                    <ul class="list">
-                                        <li><b>Max allowed fetch size for FIND query</b>
-                                        </li>
-                                        <p>With this settings you can prevent no limit <b>FIND</b> queries, and
-                                            restrict these queries to given size as <b>MB</b>, <b>0 = No restriction</b>
-                                        </p>
-                                        <li><b>Socket timeout</b></li>
-                                        <p>This settings is the time in milliseconds to attempt a send or
-                                            receive on a socket before the attempt times out, and is being used for
-                                            every connection unless it's overriden by the <a href="#options_tab"
-                                                                                             class="scrollto">connection
-                                                options</a>, <b>0=No timeout</b></p>
-
-                                        <li><b>Connection timeout</b></li>
-                                        <p>This settings is is the time in milliseconds to attempt a connection before
-                                            timing out, and is being used for
-                                            every connection unless it's overriden by the <a href="#options_tab"
-                                                                                             class="scrollto">connection
-                                                options </a><b>0=No timeout</b></p>
-
-                                        <li><b>Database statistics scheduler</b></li>
-                                        <p>Mongoclient populates <a href="#db_stats" class="scrollto">database stats</a>
-                                            charts at this interval it's in <b>miliseconds</b></p>
-
-                                        <li><b>Size information in</b></li>
-                                        <p>At certain sections, Mongoclient shows size information, you can switch these
-                                            information between <b>KB, MB or bytes.</b></p>
-
-                                        <li><b>Default result view</b></li>
-                                        <p>Mongoclient uses JSONEditor and ACEEditor to show result views, you can
-                                            change the default result view with this setting </p>
-
-                                        <li><b>Autocomplete feature for selectors</b></li>
-                                        <p>Enable/disable autocomplete feature on queries, it can cause trouble on huge
-                                            collections, since Mongoclient needs to scan collection fields for
-                                            autocompletion</p>
-
-                                        <li><b>Single tab for results</b></li>
-                                        <p>By default each query execution opens another tab, you can change this
-                                            behaviour by enabling this</p>
-
-                                        <li><b>Show live chat</b></li>
-                                        <p>Enable live support from inside of Mongoclient !</p>
-
-                                        <li><b>Show database statistics</b></li>
-                                        <p>To prevent querying database at regular intervals at the <a href="db_stats"
-                                                                                                       class="scrollto">database
-                                            stats page</a> for statistics, you can
-                                            disable this feature</p>
-
-                                        <li><b>Local dump path</b></li>
-                                        <p>Mongoclient saves dumps to your local machine if you use the <a
-                                                href="dump_restore" class="scrollto">dump</a> section, you can specify
-                                            the main path with this setting </p>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="switch_db">Switch Database (Novice Level)</h4>
-                                    <p>Mongoclient depends on database name for especially user management section,
-                                        therefore you can connect to only one database at once. But switching to another
-                                        database is just two click away from you after connecting to your <a
-                                                href="#keywords-1" class="scrollto">connection</a>.</p>
-                                    <div class="row">
-                                        <div class="col-md-offset-5 col-sm-offset-5 col-xs-offset-5 col-md-2 col-sm-2 col-xs-2">
-                                            <div class="screenshot-holder">
-                                                <a href="assets/images/screenshots/switch_db.png"
-                                                   data-title="Switch Database" data-toggle="lightbox"><img
-                                                        class="img-responsive"
-                                                        src="assets/images/screenshots/switch_db.png"
-                                                        alt="screenshot"></a>
-                                                <a class="mask" href="assets/images/screenshots/switch_db.png"
-                                                   data-title="Switch Database" data-toggle="lightbox"><i
-                                                        class="icon fa fa-search-plus"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <p>After clicking <b><i class="fa fa-chevron-circle-down"></i> More -> <i
-                                            class="fa fa-database"></i> Switch Database</b>
-                                        button you'll be able to select any of the databeses from the table, or you can
-                                        write down a new database name to input field below of the table. <b>Mongoclient
-                                            uses input field's value.</b> To fetch databases Mongoclient executes <a
-                                                href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
-                                                target="_blank">listDatabases</a> query.</p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="mongoclient_data">Import/Export Mongoclient Data (Novice Level)</h4>
-                                    <p>If you prefer to use <a href="start.html#download-section"
-                                                               target="_blank">desktop distribution</a> of Mongoclient,
-                                        you may want to keep your connections and settings for each update of
-                                        Mongoclient. With <b>Export Mongoclient Data</b> button you can export your
-                                        connections and settings, and import them to another version by choosing <b>Import
-                                            Mongoclient Data</b> <a href="start.html#docker"
-                                                                    target="_blank">Docker </a> build is always a better
-                                        choice to use Mongoclient</p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="db_stats">Database Stats (Expert Level)</h4>
-                                    <p>Mongoclient queries your database at regular intervals to populate performance
-                                        charts and tables at the <b>Database Stats</b> page</p> This feature can be
-                                    disabled, or regular interval can be configured at <a class="scrollto"
-                                                                                          href="#settings">settings</a>
-                                    <div class="row">
-                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
-                                            <div class="screenshot-holder">
-                                                <a href="assets/images/screenshots/db_stats.png"
-                                                   data-title="Database Stats" data-toggle="lightbox"><img
-                                                        class="img-responsive"
-                                                        src="assets/images/screenshots/db_stats.png"
-                                                        alt="screenshot"></a>
-                                                <a class="mask" href="assets/images/screenshots/db_stats.png"
-                                                   data-title="Database Stats" data-toggle="lightbox"><i
-                                                        class="icon fa fa-search-plus"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <p>You can find detailed information about how these charts are being populated
-                                        below. All charts data comes from <a
-                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/"
-                                                target="_blank">serverStatus</a> query of mongodb</p>
-                                    <ul class="list">
-                                        <li><b>Memory Usage</b>
-                                        </li>
-                                        <p>
-                                            <i>Virtual line</i> indicates <a
-                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.virtual"
-                                                target="_blank">mem.virtual</a> value
-                                            <br/>
-                                            <i>Mapped line</i> indicates <a
-                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.mapped"
-                                                target="_blank">mem.mapped</a> value
-                                            <br/>
-                                            <i>Current line</i> indicates <a
-                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.resident"
-                                                target="_blank">mem.resident</a> value</p>
-
-                                        <li><b>Queued Read/Write </b></li>
-                                        <p>
-                                            <i>Readers line</i> indicates <a target="_blank"
-                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.currentQueue.readers">globalLock.currentQueue.readers</a>
-                                            value
-                                            <br/>
-                                            <i>Writers line</i> indicates <a target="_blank"
-                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.currentQueue.writers">globalLock.currentQueue.writers</a>
-                                            value
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="settings">Settings (Proficient Level)</h4>
+                                        <p>Mongoclient has its own settings which can be set when either you're
+                                            connected to
+                                            a <a
+                                                    href="#connections" class="scrollto">connection</a> or disconnected
                                         </p>
 
-                                        <li><b>Active Read/Write </b></li>
-                                        <p>
-                                            <i>Readers line</i> indicates <a target="_blank"
-                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.readers">globalLock.activeClients.readers</a>
-                                            value
-                                            <br/>
-                                            <i>Writers line</i> indicates <a target="_blank"
-                                                                             href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.writers">globalLock.activeClients.writers</a>
-                                            value
-                                            <br/>
-                                            <i>Total text</i> indicates <a target="_blank"
-                                                                           href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.total">globalLock.activeClients.total</a>
-                                            value
+                                        <p>You may want to change nothing here if you're a <a href="#design-section"
+                                                                                              class="scrollto">beginner</a>
                                         </p>
-
-                                        <li><b>Connections</b></li>
-                                        <p>
-                                            <i>Active line</i> indicates <a target="_blank"
-                                                                            href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.current">connections.current</a>
-                                            value
-                                            <br/>
-                                            <i>Total Created line</i> indicates <a target="_blank"
-                                                                                   href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.totalCreated">connections.totalCreated</a>
-                                            value
-                                            <br/>
-                                            <i>Available text</i> indicates <a target="_blank"
-                                                                               href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.available">connections.available</a>
-                                            value
-                                            <br/>
-                                        </p>
-
-                                        <li><b>Network</b></li>
-                                        <p>
-                                            <i>Incoming line</i> indicates <a target="_blank"
-                                                                              href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.bytesIn">network.bytesIn</a>
-                                            value
-                                            <br/>
-                                            <i>Outgoing line</i> indicates <a target="_blank"
-                                                                              href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.bytesOut">network.bytesOut</a>
-                                            value
-                                            <br/>
-                                            <i>Total Requests text</i> indicates <a target="_blank"
-                                                                                    href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.numRequests">network.numRequests</a>
-                                            value
-                                        </p>
-
-                                        <li><b>Operation Counters</b></li>
-                                        <p>These values comes from <a target="_blank"
-                                                                      href="https://docs.mongodb.com/manual/reference/command/serverStatus/#opcounters">opCounters</a>
-                                            object</p>
-                                    </ul>
-
-                                    <p><b>Collections Read/Write table</b> shows calculated data that comes from <a
-                                            href="https://docs.mongodb.com/manual/reference/command/top/"
-                                            target="_blank">top query</a> by Mongoclient.
-                                        <br/>
-                                        <b>Read</b> column is being calculated with the following formula:
-                                        <b>(readTime - previousReadTime) / (readCount - previousReadCount)</b>
-                                        <br/>
-                                        <b>Write</b> column is being calculated with the following formula:
-                                        <b>(writeTime - previousWriteTime) / (writeCount - previousWriteCount)</b>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="user_management">User Management (Proficient Level)</h4>
-                                    <p>You can either manage your <code>admin</code> or <b>connected database's</b>
-                                        users/roles in
-                                        Mongoclient. If you check <b>right upper corner checkbox</b>, and click <b>Refresh</b>
-                                        button at the very bottom of the page, it means you've switched to <b>admin</b>
-                                        database instead of the current. User management tree is being populated via
-                                        executing command <code>{
-                                            usersInfo: 1,
-                                            showCredentials: true
-                                            }</code> on the mentioned database. You can read more about this command by
-                                        following <a
-                                                href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
-                                                target="_blank">here</a>
-                                        <br/>
-                                        Mongoclient crawls latest documentation for you from the MongoDB official
-                                        documentation whenever you click one of the <b>role, resource or privilege</b>
-                                        elements from the tree. So you don't have to search MongoDB documentation all
-                                        the time.
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
-                                            <div class="screenshot-holder">
-                                                <a href="assets/images/screenshots/user_management.png"
-                                                   data-title="User Management" data-toggle="lightbox"><img
-                                                        class="img-responsive"
-                                                        src="assets/images/screenshots/user_management.png"
-                                                        alt="screenshot"></a>
-                                                <a class="mask" href="assets/images/screenshots/user_management.png"
-                                                   data-title="User Management" data-toggle="lightbox"><i
-                                                        class="icon fa fa-search-plus"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p>There will be <b>different menus at the right upper corner</b> regarding the
-                                        selected element from the user tree.</p>
-
-                                    <ul class="list">
-                                        <li><b>Selecting database <i class="fa fa-database"></i></b>
-                                        </li>
-                                        <p>
-                                            With this selection you can see and use <a href="#manage_roles"
-                                                                                       class="scrollto">Manage Roles</a>,
-                                            and <a href="#manage_users" class="scrollto">Manage Users</a> buttons
-                                        </p>
-                                        <li><b>Selecting user <i class="fa fa-user"></i></b>
-                                        </li>
-                                        <p>
-                                            With this selection you can see and use <a href="#edit_user"
-                                                                                       class="scrollto">Edit User</a>
-                                            button
-                                        </p>
-                                    </ul>
-
-                                    <div class="callout-block callout-success">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-thumbs-up"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Useful Tip</h4>
-                                            <p>You can add custom values to most of the comboboxes in user management
-                                                section by typing your value in the combobox's input and pressing <b>Enter</b>.
-                                                Also you can de-select a value by pressing <i class="fa fa-remove"></i>
+                                        <ul class="list">
+                                            <li><b>Max allowed fetch size for FIND query</b>
+                                            </li>
+                                            <p>With this settings you can prevent no limit <b>FIND</b> queries, and
+                                                restrict these queries to given size as <b>MB</b>, <b>0 = No
+                                                    restriction</b>
                                             </p>
-                                        </div><!--//content-->
+                                            <li><b>Socket timeout</b></li>
+                                            <p>This settings is the time in milliseconds to attempt a send or
+                                                receive on a socket before the attempt times out, and is being used for
+                                                every connection unless it's overriden by the <a href="#options_tab"
+                                                                                                 class="scrollto">connection
+                                                    options</a>, <b>0=No timeout</b></p>
+
+                                            <li><b>Connection timeout</b></li>
+                                            <p>This settings is is the time in milliseconds to attempt a connection
+                                                before
+                                                timing out, and is being used for
+                                                every connection unless it's overriden by the <a href="#options_tab"
+                                                                                                 class="scrollto">connection
+                                                    options </a><b>0=No timeout</b></p>
+
+                                            <li><b>Database statistics scheduler</b></li>
+                                            <p>Mongoclient populates <a href="#db_stats" class="scrollto">database
+                                                stats</a>
+                                                charts at this interval it's in <b>miliseconds</b></p>
+
+                                            <li><b>Size information in</b></li>
+                                            <p>At certain sections, Mongoclient shows size information, you can switch
+                                                these
+                                                information between <b>KB, MB or bytes.</b></p>
+
+                                            <li><b>Default result view</b></li>
+                                            <p>Mongoclient uses JSONEditor and ACEEditor to show result views, you can
+                                                change the default result view with this setting </p>
+
+                                            <li><b>Autocomplete feature for selectors</b></li>
+                                            <p>Enable/disable autocomplete feature on queries, it can cause trouble on
+                                                huge
+                                                collections, since Mongoclient needs to scan collection fields for
+                                                autocompletion</p>
+
+                                            <li><b>Single tab for results</b></li>
+                                            <p>By default each query execution opens another tab, you can change this
+                                                behaviour by enabling this</p>
+
+                                            <li><b>Show live chat</b></li>
+                                            <p>Enable live support from inside of Mongoclient !</p>
+
+                                            <li><b>Show database statistics</b></li>
+                                            <p>To prevent querying database at regular intervals at the <a
+                                                    href="db_stats"
+                                                    class="scrollto">database
+                                                stats page</a> for statistics, you can
+                                                disable this feature</p>
+
+                                            <li><b>Local dump path</b></li>
+                                            <p>Mongoclient saves dumps to your local machine if you use the <a
+                                                    href="dump_restore" class="scrollto">dump</a> section, you can
+                                                specify
+                                                the main path with this setting </p>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h6 id="manage_roles">Manage Roles</h6>
-                                    <p>To populate table that's placed in the <b>Manage Roles</b> window,
-                                        Mongoclient executes <code>{ rolesInfo: 1, showBuiltinRoles: true }</code> on
-                                        the database (admin/selected). <a
-                                                href="https://docs.mongodb.com/manual/reference/command/rolesInfo/"
-                                                target="_blank">Click here</a> for more info about this command.</p>
-                                    <p>In this section, you can do following actions.</p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="switch_db">Switch Database (Novice Level)</h4>
+                                        <p>Mongoclient depends on database name for especially user management section,
+                                            therefore you can connect to only one database at once. But switching to
+                                            another
+                                            database is just two click away from you after connecting to your <a
+                                                    href="#keywords-1" class="scrollto">connection</a>.</p>
+                                        <div class="row">
+                                            <div class="col-md-offset-5 col-sm-offset-5 col-xs-offset-5 col-md-2 col-sm-2 col-xs-2">
+                                                <div class="screenshot-holder">
+                                                    <a href="assets/images/screenshots/switch_db.png"
+                                                       data-title="Switch Database" data-toggle="lightbox"><img
+                                                            class="img-responsive"
+                                                            src="assets/images/screenshots/switch_db.png"
+                                                            alt="screenshot"></a>
+                                                    <a class="mask" href="assets/images/screenshots/switch_db.png"
+                                                       data-title="Switch Database" data-toggle="lightbox"><i
+                                                            class="icon fa fa-search-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                    <ul class="list">
-                                        <li id="edit_custom_role"><b>Edit custom role</b>, (built-in roles can not be
-                                            edited)
-                                            <p>
-                                                You can add new, delete or edit existing privileges within this section.
-                                                Whenever you click the <i class="fa fa-edit"></i> icon for a custom
-                                                role,
-                                                Mongoclient executes <code>{ rolesInfo: {role: roleName, db: dbName},
-                                                showPrivileges: true}</code> command on the selected database. This
-                                                section
-                                                have two tabs, <b>privileges</b> and <b>roles to inherit</b>
-                                            </p>
-                                            <h6>Privileges</h6>
-                                            <p>
-                                                If you click one of the <b>Add Privilege</b> or <i
-                                                    class="fa fa-edit"></i>
-                                                (Edit Privilege) buttons, you'll see another window that includes three
-                                                comboboxes.
-                                                <br/>
-                                                <b>DB / Resource</b> combobox is being filled by <a
+                                        <p>After clicking <b><i class="fa fa-chevron-circle-down"></i> More -> <i
+                                                class="fa fa-database"></i> Switch Database</b>
+                                            button you'll be able to select any of the databeses from the table, or you
+                                            can
+                                            write down a new database name to input field below of the table. <b>Mongoclient
+                                                uses input field's value.</b> To fetch databases Mongoclient executes <a
                                                     href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
-                                                    target="_blank">list databases</a> command which is being executed
-                                                against <b>admin</b>
+                                                    target="_blank">listDatabases</a> query.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="mongoclient_data">Import/Export Mongoclient Data (Novice Level)</h4>
+                                        <p>If you prefer to use <a href="start.html#download-section"
+                                                                   target="_blank">desktop distribution</a> of
+                                            Mongoclient,
+                                            you may want to keep your connections and settings for each update of
+                                            Mongoclient. With <b>Export Mongoclient Data</b> button you can export your
+                                            connections and settings, and import them to another version by choosing <b>Import
+                                                Mongoclient Data</b> <a href="start.html#docker"
+                                                                        target="_blank">Docker </a> build is always a
+                                            better
+                                            choice to use Mongoclient</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="db_stats">Database Stats (Expert Level)</h4>
+                                        <p>Mongoclient queries your database at regular intervals to populate
+                                            performance
+                                            charts and tables at the <b>Database Stats</b> page</p> This feature can be
+                                        disabled, or regular interval can be configured at <a class="scrollto"
+                                                                                              href="#settings">settings</a>
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                                <div class="screenshot-holder">
+                                                    <a href="assets/images/screenshots/db_stats.png"
+                                                       data-title="Database Stats" data-toggle="lightbox"><img
+                                                            class="img-responsive"
+                                                            src="assets/images/screenshots/db_stats.png"
+                                                            alt="screenshot"></a>
+                                                    <a class="mask" href="assets/images/screenshots/db_stats.png"
+                                                       data-title="Database Stats" data-toggle="lightbox"><i
+                                                            class="icon fa fa-search-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <p>You can find detailed information about how these charts are being populated
+                                            below. All charts data comes from <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/serverStatus/"
+                                                    target="_blank">serverStatus</a> query of mongodb</p>
+                                        <ul class="list">
+                                            <li><b>Memory Usage</b>
+                                            </li>
+                                            <p>
+                                                <i>Virtual line</i> indicates <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.virtual"
+                                                    target="_blank">mem.virtual</a> value
                                                 <br/>
-                                                <b>Collection</b> combobox is being filled whenever a database is
-                                                selected
-                                                from <b>DB / Resource</b> combobox by list collections command.
+                                                <i>Mapped line</i> indicates <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.mapped"
+                                                    target="_blank">mem.mapped</a> value
                                                 <br/>
-                                                <b>Actions</b> combobox is being filled by <b>crawling</b> <a
-                                                    href="https://docs.mongodb.org/manual/reference/privilege-actions"
-                                                    target="_blank">MongoDB official documentation</a>, but no worries,
-                                                this
-                                                crawling operation happens once, and Mongoclient caches these actions in
-                                                it's MongoDB to show afterwards.
+                                                <i>Current line</i> indicates <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.mem.resident"
+                                                    target="_blank">mem.resident</a> value</p>
+
+                                            <li><b>Queued Read/Write </b></li>
+                                            <p>
+                                                <i>Readers line</i> indicates <a target="_blank"
+                                                                                 href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.currentQueue.readers">globalLock.currentQueue.readers</a>
+                                                value
+                                                <br/>
+                                                <i>Writers line</i> indicates <a target="_blank"
+                                                                                 href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.currentQueue.writers">globalLock.currentQueue.writers</a>
+                                                value
                                             </p>
-                                            <h6>Roles to Inherit</h6>
-                                            <p>Every role in MongoDB can inherit multiple roles, by clicking <b>Add Role
-                                                to Inherit</b> button you'll see another window that has two comboboxes.
+
+                                            <li><b>Active Read/Write </b></li>
+                                            <p>
+                                                <i>Readers line</i> indicates <a target="_blank"
+                                                                                 href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.readers">globalLock.activeClients.readers</a>
+                                                value
                                                 <br/>
-                                                <b>Database</b> combobox is being filled by <a
+                                                <i>Writers line</i> indicates <a target="_blank"
+                                                                                 href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.writers">globalLock.activeClients.writers</a>
+                                                value
+                                                <br/>
+                                                <i>Total text</i> indicates <a target="_blank"
+                                                                               href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.globalLock.activeClients.total">globalLock.activeClients.total</a>
+                                                value
+                                            </p>
+
+                                            <li><b>Connections</b></li>
+                                            <p>
+                                                <i>Active line</i> indicates <a target="_blank"
+                                                                                href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.current">connections.current</a>
+                                                value
+                                                <br/>
+                                                <i>Total Created line</i> indicates <a target="_blank"
+                                                                                       href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.totalCreated">connections.totalCreated</a>
+                                                value
+                                                <br/>
+                                                <i>Available text</i> indicates <a target="_blank"
+                                                                                   href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.connections.available">connections.available</a>
+                                                value
+                                                <br/>
+                                            </p>
+
+                                            <li><b>Network</b></li>
+                                            <p>
+                                                <i>Incoming line</i> indicates <a target="_blank"
+                                                                                  href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.bytesIn">network.bytesIn</a>
+                                                value
+                                                <br/>
+                                                <i>Outgoing line</i> indicates <a target="_blank"
+                                                                                  href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.bytesOut">network.bytesOut</a>
+                                                value
+                                                <br/>
+                                                <i>Total Requests text</i> indicates <a target="_blank"
+                                                                                        href="https://docs.mongodb.com/manual/reference/command/serverStatus/#serverstatus.network.numRequests">network.numRequests</a>
+                                                value
+                                            </p>
+
+                                            <li><b>Operation Counters</b></li>
+                                            <p>These values comes from <a target="_blank"
+                                                                          href="https://docs.mongodb.com/manual/reference/command/serverStatus/#opcounters">opCounters</a>
+                                                object</p>
+                                        </ul>
+
+                                        <p><b>Collections Read/Write table</b> shows calculated data that comes from <a
+                                                href="https://docs.mongodb.com/manual/reference/command/top/"
+                                                target="_blank">top query</a> by Mongoclient.
+                                            <br/>
+                                            <b>Read</b> column is being calculated with the following formula:
+                                            <b>(readTime - previousReadTime) / (readCount - previousReadCount)</b>
+                                            <br/>
+                                            <b>Write</b> column is being calculated with the following formula:
+                                            <b>(writeTime - previousWriteTime) / (writeCount - previousWriteCount)</b>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="user_management">User Management (Proficient Level)</h4>
+                                        <p>You can either manage your <code>admin</code> or <b>connected database's</b>
+                                            users/roles in
+                                            Mongoclient. If you check <b>right upper corner checkbox</b>, and click <b>Refresh</b>
+                                            button at the very bottom of the page, it means you've switched to
+                                            <b>admin</b>
+                                            database instead of the current. User management tree is being populated via
+                                            executing command <code>{
+                                                usersInfo: 1,
+                                                showCredentials: true
+                                                }</code> on the mentioned database. You can read more about this command
+                                            by
+                                            following <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
+                                                    target="_blank">here</a>
+                                            <br/>
+                                            Mongoclient crawls latest documentation for you from the MongoDB official
+                                            documentation whenever you click one of the <b>role, resource or
+                                                privilege</b>
+                                            elements from the tree. So you don't have to search MongoDB documentation
+                                            all
+                                            the time.
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                                <div class="screenshot-holder">
+                                                    <a href="assets/images/screenshots/user_management.png"
+                                                       data-title="User Management" data-toggle="lightbox"><img
+                                                            class="img-responsive"
+                                                            src="assets/images/screenshots/user_management.png"
+                                                            alt="screenshot"></a>
+                                                    <a class="mask" href="assets/images/screenshots/user_management.png"
+                                                       data-title="User Management" data-toggle="lightbox"><i
+                                                            class="icon fa fa-search-plus"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>There will be <b>different menus at the right upper corner</b> regarding the
+                                            selected element from the user tree.</p>
+
+                                        <ul class="list">
+                                            <li><b>Selecting database <i class="fa fa-database"></i></b>
+                                            </li>
+                                            <p>
+                                                With this selection you can see and use <a href="#manage_roles"
+                                                                                           class="scrollto">Manage
+                                                Roles</a>,
+                                                and <a href="#manage_users" class="scrollto">Manage Users</a> buttons
+                                            </p>
+                                            <li><b>Selecting user <i class="fa fa-user"></i></b>
+                                            </li>
+                                            <p>
+                                                With this selection you can see and use <a href="#edit_user"
+                                                                                           class="scrollto">Edit
+                                                User</a>
+                                                button
+                                            </p>
+                                        </ul>
+
+                                        <div class="callout-block callout-success">
+                                            <div class="icon-holder">
+                                                <i class="fa fa-thumbs-up"></i>
+                                            </div><!--//icon-holder-->
+                                            <div class="content">
+                                                <h4 class="callout-title">Useful Tip</h4>
+                                                <p>You can add custom values to most of the comboboxes in user
+                                                    management
+                                                    section by typing your value in the combobox's input and pressing
+                                                    <b>Enter</b>.
+                                                    Also you can de-select a value by pressing <i
+                                                            class="fa fa-remove"></i>
+                                                </p>
+                                            </div><!--//content-->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="manage_roles">Manage Roles</h6>
+                                        <p>To populate table that's placed in the <b>Manage Roles</b> window,
+                                            Mongoclient executes <code>{ rolesInfo: 1, showBuiltinRoles: true }</code>
+                                            on
+                                            the database (admin/selected). <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/rolesInfo/"
+                                                    target="_blank">Click here</a> for more info about this command.</p>
+                                        <p>In this section, you can do following actions.</p>
+
+                                        <ul class="list">
+                                            <li id="edit_custom_role"><b>Edit custom role</b>, (built-in roles can not
+                                                be
+                                                edited)
+                                                <p>
+                                                    You can add new, delete or edit existing privileges within this
+                                                    section.
+                                                    Whenever you click the <i class="fa fa-edit"></i> icon for a custom
+                                                    role,
+                                                    Mongoclient executes <code>{ rolesInfo: {role: roleName, db:
+                                                    dbName},
+                                                    showPrivileges: true}</code> command on the selected database. This
+                                                    section
+                                                    have two tabs, <b>privileges</b> and <b>roles to inherit</b>
+                                                </p>
+                                                <h6>Privileges</h6>
+                                                <p>
+                                                    If you click one of the <b>Add Privilege</b> or <i
+                                                        class="fa fa-edit"></i>
+                                                    (Edit Privilege) buttons, you'll see another window that includes
+                                                    three
+                                                    comboboxes.
+                                                    <br/>
+                                                    <b>DB / Resource</b> combobox is being filled by <a
                                                         href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
                                                         target="_blank">list databases</a> command which is being
-                                                executed
-                                                against <b>admin</b>
-                                                <br/>
-                                                <b>Role</b> combobox is being filled by executing command <code>{
-                                                    rolesInfo: 1,
-                                                    showBuiltinRoles: true
-                                                    }</code> on the mentioned database.
-                                                <br/>
-                                                When you click <b>Add</b> at <b>Add Role to Inherit</b> window, you'll
-                                                realize window won't disappear, that's because you can select and add
-                                                more roles on-the-fly and nothing will be saved unless you close this
-                                                window and click <b>Save</b> in the previous window.
-                                            </p>
-                                        </li>
+                                                    executed
+                                                    against <b>admin</b>
+                                                    <br/>
+                                                    <b>Collection</b> combobox is being filled whenever a database is
+                                                    selected
+                                                    from <b>DB / Resource</b> combobox by list collections command.
+                                                    <br/>
+                                                    <b>Actions</b> combobox is being filled by <b>crawling</b> <a
+                                                        href="https://docs.mongodb.org/manual/reference/privilege-actions"
+                                                        target="_blank">MongoDB official documentation</a>, but no
+                                                    worries,
+                                                    this
+                                                    crawling operation happens once, and Mongoclient caches these
+                                                    actions in
+                                                    it's MongoDB to show afterwards.
+                                                </p>
+                                                <h6>Roles to Inherit</h6>
+                                                <p>Every role in MongoDB can inherit multiple roles, by clicking <b>Add
+                                                    Role
+                                                    to Inherit</b> button you'll see another window that has two
+                                                    comboboxes.
+                                                    <br/>
+                                                    <b>Database</b> combobox is being filled by <a
+                                                            href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
+                                                            target="_blank">list databases</a> command which is being
+                                                    executed
+                                                    against <b>admin</b>
+                                                    <br/>
+                                                    <b>Role</b> combobox is being filled by executing command <code>{
+                                                        rolesInfo: 1,
+                                                        showBuiltinRoles: true
+                                                        }</code> on the mentioned database.
+                                                    <br/>
+                                                    When you click <b>Add</b> at <b>Add Role to Inherit</b> window,
+                                                    you'll
+                                                    realize window won't disappear, that's because you can select and
+                                                    add
+                                                    more roles on-the-fly and nothing will be saved unless you close
+                                                    this
+                                                    window and click <b>Save</b> in the previous window.
+                                                </p>
+                                            </li>
 
-                                        <li><b>Delete custom role</b>, (built-in roles can not be deleted)
-                                            <p>
-                                                Mongoclient executes <code>{dropRole: roleName}</code> on the mentioned
-                                                database to drop role, you can read more about this command by <a
-                                                    href="https://docs.mongodb.com/manual/reference/command/dropRole/#dbcmd.dropRole"
-                                                    target="_blank">clicking here</a>. To delete a role you need to
-                                                select a role from the table and click <i class="fa fa-remove"></i>
-                                                button.
-                                            </p>
-                                        </li>
+                                            <li><b>Delete custom role</b>, (built-in roles can not be deleted)
+                                                <p>
+                                                    Mongoclient executes <code>{dropRole: roleName}</code> on the
+                                                    mentioned
+                                                    database to drop role, you can read more about this command by <a
+                                                        href="https://docs.mongodb.com/manual/reference/command/dropRole/#dbcmd.dropRole"
+                                                        target="_blank">clicking here</a>. To delete a role you need to
+                                                    select a role from the table and click <i class="fa fa-remove"></i>
+                                                    button.
+                                                </p>
+                                            </li>
 
-                                        <li><b>Add custom role</b>
-                                            <p>
-                                                This section is same as <a href="#edit_custom_role" class="scrollto">editing
-                                                a custom role</a> except in here you can <b> add a new role</b> instead
-                                                of <b>editing existing one.</b> To reach this section, you need to click
-                                                <b>Add Role</b> button from the <b>Manage Roles</b> window
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h6 id="manage_users">Manage Users</h6>
-                                    <p>To populate table that's placed in the <b>Manage Users</b>,
-                                        Mongoclient executes <code>{ usersInfo: 1, showCredentials: true}</code> on
-                                        the database (admin/selected). <a
-                                                href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
-                                                target="_blank">Click here</a> for more info about this command.</p>
-                                    <p>In this section, you can do following actions.</p>
-
-                                    <ul class="list">
-                                        <li id="edit_user"><b>Edit user</b>
-                                            <p>
-                                                Editing user is possible either clicking <i class="fa fa-edit"></i>
-                                                after selecting a user from the table that's placed in the <b>Edit
-                                                User</b> window, or selecting user from the <a href="#user_management"
-                                                                                               class="scrollto">user
-                                                tree</a> and clicking <b>Edit User</b> button from the right upper
-                                                corner. You can edit user's roles or custom data as it's placed in
-                                                different tabs in the <b>Edit User</b> window.
-                                                <br/>
-                                                Changes in this section will be applied after you click the <b>Save</b>
-                                                button, Mongoclient executes <code>updateUser</code> command to save
-                                                user. <a
-                                                    href="https://docs.mongodb.com/manual/reference/command/updateUser/"
-                                                    target="_blank"> Click here </a>for more info.
-                                            </p>
-                                            <h6>Username & Password</h6>
-                                            <p>To change the username or password of selected user you need to fill
-                                                input fields at the top of <b>Edit User</b> window. If you <b>leave
-                                                    password input empty</b>, password won't be updated by Mongoclient
-                                            </p>
-
-                                            <h6>Roles</h6>
-                                            <p>
-                                                You can delete existing roles of user by selecting a role from the table
-                                                and clicking <i class="fa fa-remove"></i>.
-                                                <br/>
-                                                <b>Add Role</b> button shows a new window that lets you to add a role
-                                                either by selecting from a table or selecting database and role from the
-                                                top of window. In this section, table and top two comboboxes (database,
-                                                role) are being populated by commands <code>rolesInfo</code> and <code>listDatabases</code>,
-                                                <a href="https://docs.mongodb.com/manual/reference/command/rolesInfo/"
-                                                   target="_blank">click here </a> for rolesInfo, and <a
-                                                    href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
-                                                    target="_blank">
-                                                click here </a>for listDatabases.
-                                            </p>
-                                            <h6>Custom Data</h6>
-                                            <p>
-                                                You can assign a custom data object to user, custom data objects valid
-                                                for
-                                                <b>MongoDB >= 2.6</b>
-                                            </p>
-                                        </li>
-                                        <li><b>Show custom data</b>
-                                            <p>
-                                                If you don't need to change anything of user, you can
-                                                see user's custom data by clicking <i
-                                                    class="fa fa-book"></i> after selecting a user from the table in the
-                                                <b>Manage Users</b> window
-                                            </p>
-                                        </li>
-                                        <li><b>Delete user</b>
-                                            <p>
-                                                Mongoclient executes <code>{dropUser: userName}</code> on the mentioned
-                                                database to drop user, you can read more about this command by <a
-                                                    href="https://docs.mongodb.com/manual/reference/command/dropUser"
-                                                    target="_blank">clicking here</a>. To delete a user you need to
-                                                select a user from the table and click <i class="fa fa-remove"></i>
-                                                button.
-                                            </p>
-                                        </li>
-
-                                        <li><b>Add new user</b>
-                                            <p>
-                                                This section is same as <a href="#edit_user" class="scrollto">editing
-                                                a user</a> except in here you can <b> add a new user</b> instead
-                                                of <b>editing existing one.</b> To reach this section, you need to click
-                                                <b>Add User</b> button from the <b>Manage Users</b> window
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="dump_restore_import">Dump/Restore/Import (Novice Level)</h4>
-                                    <div class="callout-block callout-danger">
-                                        <div class="icon-holder">
-                                            <i class="fa fa-warning"></i>
-                                        </div><!--//icon-holder-->
-                                        <div class="content">
-                                            <h4 class="callout-title">Warning</h4>
-                                            <p>This section is <b>NOT FOR PRODUCTION USE </b> as of current version of
-                                                Mongoclient, and can be used on <b>TEST</b> or <b>LOCAL</b>
-                                                environments.
-                                            </p>
-                                        </div><!--//content-->
+                                            <li><b>Add custom role</b>
+                                                <p>
+                                                    This section is same as <a href="#edit_custom_role"
+                                                                               class="scrollto">editing
+                                                    a custom role</a> except in here you can <b> add a new role</b>
+                                                    instead
+                                                    of <b>editing existing one.</b> To reach this section, you need to
+                                                    click
+                                                    <b>Add Role</b> button from the <b>Manage Roles</b> window
+                                                </p>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
-                                            <div class="screenshot-holder">
-                                                <a href="assets/images/screenshots/dump_restore.png"
-                                                   data-title="Dump/Restore/Import" data-toggle="lightbox"><img
-                                                        class="img-responsive"
-                                                        src="assets/images/screenshots/dump_restore.png"
-                                                        alt="screenshot"></a>
-                                                <a class="mask" href="assets/images/screenshots/dump_restore.png"
-                                                   data-title="Dump/Restore/Import" data-toggle="lightbox"><i
-                                                        class="icon fa fa-search-plus"></i></a>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="manage_users">Manage Users</h6>
+                                        <p>To populate table that's placed in the <b>Manage Users</b>,
+                                            Mongoclient executes <code>{ usersInfo: 1, showCredentials: true}</code> on
+                                            the database (admin/selected). <a
+                                                    href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
+                                                    target="_blank">Click here</a> for more info about this command.</p>
+                                        <p>In this section, you can do following actions.</p>
+
+                                        <ul class="list">
+                                            <li id="edit_user"><b>Edit user</b>
+                                                <p>
+                                                    Editing user is possible either clicking <i class="fa fa-edit"></i>
+                                                    after selecting a user from the table that's placed in the <b>Edit
+                                                    User</b> window, or selecting user from the <a
+                                                        href="#user_management"
+                                                        class="scrollto">user
+                                                    tree</a> and clicking <b>Edit User</b> button from the right upper
+                                                    corner. You can edit user's roles or custom data as it's placed in
+                                                    different tabs in the <b>Edit User</b> window.
+                                                    <br/>
+                                                    Changes in this section will be applied after you click the
+                                                    <b>Save</b>
+                                                    button, Mongoclient executes <code>updateUser</code> command to save
+                                                    user. <a
+                                                        href="https://docs.mongodb.com/manual/reference/command/updateUser/"
+                                                        target="_blank"> Click here </a>for more info.
+                                                </p>
+                                                <h6>Username & Password</h6>
+                                                <p>To change the username or password of selected user you need to fill
+                                                    input fields at the top of <b>Edit User</b> window. If you <b>leave
+                                                        password input empty</b>, password won't be updated by
+                                                    Mongoclient
+                                                </p>
+
+                                                <h6>Roles</h6>
+                                                <p>
+                                                    You can delete existing roles of user by selecting a role from the
+                                                    table
+                                                    and clicking <i class="fa fa-remove"></i>.
+                                                    <br/>
+                                                    <b>Add Role</b> button shows a new window that lets you to add a
+                                                    role
+                                                    either by selecting from a table or selecting database and role from
+                                                    the
+                                                    top of window. In this section, table and top two comboboxes
+                                                    (database,
+                                                    role) are being populated by commands <code>rolesInfo</code> and
+                                                    <code>listDatabases</code>,
+                                                    <a href="https://docs.mongodb.com/manual/reference/command/rolesInfo/"
+                                                       target="_blank">click here </a> for rolesInfo, and <a
+                                                        href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
+                                                        target="_blank">
+                                                    click here </a>for listDatabases.
+                                                </p>
+                                                <h6>Custom Data</h6>
+                                                <p>
+                                                    You can assign a custom data object to user, custom data objects
+                                                    valid
+                                                    for
+                                                    <b>MongoDB >= 2.6</b>
+                                                </p>
+                                            </li>
+                                            <li><b>Show custom data</b>
+                                                <p>
+                                                    If you don't need to change anything of user, you can
+                                                    see user's custom data by clicking <i
+                                                        class="fa fa-book"></i> after selecting a user from the table in
+                                                    the
+                                                    <b>Manage Users</b> window
+                                                </p>
+                                            </li>
+                                            <li><b>Delete user</b>
+                                                <p>
+                                                    Mongoclient executes <code>{dropUser: userName}</code> on the
+                                                    mentioned
+                                                    database to drop user, you can read more about this command by <a
+                                                        href="https://docs.mongodb.com/manual/reference/command/dropUser"
+                                                        target="_blank">clicking here</a>. To delete a user you need to
+                                                    select a user from the table and click <i class="fa fa-remove"></i>
+                                                    button.
+                                                </p>
+                                            </li>
+
+                                            <li><b>Add new user</b>
+                                                <p>
+                                                    This section is same as <a href="#edit_user" class="scrollto">editing
+                                                    a user</a> except in here you can <b> add a new user</b> instead
+                                                    of <b>editing existing one.</b> To reach this section, you need to
+                                                    click
+                                                    <b>Add User</b> button from the <b>Manage Users</b> window
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="dump_restore_import">Dump/Restore/Import (Novice Level)</h4>
+                                        <div class="callout-block callout-danger">
+                                            <div class="icon-holder">
+                                                <i class="fa fa-warning"></i>
+                                            </div><!--//icon-holder-->
+                                            <div class="content">
+                                                <h4 class="callout-title">Warning</h4>
+                                                <p>This section is <b>NOT FOR PRODUCTION USE </b> as of current version
+                                                    of
+                                                    Mongoclient, and can be used on <b>TEST</b> or <b>LOCAL</b>
+                                                    environments.
+                                                </p>
+                                            </div><!--//content-->
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                                <div class="screenshot-holder">
+                                                    <a href="assets/images/screenshots/dump_restore.png"
+                                                       data-title="Dump/Restore/Import" data-toggle="lightbox"><img
+                                                            class="img-responsive"
+                                                            src="assets/images/screenshots/dump_restore.png"
+                                                            alt="screenshot"></a>
+                                                    <a class="mask" href="assets/images/screenshots/dump_restore.png"
+                                                       data-title="Dump/Restore/Import" data-toggle="lightbox"><i
+                                                            class="icon fa fa-search-plus"></i></a>
+                                                </div>
                                             </div>
                                         </div>
+                                        <p>This section consists of two parts.</p>
+                                        <ul class="list">
+                                            <li><b>Import Data</b>
+                                                <p>
+                                                    If you have an extended JSON file which has been exported via <a
+                                                        href="https://docs.mongodb.com/manual/reference/program/mongoexport/"
+                                                        target="_blank">mongoexport</a>
+                                                    with <b>--jsonArray</b> flag, you can use this section to import
+                                                    this
+                                                    extended JSON into one of your collections.
+                                                </p>
+                                            </li>
+
+                                            <li><b>Dump/Restore</b>
+                                                <p>
+                                                    If you want to take a dump of your currently connected database, you
+                                                    can
+                                                    simply click <b>Take Dump</b> button. The local path that dump is
+                                                    written can be changed from <a class="scrollto"
+                                                                                   href="#settings">settings</a>
+                                                    <br/>
+                                                    Since dump process uses a <a
+                                                        href="https://docs.mongodb.com/manual/reference/command/parallelCollectionScan/"
+                                                        target="_blank">paralel scan of collections</a> , it's always
+                                                    good
+                                                    not to use this feature on production.
+                                                </p>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <p>This section consists of two parts.</p>
-                                    <ul class="list">
-                                        <li><b>Import Data</b>
-                                            <p>
-                                                If you have an extended JSON file which has been exported via <a
-                                                    href="https://docs.mongodb.com/manual/reference/program/mongoexport/"
-                                                    target="_blank">mongoexport</a>
-                                                with <b>--jsonArray</b> flag, you can use this section to import this
-                                                extended JSON into one of your collections.
-                                            </p>
-                                        </li>
-
-                                        <li><b>Dump/Restore</b>
-                                            <p>
-                                                If you want to take a dump of your currently connected database, you can
-                                                simply click <b>Take Dump</b> button. The local path that dump is
-                                                written can be changed from <a class="scrollto"
-                                                                               href="#settings">settings</a>
-                                                <br/>
-                                                Since dump process uses a <a
-                                                    href="https://docs.mongodb.com/manual/reference/command/parallelCollectionScan/"
-                                                    target="_blank">paralel scan of collections</a> , it's always good
-                                                not to use this feature on production.
-                                            </p>
-                                        </li>
-                                    </ul>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="file_management">File Management (Novice Level)</h4>
-                                    <p>
-                                        Mongoclient comes with ease of managing your GridFS collections with a few
-                                        clicks, instead of queries. At the file management section, you can <b>download,
-                                        upload, delete, filter</b> your files with the buttons.
-                                    </p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="file_management">File Management (Novice Level)</h4>
+                                        <p>
+                                            Mongoclient comes with ease of managing your GridFS collections with a few
+                                            clicks, instead of queries. At the file management section, you can <b>download,
+                                            upload, delete, filter</b> your files with the buttons.
+                                        </p>
 
-                                    <div class="row">
-                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
-                                            <div class="screenshot-holder">
-                                                <a href="assets/images/screenshots/file_managemnet.png"
-                                                   data-title="File Management" data-toggle="lightbox"><img
-                                                        class="img-responsive"
-                                                        src="assets/images/screenshots/file_managemnet.png"
-                                                        alt="screenshot"></a>
-                                                <a class="mask" href="assets/images/screenshots/file_managemnet.png"
-                                                   data-title="File Management" data-toggle="lightbox"><i
-                                                        class="icon fa fa-search-plus"></i></a>
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                                <div class="screenshot-holder">
+                                                    <a href="assets/images/screenshots/file_managemnet.png"
+                                                       data-title="File Management" data-toggle="lightbox"><img
+                                                            class="img-responsive"
+                                                            src="assets/images/screenshots/file_managemnet.png"
+                                                            alt="screenshot"></a>
+                                                    <a class="mask" href="assets/images/screenshots/file_managemnet.png"
+                                                       data-title="File Management" data-toggle="lightbox"><i
+                                                            class="icon fa fa-search-plus"></i></a>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <p>In this section you can delete multiple files that match with the entered
+                                            selector by clicking <b>Delete</b> button, or refresh file list which has
+                                            been
+                                            populated at the below table by clicking <b>Refresh</b> button. Following
+                                            actions happening here at the behind
+                                            the scenes.</p>
+                                        <ul class="list">
+                                            <li id="listing_filtering_files"><b>Listing and filtering files</b>
+                                                <p>To fetch and filter files, Mongoclient executes <b>find</b> query on
+                                                    the
+                                                    <code>selectedBucket.files</code> collection</p>
+                                            </li>
+                                            <li><b>Showing and editing file information</b>
+                                                <p>
+                                                    This works exactly same as <a href="#listing_filtering_files"
+                                                                                  class="scrollto">listing and filtering
+                                                    files </a> , so when you try to see a file information by selecting
+                                                    a
+                                                    file from table and clicking <i class="fa fa-book"></i> Mongoclient
+                                                    executes <b>findOne</b> and for the save process executes
+                                                    <b>updateOne</b> queries.
+                                                </p>
+                                            </li>
+                                            <li><b>Deleting a file</b>
+                                                <p>Differently from above operations, Mongoclient calls
+                                                    <code>delete</code>
+                                                    operation for the selected file's id on GridFS level, so you don't
+                                                    have
+                                                    to worry about <b>.files and .chunks</b> collections. To delete a
+                                                    file
+                                                    you need to select a file from table and click <i
+                                                            class="fa fa-remove"></i> button</p></li>
+
+                                            <li><b>Downloading a file</b>
+                                                <p>Mongoclient sends you to a new route <b>download</b> with the
+                                                    parameters
+                                                    <b>fileId</b> and <b>bucket name</b> and starts piping bytes to you
+                                                    to download a file. This is a low level operation and uses streams
+                                                    behind the scenes. To download a file you need to click <i
+                                                            class="fa fa-download"></i> button after selecting a file
+                                                    from
+                                                    the table</p>
+                                            </li>
+
+                                            <li><b>Upload a file</b>
+                                                <p>
+                                                    To use <b>Upload</b> button you need to select a file from the input
+                                                    first. After you'll see a message which asks you, if you want
+                                                    to keep uplaoding or not. If you answer this question <b>yes</b>
+                                                    then
+                                                    you can manually fill other informations of your <b>GridFS</b> file
+                                                    before uploading it. Mongoclient pipes stream to your database's <b>GridFS</b>
+                                                    bucket to upload a file. Before uploading you can fill <b>fileName,
+                                                    contentType, metaData, aliases</b> information.
+                                                </p>
+                                            </li>
+                                        </ul>
                                     </div>
-
-                                    <p>In this section you can delete multiple files that match with the entered
-                                        selector by clicking <b>Delete</b> button, or refresh file list which has been
-                                        populated at the below table by clicking <b>Refresh</b> button. Following
-                                        actions happening here at the behind
-                                        the scenes.</p>
-                                    <ul class="list">
-                                        <li id="listing_filtering_files"><b>Listing and filtering files</b>
-                                            <p>To fetch and filter files, Mongoclient executes <b>find</b> query on the
-                                                <code>selectedBucket.files</code> collection</p>
-                                        </li>
-                                        <li><b>Showing and editing file information</b>
-                                            <p>
-                                                This works exactly same as <a href="#listing_filtering_files"
-                                                                              class="scrollto">listing and filtering
-                                                files </a> , so when you try to see a file information by selecting a
-                                                file from table and clicking <i class="fa fa-book"></i> Mongoclient
-                                                executes <b>findOne</b> and for the save process executes
-                                                <b>updateOne</b> queries.
-                                            </p>
-                                        </li>
-                                        <li><b>Deleting a file</b>
-                                            <p>Differently from above operations, Mongoclient calls <code>delete</code>
-                                                operation for the selected file's id on GridFS level, so you don't have
-                                                to worry about <b>.files and .chunks</b> collections. To delete a file
-                                                you need to select a file from table and click <i
-                                                        class="fa fa-remove"></i> button</p></li>
-
-                                        <li><b>Downloading a file</b>
-                                            <p>Mongoclient sends you to a new route <b>download</b> with the parameters
-                                                <b>fileId</b> and <b>bucket name</b> and starts piping bytes to you
-                                                to download a file. This is a low level operation and uses streams
-                                                behind the scenes. To download a file you need to click <i
-                                                        class="fa fa-download"></i> button after selecting a file from
-                                                the table</p>
-                                        </li>
-
-                                        <li><b>Upload a file</b>
-                                            <p>
-                                                To use <b>Upload</b> button you need to select a file from the input
-                                                first. After you'll see a message which asks you, if you want
-                                                to keep uplaoding or not. If you answer this question <b>yes</b> then
-                                                you can manually fill other informations of your <b>GridFS</b> file
-                                                before uploading it. Mongoclient pipes stream to your database's <b>GridFS</b>
-                                                bucket to upload a file. Before uploading you can fill <b>fileName,
-                                                contentType, metaData, aliases</b> information.
-                                            </p>
-                                        </li>
-                                    </ul>
                                 </div>
-                            </div>
 
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="index_management">Index Management (Expert Level)</h4>
+                                        <p>Mongoclient has a very unique way to manage indexes. Each index type is being
+                                            coloured differently and you can add new indexes with a few click without
+                                            struggling design obstacles and queries. Changing collection from the
+                                            combobox
+                                            refreshes the indexes list. These collections comes from the <b>active
+                                                database
+                                                connection</b></p>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="index_management">Index Management (Expert Level)</h4>
-                                    <p>Mongoclient has a very unique way to manage indexes. Each index type is being
-                                        coloured differently and you can add new indexes with a few click without
-                                        struggling design obstacles and queries. Changing collection from the combobox
-                                        refreshes the indexes list. These collections comes from the <b>active database
-                                            connection</b></p>
-
-                                    <div class="row">
-                                        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
-                                            <div class="screenshot-holder">
-                                                <a href="assets/images/screenshots/index_management.png"
-                                                   data-title="Index Management" data-toggle="lightbox"><img
-                                                        class="img-responsive"
-                                                        src="assets/images/screenshots/index_management.png"
-                                                        alt="screenshot"></a>
-                                                <a class="mask" href="assets/images/screenshots/index_management.png"
-                                                   data-title="Index Management" data-toggle="lightbox"><i
-                                                        class="icon fa fa-search-plus"></i></a>
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
+                                                <div class="screenshot-holder">
+                                                    <a href="assets/images/screenshots/index_management.png"
+                                                       data-title="Index Management" data-toggle="lightbox"><img
+                                                            class="img-responsive"
+                                                            src="assets/images/screenshots/index_management.png"
+                                                            alt="screenshot"></a>
+                                                    <a class="mask"
+                                                       href="assets/images/screenshots/index_management.png"
+                                                       data-title="Index Management" data-toggle="lightbox"><i
+                                                            class="icon fa fa-search-plus"></i></a>
+                                                </div>
                                             </div>
                                         </div>
+                                        <p>You can find what's happening behind the scenes for this section at
+                                            below.</p>
+                                        <ul class="list">
+                                            <li><b>Listing indexes</b>
+                                                <p>Mongoclient executes <b>three</b> queries to populate whole data of
+                                                    index
+                                                    management section. These are <a
+                                                            href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
+                                                            target="_blank">getIndexes</a> to get index names and
+                                                    properties, <a
+                                                            href="https://docs.mongodb.com/manual/reference/method/db.stats/"
+                                                            target="_blank">stats</a> to get index sizes,
+                                                    <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/indexStats/">indexStats
+                                                        aggregation</a> to get index usage statistics <b>(MongoDB >=
+                                                        3.2)</b></p>
+                                            </li>
+
+                                            <li id="view_index"><b>Viewing an index</b>
+                                                <p>After selecting an index from table and clicking <i
+                                                        class="fa fa-book"></i> button, you'll be able to see the
+                                                    details of
+                                                    the index in an another window. Mongoclient executes <a
+                                                            href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
+                                                            target="_blank">getIndexes</a> with the selected index name
+                                                    to
+                                                    fetch these details.</p>
+                                            </li>
+
+                                            <li><b>Viewing index as raw</b>
+                                                <p>
+                                                    This works same as <a href="#view_index" class="scrollto">viewing an
+                                                    index</a>, except instead of populating UI, shows the raw JSON data.
+                                                    You can reach this raw json by clicking <i class="fa fa-leaf"></i>
+                                                    button after selecting an index from the table
+                                                </p>
+                                            </li>
+
+                                            <li><b>Dropping index</b>
+                                                <p>
+                                                    If you click <i class="fa fa-remove"></i> button, Mongoclient
+                                                    executes
+                                                    <a href="https://docs.mongodb.com/manual/reference/method/db.collection.dropIndex/"
+                                                       target="_blank">dropIndex</a> to drop the selected index.
+                                                </p>
+                                            </li>
+
+                                            <li><b>Adding index</b>
+                                                <p>
+                                                    <b>Add Index</b> button that's placed at the very bottom of the
+                                                    page,
+                                                    lets you to add a new index. In the opened window there are <b>four
+                                                    tabs</b>. And only general has two fields that are required, all
+                                                    other
+                                                    tabs have optional options.
+                                                    <br/>
+                                                    <b>General</b> tab lets you to specify <b>index name</b> (required),
+                                                    select <b>fields
+                                                    with their types</b> (at least one field is required), and select
+                                                    <b>index
+                                                        properties</b> (optional).
+                                                    <br/>
+                                                    <b>Text Options</b> tab has the options for the <b>text</b> index,
+                                                    if
+                                                    you've selected one in the <b>General tab</b>
+                                                    <br/>
+                                                    <b>Geo Options</b> tab has three sections for three types of geo
+                                                    indexes
+                                                    of MongoDB (2D, 2D Sphere, Geo Haystack), each section has related
+                                                    options and only valid if you've selected the corresponding type of
+                                                    index from the <b>General tab</b>
+                                                    <br/>
+                                                    <b>Collation</b> is valid only for <b>MongoDB >=3.4</b>, you can
+                                                    read
+                                                    more <a href="https://docs.mongodb.com/manual/reference/collation/"
+                                                            target="_blank">from here</a>
+                                                </p>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <p>You can find what's happening behind the scenes for this section at below.</p>
-                                    <ul class="list">
-                                        <li><b>Listing indexes</b>
-                                            <p>Mongoclient executes <b>three</b> queries to populate whole data of index
-                                                management section. These are <a
-                                                        href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
-                                                        target="_blank">getIndexes</a> to get index names and
-                                                properties, <a
-                                                        href="https://docs.mongodb.com/manual/reference/method/db.stats/"
-                                                        target="_blank">stats</a> to get index sizes,
-                                                <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/indexStats/">indexStats
-                                                    aggregation</a> to get index usage statistics <b>(MongoDB >=
-                                                    3.2)</b></p>
-                                        </li>
-
-                                        <li id="view_index"><b>Viewing an index</b>
-                                            <p>After selecting an index from table and clicking <i
-                                                    class="fa fa-book"></i> button, you'll be able to see the details of
-                                                the index in an another window. Mongoclient executes <a
-                                                        href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
-                                                        target="_blank">getIndexes</a> with the selected index name to
-                                                fetch these details.</p>
-                                        </li>
-
-                                        <li><b>Viewing index as raw</b>
-                                            <p>
-                                                This works same as <a href="#view_index" class="scrollto">viewing an
-                                                index</a>, except instead of populating UI, shows the raw JSON data.
-                                                You can reach this raw json by clicking <i class="fa fa-leaf"></i>
-                                                button after selecting an index from the table
-                                            </p>
-                                        </li>
-
-                                        <li><b>Dropping index</b>
-                                            <p>
-                                                If you click <i class="fa fa-remove"></i> button, Mongoclient executes
-                                                <a href="https://docs.mongodb.com/manual/reference/method/db.collection.dropIndex/"
-                                                   target="_blank">dropIndex</a> to drop the selected index.
-                                            </p>
-                                        </li>
-
-                                        <li><b>Adding index</b>
-                                            <p>
-                                                <b>Add Index</b> button that's placed at the very bottom of the page,
-                                                lets you to add a new index. In the opened window there are <b>four
-                                                tabs</b>. And only general has two fields that are required, all other
-                                                tabs have optional options.
-                                                <br/>
-                                                <b>General</b> tab lets you to specify <b>index name</b> (required),
-                                                select <b>fields
-                                                with their types</b> (at least one field is required), and select <b>index
-                                                properties</b> (optional).
-                                                <br/>
-                                                <b>Text Options</b> tab has the options for the <b>text</b> index, if
-                                                you've selected one in the <b>General tab</b>
-                                                <br/>
-                                                <b>Geo Options</b> tab has three sections for three types of geo indexes
-                                                of MongoDB (2D, 2D Sphere, Geo Haystack), each section has related
-                                                options and only valid if you've selected the corresponding type of
-                                                index from the <b>General tab</b>
-                                                <br/>
-                                                <b>Collation</b> is valid only for <b>MongoDB >=3.4</b>, you can read
-                                                more <a href="https://docs.mongodb.com/manual/reference/collation/"
-                                                        target="_blank">from here</a>
-                                            </p>
-                                        </li>
-                                    </ul>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="admin_queries">Admin Queries (Expert Level)</h4>
-                                    <p>Mongoclient separates queries as <b>Admin</b> and <b>Normal</b> queries. If
-                                        you're a developer and want to just query your database, you have nothing to do
-                                        with this section.</p>
-                                    <p>These queries can only be executed if you have the necessary privileges. Some of
-                                        these queries can be executed on the <code>admin</code> database instead of the
-                                        currently connected database. To do that you simply need to check right upper
-                                        corner checkbox. <b>Checked = execute on the admin database</b></p>
-                                    <p>If you don't like <b>JsonEditor</b>, you can switch to <b>AceEditor</b> instead,
-                                        by clicking <i
-                                                class="fa fa-exchange"></i> button that's placed at the right upper
-                                        corner. Default result view can be changed via <a href="#settings"
-                                                                                          class="scrollto">settings</a>
-                                    </p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="admin_queries">Admin Queries (Expert Level)</h4>
+                                        <p>Mongoclient separates queries as <b>Admin</b> and <b>Normal</b> queries. If
+                                            you're a developer and want to just query your database, you have nothing to
+                                            do
+                                            with this section.</p>
+                                        <p>These queries can only be executed if you have the necessary privileges. Some
+                                            of
+                                            these queries can be executed on the <code>admin</code> database instead of
+                                            the
+                                            currently connected database. To do that you simply need to check right
+                                            upper
+                                            corner checkbox. <b>Checked = execute on the admin database</b></p>
+                                        <p>If you don't like <b>JsonEditor</b>, you can switch to <b>AceEditor</b>
+                                            instead,
+                                            by clicking <i
+                                                    class="fa fa-exchange"></i> button that's placed at the right upper
+                                            corner. Default result view can be changed via <a href="#settings"
+                                                                                              class="scrollto">settings</a>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <p>Below, you can find following MongoDB queries that Mongoclient executes for the
-                                        corresponding <b>admin query</b>.</p>
-                                    <h6>Queries</h6>
-                                    <ul class="list">
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/method/db.createUser/">addUser</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/command/buildInfo/">buildInfo</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/method/db.runCommand/">command</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/command/listDatabases/">listDatabases</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/method/db.getProfilingStatus/">profilingInfo</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/method/db.removeUser/">removeUser</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/command/replSetGetStatus/">replSetGetStatus</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/command/buildInfo/">serverInfo</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/command/serverStatus/">serverStatus</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/method/db.setProfilingLevel/">setProfilingLevel</a>
-                                        </li>
-                                        <li><a target="_blank"
-                                               href="https://docs.mongodb.com/manual/reference/method/db.collection.validate/">validateCollection</a>
-                                        </li>
-                                    </ul>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Below, you can find following MongoDB queries that Mongoclient executes for
+                                            the
+                                            corresponding <b>admin query</b>.</p>
+                                        <h6>Queries</h6>
+                                        <ul class="list">
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/method/db.createUser/">addUser</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/command/buildInfo/">buildInfo</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/method/db.runCommand/">command</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/command/listDatabases/">listDatabases</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/method/db.getProfilingStatus/">profilingInfo</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/method/db.removeUser/">removeUser</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/command/replSetGetStatus/">replSetGetStatus</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/command/buildInfo/">serverInfo</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/command/serverStatus/">serverStatus</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/method/db.setProfilingLevel/">setProfilingLevel</a>
+                                            </li>
+                                            <li><a target="_blank"
+                                                   href="https://docs.mongodb.com/manual/reference/method/db.collection.validate/">validateCollection</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="shell">Shell (Novice Level)</h4>
-                                    <p>MongoDB offers a nice shell if you're familiar with linux or mac terminal, it's a
-                                        nice feature to have such a tool. But lack of syntax highlighting and auto
-                                        completion can be a huge disadvantage, Mongoclient changes this disadvantage to
-                                        advantage for its users.</p>
-                                    <p><b>CTRL+SPACE</b> on the shell can be used for auto completion.
-                                        <br/>
-                                        <b>ENTER</b> button executes the query.
-                                    </p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="shell">Shell (Novice Level)</h4>
+                                        <p>MongoDB offers a nice shell if you're familiar with linux or mac terminal,
+                                            it's a
+                                            nice feature to have such a tool. But lack of syntax highlighting and auto
+                                            completion can be a huge disadvantage, Mongoclient changes this disadvantage
+                                            to
+                                            advantage for its users.</p>
+                                        <p><b>CTRL+SPACE</b> on the shell can be used for auto completion.
+                                            <br/>
+                                            <b>ENTER</b> button executes the query.
+                                        </p>
 
-                                    <p>Mongoclient internally brings MongoDB shell (for linux/windows/osx) for this
-                                        feature, and current version
-                                        of the shell is <b>v3.4.2</b></p>
+                                        <p>Mongoclient internally brings MongoDB shell (for linux/windows/osx) for this
+                                            feature, and current version
+                                            of the shell is <b>v3.4.2</b></p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="aggregate">Aggregate (Proficient Level)</h4>
-                                    <p>Aggregation pipeline of MongoDB is a combination of the stages which you can read
-                                        more about them <a
-                                                href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/"
-                                                target="_blank">here</a></p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="aggregate">Aggregate (Proficient Level)</h4>
+                                        <p>Aggregation pipeline of MongoDB is a combination of the stages which you can
+                                            read
+                                            more about them <a
+                                                    href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/"
+                                                    target="_blank">here</a></p>
 
-                                    <p>Mongoclient comes with a tool that lets you to execute your aggregation pipeline
-                                        at any stage level, re-order stages and add as many as stages you wish.
-                                        <br/>
-                                        <br/>To <b>add a new stage</b>, you need to select a collection and a stage from
-                                        the
-                                        comboboxes that's placed at the very top of the page.</br>
-                                        To <b>re-order</b> stages you can drag & drop a stage panel between all stages.
-                                        <br/>
-                                        To <b>remove a stage</b>, you can click <i class="fa fa-remove"></i> button
-                                        that's placed at the right upper corner of the corresponding stage panel. </p>
+                                        <p>Mongoclient comes with a tool that lets you to execute your aggregation
+                                            pipeline
+                                            at any stage level, re-order stages and add as many as stages you wish.
+                                            <br/>
+                                            <br/>To <b>add a new stage</b>, you need to select a collection and a stage
+                                            from
+                                            the
+                                            comboboxes that's placed at the very top of the page.</br>
+                                            To <b>re-order</b> stages you can drag & drop a stage panel between all
+                                            stages.
+                                            <br/>
+                                            To <b>remove a stage</b>, you can click <i class="fa fa-remove"></i> button
+                                            that's placed at the right upper corner of the corresponding stage panel.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="stored_functions">Stored Functions (Proficient Level)</h4>
-                                    <p>There is a special system collection named <code>system.js</code> that can store
-                                        JavaScript
-                                        functions for reuse in MongoDB. With Mongoclient you can manage your functions
-                                        easily.</p>
-                                    <p>Mongoclient lists all current functions via executing <code>find</code> query on
-                                        collection <b>system.js</b>, to add functions calls <b>insertMany</b>, to update
-                                        functions calls <b>updateOne</b>, and
-                                        to delete them calls <b>delete</b> queries internally.</p>
-                                    <p>A basic function seems like: <code>{ "_id" : "myAddFunction", "value" : { "code"
-                                        : "function (x, y){ return x + y; }" } }</code> in your database.</p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="stored_functions">Stored Functions (Proficient Level)</h4>
+                                        <p>There is a special system collection named <code>system.js</code> that can
+                                            store
+                                            JavaScript
+                                            functions for reuse in MongoDB. With Mongoclient you can manage your
+                                            functions
+                                            easily.</p>
+                                        <p>Mongoclient lists all current functions via executing <code>find</code> query
+                                            on
+                                            collection <b>system.js</b>, to add functions calls <b>insertMany</b>, to
+                                            update
+                                            functions calls <b>updateOne</b>, and
+                                            to delete them calls <b>delete</b> queries internally.</p>
+                                        <p>A basic function seems like: <code>{ "_id" : "myAddFunction", "value" : {
+                                            "code"
+                                            : "function (x, y){ return x + y; }" } }</code> in your database.</p>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h4 id="schema_analyzer">Schema Analyzer (Proficient Level)</h4>
-                                    <p>Since MongoDB is <a href="#keywords-11" class="scrollto">schemaless</a>, you may
-                                        want to analyze your collection's schema and see what data types have your
-                                        fields. Mongoclient uses <a href="https://github.com/variety/variety"
-                                                                    target="_blank">variety.js</a> to present
-                                        you this feature.</p>
-                                    <p>It's always good <b>not to use this on huge collections</b>.</p>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h4 id="schema_analyzer">Schema Analyzer (Proficient Level)</h4>
+                                        <p>Since MongoDB is <a href="#keywords-11" class="scrollto">schemaless</a>, you
+                                            may
+                                            want to analyze your collection's schema and see what data types have your
+                                            fields. Mongoclient uses <a href="https://github.com/variety/variety"
+                                                                        target="_blank">variety.js</a> to present
+                                            you this feature.</p>
+                                        <p>It's always good <b>not to use this on huge collections</b>.</p>
+                                    </div>
                                 </div>
                             </div>
                         </section>
+
+                        <section id="querying-section" class="doc-section">
+                            <h2 class="section-title">Collections - Querying (Novice Level)</h2>
+                            <div class="section-block">
+                                <p>
+
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </section><!--//doc-section-->
                     </div><!--//content-inner-->
                 </div><!--//doc-content-->
                 <div class="doc-sidebar hidden-xs">
@@ -1497,6 +1609,7 @@
                                     <li><a class="scrollto" href="#schema_analyzer">Schema Analyzer</a></li>
                                 </ul><!--//nav-->
                             </li>
+                            <li><a class="scrollto" href="#querying-section">Collections (Querying)</a></li>
                             <li></li>
                         </ul><!--//doc-menu-->
                     </nav>
