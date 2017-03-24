@@ -173,7 +173,7 @@
                                                         Aggregation operations process data records and return computed
                                                         results. Mongoclient offers a nice intuitive tool to
                                                         <b>combine/reorder and execute
-                                                            aggregation stages of MongoDB</b> in a nice UI.
+                                                            aggregation stages of MongoDB</b>.
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1573,11 +1573,109 @@
                             <h2 class="section-title">Collections - Querying (Novice Level)</h2>
                             <div class="section-block">
                                 <p>
-
+                                    Mongoclient lists your all collections at the left navigation panel for quick
+                                    navigation, and internally executes <a
+                                        href="https://docs.mongodb.com/manual/reference/command/listCollections/"
+                                        target="_blank">listCollections</a> for that.
                                 </p>
+                                <p>Whenever you choose a collection from left panel, right section is being re-rendered
+                                    and allows you to query your selected collection.
+                                    In most cases, that section is what you're looking for. </p>
+                                <p>Within this section you can:</p>
+                                <ul class="list">
+                                    <li>List, group and <a href="#keywords-7" class="scrollto">aggregation </a>
+                                        operations for <a href="#keywords-5"
+                                                          class="scrollto">collection's</a>
+                                        <a href="#keywords-4">documents</a></li>
+                                    <li>Manipulate and update <a href="#keywords-5" class="scrollto">collection's</a> <a
+                                            href="#keywords-4">documents</a></li>
+                                    <li>Delete <a href="#keywords-5" class="scrollto">collection's</a> <a
+                                            href="#keywords-4">documents</a></li>
+
+                                </ul>
+                                <p>You can use below queries for the selected collection.</p>
+                                <ul class="list">
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/aggregation/">aggregate</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/core/bulk-write-operations/">bulkWrite</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.count/">count</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/">createIndex</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/">delete</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.dropIndex/">dropIndex</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.find/">find</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.findOne/">findOne</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndDelete/">findOneAndDelete</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndReplace/">findOneAndReplace</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndUpdate/">findOneAndUpdate</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/command/geoSearch/">geoHaystackSearch</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/command/geoNear/">geoNear</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.group/">group</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.getIndexes/">indexInformation</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.insertMany/">insertMany</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.isCapped/">isCapped</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.mapReduce/">mapReduce</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.createCollection/">options</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.renameCollection/">rename</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.reIndex/">reIndex</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.stats/">stats</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.updateMany/">updateMany</a>
+                                    </li>
+                                    <li><a target="_blank"
+                                           href="https://docs.mongodb.com/manual/reference/method/db.collection.updateOne/">updateOne</a>
+                                    </li>
+                                </ul>
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p>Most of the queries has their own options, for example <b>find</b> has
+                                            options such as <b>limit, projection, sort</b> etc... Whenever you select a
+                                            query from the input that's placed at the very top of the page, Mongoclient
+                                            renders its options automatically.</p>
+
                                     </div>
                                 </div>
                             </div>
