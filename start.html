@@ -120,7 +120,8 @@
                                             <li>Import <b>mongoexport</b> results</li>
                                             <li>Database dump/restore</li>
                                             <li>User management from an intuitive UI without queries</li>
-                                            <li>File (<b>GridFS</b>) management from an intuitive UI without queries</li>
+                                            <li>File (<b>GridFS</b>) management from an intuitive UI without queries
+                                            </li>
                                             <li>Index management from an intuitive UI without queries</li>
                                             <li>Aggregation pipeline tool, drag & drop stages between your pipeline
                                                 list
@@ -1030,6 +1031,9 @@
                 </div><!--//doc-sidebar-->
             </div><!--//doc-body-->
         </div><!--//container-->
+        <a id="back-to-top" href="#" class="btn btn-green btn-lg back-to-top" role="button"
+           title="Go Top" data-toggle="tooltip" data-placement="left"><i style="margin-right: 0px;"
+                                                                         class="fa fa-arrow-up"></i></a>
     </div><!--//doc-wrapper-->
 
 </div><!--//page-wrapper-->
@@ -1052,6 +1056,30 @@
 <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="assets/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
 <script type="text/javascript" src="assets/js/main.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+
+        $('#back-to-top').tooltip('show');
+
+    });
+</script>
 
 </body>
 </html> 
