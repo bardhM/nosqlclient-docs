@@ -453,6 +453,123 @@
 
                             </div><!--//section-block-->
 
+                            <div id="systemd" class="section-block">
+                                <h3 class="block-title">Systemd (Linux)</h3>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>TL;DR</h6>
+                                        <ol class="list">
+                                            <li>Clone Mongoclient <code>
+                                                git clone https://github.com/mongoclient/mongoclient.git</code>
+                                            </li>
+                                            <li>Install <a href="https://www.meteor.com/install" target="_blank">MeteorJS</a>
+                                            </li>
+                                            <li>Navigate to systemd folder <code>cd /etc/systemd/system/</code>
+                                            </li>
+                                            <li>Create file <b>mongoclient.service</b> with the content:<br/><br/>
+                                                <code>
+                                                    [Unit]<br/>
+                                                    Description=MongoDB management tool<br/>
+                                                    After=network-online.target<br/>
+
+                                                    [Service]<br/>
+                                                    User=mongoclient<br/>
+                                                    Group=mongoclient<br/>
+                                                    WorkingDirectory=/path/to/clone/mongoclient/<br/>
+                                                    Environment=MONGOCLIENT_AUTH=true<br/>
+                                                    Environment=MONGOCLIENT_USERNAME=MYUSERNAME<br/>
+                                                    Environment=MONGOCLIENT_PASSWORD=MYPASSWORD<br/>
+                                                    ExecStart=/usr/local/bin/meteor --port MYPORT<br/>
+
+                                                    [Install]<br/>
+                                                    WantedBy=multi-user.target
+                                                </code>
+                                            </li>
+                                            <li>Execute <code>systemctl enable mongoclient.service</code></li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 30px" class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p><a href="https://en.wikipedia.org/wiki/Systemd" target="_blank">Systemd </a>is
+                                            an init system used in Linux. Check wikipedia for more information.</p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>Environment Variables</h6>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Configuration</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>ROOT_URL</td>
+                                                    <td>Useful to start mongoclient from another base
+                                                        URL, <b>by
+                                                            default
+                                                            uses root if empty</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>MONGO_URL</td>
+                                                    <td>Set an external mongodb URL to use for
+                                                        mongoclient, <b>by
+                                                            default it uses an internal one that comes from Meteor</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>MONGOCLIENT_AUTH</td>
+                                                    <td>Enable basic authentication for Mongoclient, <b>by
+                                                        default it's set to false</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>MONGOCLIENT_USERNAME</td>
+                                                    <td>Basic authentication's username, has to be set
+                                                        with <b>MONGOCLIENT_AUTH</b>,
+                                                        <b>by
+                                                            default there's no username</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>MONGOCLIENT_PASSWORD</td>
+                                                    <td>Basic authentication's password, has to be set
+                                                        with <b>MONGOCLIENT_AUTH</b>
+                                                        and <b>MONGOCLIENT_USERNAME</b>, <b>by
+                                                            default there's no password</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">6</th>
+                                                    <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
+                                                    <td>You can specify a default connection url, that
+                                                        will be
+                                                        injected
+                                                        into Mongoclient at startup so that, you won't
+                                                        have to
+                                                        create
+                                                        connection manually after installation.
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div id="heroku" class="section-block">
                                 <h3 class="block-title">Heroku</h3>
                                 <div class="row">
@@ -466,10 +583,13 @@
 
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Heroku is a cloud platform as a service (PaaS) and bypasses infrastructure
+                                        <p>Heroku is a cloud platform as a service (PaaS) and bypasses
+                                            infrastructure
                                             stuff. Mongoclient takes advantage of <code>heroku-16</code>
-                                            stack which comes with Ubuntu 16.04. Since Mongoclient's shell and schema
-                                            analyzer depends on <b>Mongo</b> executable 3.4 and the executable depends
+                                            stack which comes with Ubuntu 16.04. Since Mongoclient's shell and
+                                            schema
+                                            analyzer depends on <b>Mongo</b> executable 3.4 and the executable
+                                            depends
                                             on GLIBC's 2.23 version, this stack suits Mongoclient most.</p>
 
                                         <p>There's only one configuration you have to do while deploying to
@@ -492,7 +612,8 @@
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
                                                             <td>This has to be set as <b>http://&lt;heroku-app-name&gt;.herokuapp.com/&lt;optional-path&gt;</b>,
-                                                                heroku-app-name must be same as your application name
+                                                                heroku-app-name must be same as your application
+                                                                name
                                                             </td>
                                                         </tr>
                                                         </tbody>
@@ -504,10 +625,12 @@
                                         <div class="row">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <h6>MongoDB Dependency</h6>
-                                                <p>As Mongoclient needs a running mongodb instance to persist your
+                                                <p>As Mongoclient needs a running mongodb instance to persist
+                                                    your
                                                     connections and settings, it uses <a
                                                             href="https://elements.heroku.com/addons/mongolab">mLab
-                                                        addon</a>'s free edition which is enough to keep these details.
+                                                        addon</a>'s free edition which is enough to keep these
+                                                    details.
                                                 </p>
                                             </div>
                                         </div>
@@ -533,7 +656,8 @@
                                             <li>Install <a
                                                     href="https://docs.cloudfoundry.org/cf-cli/install-go-cli.html">command
                                                 line tool</a></li>
-                                            <li>Execute <code>cf login -a api.ng.bluemix.net -u username -p password
+                                            <li>Execute <code>cf login -a api.ng.bluemix.net -u username -p
+                                                password
                                             </code></li>
                                             <li>Execute <code>cf push
                                             </code></li>
@@ -543,11 +667,15 @@
 
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>As a developer you can trail the instance of CloudFoundry, either from <a
-                                                href="https://console.ng.bluemix.net/">IBM Bluemix</a>
-                                            or <a href="https://console.run.pivotal.io/">Pivotal</a>. Since Mongoclient
-                                            needs a MongoDB instance to persist your connections and settings, you need
-                                            an external mongodb which can be acquired from <a href="https://mlab.com/">Mlab</a>
+                                        <p>As a developer you can trail the instance of CloudFoundry, either
+                                            from <a
+                                                    href="https://console.ng.bluemix.net/">IBM Bluemix</a>
+                                            or <a href="https://console.run.pivotal.io/">Pivotal</a>. Since
+                                            Mongoclient
+                                            needs a MongoDB instance to persist your connections and settings,
+                                            you need
+                                            an external mongodb which can be acquired from <a
+                                                    href="https://mlab.com/">Mlab</a>
                                             for free.
                                         </p>
 
@@ -572,15 +700,18 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>Useful to start mongoclient from another base URL, <b>by
-                                                                default
-                                                                uses root if empty</b></td>
+                                                            <td>Useful to start mongoclient from another base
+                                                                URL, <b>by
+                                                                    default
+                                                                    uses root if empty</b></td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
-                                                            <td>Set an external mongodb URL to use for mongoclient, <b>by
-                                                                default it's empty and has to be set</b></td>
+                                                            <td>Set an external mongodb URL to use for
+                                                                mongoclient, <b>by
+                                                                    default it's empty and has to be set</b>
+                                                            </td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">3</th>
@@ -592,7 +723,8 @@
                                                         <tr>
                                                             <th scope="row">4</th>
                                                             <td>MONGOCLIENT_USERNAME</td>
-                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                            <td>Basic authentication's username, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>,
                                                                 <b>by
                                                                     default there's no username</b>
                                                             </td>
@@ -600,7 +732,8 @@
                                                         <tr>
                                                             <th scope="row">5</th>
                                                             <td>MONGOCLIENT_PASSWORD</td>
-                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                            <td>Basic authentication's password, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>
                                                                 and <b>MONGOCLIENT_USERNAME</b>, <b>by
                                                                     default there's no password</b>
                                                             </td>
@@ -608,8 +741,12 @@
                                                         <tr>
                                                             <th scope="row">6</th>
                                                             <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
-                                                            <td>You can specify a default connection url, that will be injected
-                                                                into Mongoclient at startup so that, you won't have to create
+                                                            <td>You can specify a default connection url, that
+                                                                will be
+                                                                injected
+                                                                into Mongoclient at startup so that, you won't
+                                                                have to
+                                                                create
                                                                 connection manually after installation.
                                                             </td>
                                                         </tr>
@@ -628,7 +765,8 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6>TL;DR</h6>
                                         <ol class="list">
-                                            <li>Install <a href="https://www.meteor.com/"> MeteorJS</a> (supports all
+                                            <li>Install <a href="https://www.meteor.com/"> MeteorJS</a>
+                                                (supports all
                                                 platforms)
                                             </li>
                                             <li>Clone Mongoclient <code>
@@ -657,8 +795,10 @@
 
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Galaxy has slightly better prices comparing to other hosting services and
-                                            it's best to keep a MeteorJS application since it's a MeteorJS product.</p>
+                                        <p>Galaxy has slightly better prices comparing to other hosting services
+                                            and
+                                            it's best to keep a MeteorJS application since it's a MeteorJS
+                                            product.</p>
 
                                         <p>You can use a few environment variables during deployment, <a
                                                 href="http://galaxy-guide.meteor.com/environment-variables.html">follow
@@ -680,15 +820,18 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient you can
+                                                            <td>If you want to change base url of Mongoclient
+                                                                you can
                                                                 use this parameter.
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
-                                                            <td>This has to be set to deploy galaxy, since Mongoclient
-                                                                depends on a MongoDB instance to persist connections and
+                                                            <td>This has to be set to deploy galaxy, since
+                                                                Mongoclient
+                                                                depends on a MongoDB instance to persist
+                                                                connections and
                                                                 settings
                                                             </td>
                                                         </tr>
@@ -702,7 +845,8 @@
                                                         <tr>
                                                             <th scope="row">4</th>
                                                             <td>MONGOCLIENT_USERNAME</td>
-                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                            <td>Basic authentication's username, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>,
                                                                 <b>by
                                                                     default there's no username</b>
                                                             </td>
@@ -710,7 +854,8 @@
                                                         <tr>
                                                             <th scope="row">5</th>
                                                             <td>MONGOCLIENT_PASSWORD</td>
-                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                            <td>Basic authentication's password, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>
                                                                 and <b>MONGOCLIENT_USERNAME</b>, <b>by
                                                                     default there's no password</b>
                                                             </td>
@@ -718,8 +863,12 @@
                                                         <tr>
                                                             <th scope="row">6</th>
                                                             <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
-                                                            <td>You can specify a default connection url, that will be injected
-                                                                into Mongoclient at startup so that, you won't have to create
+                                                            <td>You can specify a default connection url, that
+                                                                will be
+                                                                injected
+                                                                into Mongoclient at startup so that, you won't
+                                                                have to
+                                                                create
                                                                 connection manually after installation.
                                                             </td>
                                                         </tr>
@@ -740,10 +889,12 @@
                                         <ol class="list">
                                             <li>Create a compute instance with a linux image, ubuntu preferred
                                             </li>
-                                            <li>Install docker with <code>sudo wget -qO- https://get.docker.com/ |
+                                            <li>Install docker with <code>sudo wget -qO- https://get.docker.com/
+                                                |
                                                 sh</code>
                                             </li>
-                                            <li>Install and run mongodb docker image <code>sudo docker run --name db -d
+                                            <li>Install and run mongodb docker image <code>sudo docker run
+                                                --name db -d
                                                 mongo
                                                 --smallfiles</code></li>
                                             <li>Install and run Mongoclient docker image <code>docker run --name
@@ -756,7 +907,9 @@
                                             <li>Add custom metadata:
                                                 <ul>
                                                     <li>key: "startup-script"</li>
-                                                    <li>value "sudo docker start db; sudo docker start mongoclient"</li>
+                                                    <li>value "sudo docker start db; sudo docker start
+                                                        mongoclient"
+                                                    </li>
 
                                                 </ul>
                                             </li>
@@ -767,7 +920,8 @@
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <p>GCP offers a flexibility to setup a server instance with a few
-                                            clicks. And then you can just manage your mongoclient with docker, even can
+                                            clicks. And then you can just manage your mongoclient with docker,
+                                            even can
                                             set nginx and letsencrypt for SSL</p>
 
                                         <div class="row">
@@ -786,7 +940,8 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient you can
+                                                            <td>If you want to change base url of Mongoclient
+                                                                you can
                                                                 use this parameter.
                                                             </td>
                                                         </tr>
@@ -794,8 +949,10 @@
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
                                                             <td>This has to be set, since Mongoclient
-                                                                depends on a MongoDB instance to persist connections and
-                                                                settings, and you're setting up an another container for
+                                                                depends on a MongoDB instance to persist
+                                                                connections and
+                                                                settings, and you're setting up an another
+                                                                container for
                                                                 mongodb.
                                                             </td>
                                                         </tr>
@@ -809,7 +966,8 @@
                                                         <tr>
                                                             <th scope="row">4</th>
                                                             <td>MONGOCLIENT_USERNAME</td>
-                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                            <td>Basic authentication's username, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>,
                                                                 <b>by
                                                                     default there's no username</b>
                                                             </td>
@@ -817,7 +975,8 @@
                                                         <tr>
                                                             <th scope="row">5</th>
                                                             <td>MONGOCLIENT_PASSWORD</td>
-                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                            <td>Basic authentication's password, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>
                                                                 and <b>MONGOCLIENT_USERNAME</b>, <b>by
                                                                     default there's no password</b>
                                                             </td>
@@ -825,8 +984,12 @@
                                                         <tr>
                                                             <th scope="row">6</th>
                                                             <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
-                                                            <td>You can specify a default connection url, that will be injected
-                                                                into Mongoclient at startup so that, you won't have to create
+                                                            <td>You can specify a default connection url, that
+                                                                will be
+                                                                injected
+                                                                into Mongoclient at startup so that, you won't
+                                                                have to
+                                                                create
                                                                 connection manually after installation.
                                                             </td>
                                                         </tr>
@@ -847,7 +1010,8 @@
                                         <ol class="list">
                                             <li>Create EC2 instance (ubuntu 16.04 preferred) as <b>t2.micro</b>
                                             </li>
-                                            <li>Follow 2nd, 3rd, 4th elements <a class="scrollto" href="#gcp"> from
+                                            <li>Follow 2nd, 3rd, 4th elements <a class="scrollto" href="#gcp">
+                                                from
                                                 here</a></li>
                                         </ol>
                                     </div>
@@ -855,8 +1019,10 @@
 
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Since docker is best way to isolate system from Mongoclient, all manual
-                                            deployments should be done via docker, regardless of the hosting service
+                                        <p>Since docker is best way to isolate system from Mongoclient, all
+                                            manual
+                                            deployments should be done via docker, regardless of the hosting
+                                            service
                                             (GCP, AWS...)</p>
 
                                         <div class="row">
@@ -875,7 +1041,8 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient you can
+                                                            <td>If you want to change base url of Mongoclient
+                                                                you can
                                                                 use this parameter.
                                                             </td>
                                                         </tr>
@@ -883,8 +1050,10 @@
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
                                                             <td>This has to be set, since Mongoclient
-                                                                depends on a MongoDB instance to persist connections and
-                                                                settings, and you're setting up an another container for
+                                                                depends on a MongoDB instance to persist
+                                                                connections and
+                                                                settings, and you're setting up an another
+                                                                container for
                                                                 mongodb.
                                                             </td>
                                                         </tr>
@@ -898,7 +1067,8 @@
                                                         <tr>
                                                             <th scope="row">4</th>
                                                             <td>MONGOCLIENT_USERNAME</td>
-                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                            <td>Basic authentication's username, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>,
                                                                 <b>by
                                                                     default there's no username</b>
                                                             </td>
@@ -906,7 +1076,8 @@
                                                         <tr>
                                                             <th scope="row">5</th>
                                                             <td>MONGOCLIENT_PASSWORD</td>
-                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                            <td>Basic authentication's password, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>
                                                                 and <b>MONGOCLIENT_USERNAME</b>, <b>by
                                                                     default there's no password</b>
                                                             </td>
@@ -914,8 +1085,12 @@
                                                         <tr>
                                                             <th scope="row">6</th>
                                                             <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
-                                                            <td>You can specify a default connection url, that will be injected
-                                                                into Mongoclient at startup so that, you won't have to create
+                                                            <td>You can specify a default connection url, that
+                                                                will be
+                                                                injected
+                                                                into Mongoclient at startup so that, you won't
+                                                                have to
+                                                                create
                                                                 connection manually after installation.
                                                             </td>
                                                         </tr>
@@ -942,8 +1117,10 @@
                                             <li>Enter container via <a
                                                     href="https://docs.jelastic.com/ssh-access">SSH</a></li>
                                             <li>Start MongoDB <code>/opt/mongodb/bin/mongod</code></li>
-                                            <li>Start Mongoclient <code>node /opt/meteor/dist/bundle/main.js</code></li>
-                                            <li>Create an endpoint for your environment and select <b>3000</b> as
+                                            <li>Start Mongoclient <code>node
+                                                /opt/meteor/dist/bundle/main.js</code></li>
+                                            <li>Create an endpoint for your environment and select <b>3000</b>
+                                                as
                                                 private port
                                             </li>
                                         </ol>
@@ -968,7 +1145,8 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient you can
+                                                            <td>If you want to change base url of Mongoclient
+                                                                you can
                                                                 use this parameter.
                                                             </td>
                                                         </tr>
@@ -976,9 +1154,12 @@
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
                                                             <td>This has to be set, since Mongoclient
-                                                                depends on a MongoDB instance to persist connections and
-                                                                settings, you can create an another app on jelastic and
-                                                                change <b>Mongoclient's MongoDB</b> to there with this
+                                                                depends on a MongoDB instance to persist
+                                                                connections and
+                                                                settings, you can create an another app on
+                                                                jelastic and
+                                                                change <b>Mongoclient's MongoDB</b> to there
+                                                                with this
                                                                 URL.
                                                             </td>
                                                         </tr>
@@ -992,7 +1173,8 @@
                                                         <tr>
                                                             <th scope="row">4</th>
                                                             <td>MONGOCLIENT_USERNAME</td>
-                                                            <td>Basic authentication's username, has to be set with <b>MONGOCLIENT_AUTH</b>,
+                                                            <td>Basic authentication's username, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>,
                                                                 <b>by
                                                                     default there's no username</b>
                                                             </td>
@@ -1000,7 +1182,8 @@
                                                         <tr>
                                                             <th scope="row">5</th>
                                                             <td>MONGOCLIENT_PASSWORD</td>
-                                                            <td>Basic authentication's password, has to be set with <b>MONGOCLIENT_AUTH</b>
+                                                            <td>Basic authentication's password, has to be set
+                                                                with <b>MONGOCLIENT_AUTH</b>
                                                                 and <b>MONGOCLIENT_USERNAME</b>, <b>by
                                                                     default there's no password</b>
                                                             </td>
@@ -1008,8 +1191,12 @@
                                                         <tr>
                                                             <th scope="row">6</th>
                                                             <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
-                                                            <td>You can specify a default connection url, that will be injected
-                                                                into Mongoclient at startup so that, you won't have to create
+                                                            <td>You can specify a default connection url, that
+                                                                will be
+                                                                injected
+                                                                into Mongoclient at startup so that, you won't
+                                                                have to
+                                                                create
                                                                 connection manually after installation.
                                                             </td>
                                                         </tr>
@@ -1071,6 +1258,7 @@
                             <li>
                                 <a class="scrollto" href="#deployments-section">Other Deployments</a>
                                 <ul class="nav doc-sub-menu">
+                                    <li><a class="scrollto" href="#systemd">Systemd (Linux)</a></li>
                                     <li><a class="scrollto" href="#heroku">Heroku</a></li>
                                     <li><a class="scrollto" href="#cloud-foundry">Cloud Foundry</a></li>
                                     <li><a class="scrollto" href="#galaxy">Meteor Galaxy</a></li>
