@@ -57,7 +57,7 @@
         <div class="container">
             <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><i class="icon fa fa-archive"></i> User Manual</h1>
-                <div class="meta"><i class="fa fa-clock-o"></i> Version 2.0.0</div>
+                <div class="meta"><i class="fa fa-clock-o"></i> Version 2.1.0</div>
             </div><!--//doc-header-->
             <div class="doc-body">
                 <div class="doc-content">
@@ -397,7 +397,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h6>Content of Add Connection Modal Window</h6>
+                                        <h6>Contents of Add Connection Modal Window</h6>
                                         <ol class="list">
                                             <li><a class="scrollto" href="#connection_name_url_tab">Connection Name
                                                 & Url</a>
@@ -596,7 +596,11 @@
                                         <p><b>Port</b> is the port of the server address that <a class="scrollto"
                                                                                                  href="#keywords-17">
                                             mongodb</a> instance is running on.</p>
-
+                                        <p><b>Destination Port</b> is the port of the remote <a class="scrollto"
+                                                                                                href="#keywords-17">mongod/mongos</a>
+                                            instance</p>
+                                        <p><b>Local Port</b> is local port to bind for ssh tunneling, should be set same
+                                            with the <a class="scrollto" href="#connection_tab">first tab</a></p>
                                         <p><b>Username</b> is the username that you want to use while connecting to
                                             server that <a class="scrollto"
                                                            href="#keywords-17">
@@ -1519,7 +1523,9 @@
 
                                         <p>Mongoclient internally brings MongoDB shell (for linux/windows/osx) for this
                                             feature, and current version
-                                            of the shell is <b>v3.4.2</b></p>
+                                            of the shell is <b>v3.4.4</b> But a new binary can be assignable through
+                                            settings for the shell and schema analyzer, just in case if you want to use
+                                            a different version or using a different OS.</p>
                                     </div>
                                 </div>
 
@@ -1546,6 +1552,11 @@
                                             <br/>
                                             To <b>remove a stage</b>, you can click <i class="fa fa-remove"></i> button
                                             that's placed at the right upper corner of the corresponding stage panel.
+                                        </p>
+
+                                        <p>With version <b>2.1.0</b> you can now see histories of your aggregation
+                                            pipelines and use those. Apart from that, Mongoclient now opens per tab for
+                                            per execution, which can be closed by right click menus or <b>x</b> button.
                                         </p>
                                     </div>
                                 </div>
@@ -1581,6 +1592,13 @@
                                                                         target="_blank">variety.js</a> to present
                                             you this feature.</p>
                                         <p>It's always good <b>not to use this on huge collections</b>.</p>
+
+                                        <p>Mongoclient internally brings MongoDB shell (for linux/windows/osx) for this
+                                            feature, and current version
+                                            of the schema analyzer binary is <b>v3.4.4</b> But a new binary can be
+                                            assignable through
+                                            settings for the shell and schema analyzer, just in case if you want to use
+                                            a different version or using a different OS.</p>
                                     </div>
                                 </div>
                             </div>

@@ -56,7 +56,7 @@
         <div class="container">
             <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
-                <div class="meta"><i class="fa fa-clock-o"></i> Version 2.0.0</div>
+                <div class="meta"><i class="fa fa-clock-o"></i> Version 2.1.0</div>
             </div><!--//doc-header-->
             <div class="doc-body">
                 <div class="doc-content">
@@ -300,6 +300,7 @@
                                             releases. But it's okay to use <code>latest</code> tag everytime.</p>
                                         <ul class="list">
                                             <li>latest</li>
+                                            <li>2.1.0</li>
                                             <li>2.0.0</li>
                                             <li>1.5.0</li>
                                             <li>1.4.0 (deprecated)</li>
@@ -326,8 +327,8 @@
                                             </tr>
                                             <tr>
                                                 <th scope="row">2</th>
-                                                <td><code>docker pull mongoclient/mongoclient:2.0.0</code></td>
-                                                <td>Runs version 2.0.0</td>
+                                                <td><code>docker pull mongoclient/mongoclient:2.1.0</code></td>
+                                                <td>Runs version 2.1.0</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">3</th>
@@ -381,7 +382,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Mongoclient uses MeteorJS version 1.4.3.1 as of version 2.0.0. To read
+                                        <p>Mongoclient uses MeteorJS version 1.4.4.2 as of version 2.1.0. To read
                                             complete MeteorJS guide you can follow <a href="http://docs.meteor.com/">
                                                 this link</a>. To read more about code guideline, and how to contribute,
                                             you can <a
@@ -460,6 +461,112 @@
                                 </div><!--//row-->
                             </div><!--//section-block-->
                         </section><!--//doc-section-->
+
+                        <section id="update-section" class="doc-section">
+                            <h2 class="section-title">Updating Mongoclient From Previous Version</h2>
+                            <div class="section-block">
+                                <p>
+                                    Mongoclient checks newer versions each time you select a collection from left panel.
+                                    It's main cause is forcing people <b>to update the newest version all the time.</b>
+                                </p>
+
+                                <p>
+                                    Per deployment type, or distribution type Mongoclient offers a solution to migrate
+                                    your old connections and settings into new version.
+                                </p>
+
+                                <p>In case of migrating from 1.x version to 2.x version you may want to use <a
+                                        href="user_manual.html#mongoclient_data"
+                                        class="scrollto">Import/Export</a> feature, which will automatically
+                                    migrate your data to 2.x versions regardless of your system or deployment.</p>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6>Distribution / Deployment Type</h6>
+                                        <ol class="list">
+                                            <li><a class="scrollto" href="#update_windows">Windows Portable</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#update_linux">Linux Portable</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#update_osx">OSx Portable</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#update_docker">Docker</a>
+                                            </li>
+                                            <li><a class="scrollto" href="#update_other">Other deployments, compile from
+                                                source</a>
+                                            </li>
+                                            <li><a class="scrollto" href="user_manual.html#mongoclient_data">Platform
+                                                independent way</a>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="update_windows">1. Update Windows Portable</h6>
+                                        <p>
+                                            Mongoclient keeps it's <b>internal mongodb's data path in</b> <code>%appdata%/Mongoclient/db</code>
+                                            folder across versions. Therefore you don't have to worry about version
+                                            update, you can simply download newer version from the <a
+                                                href="https://github.com/mongoclient/mongoclient/releases/latest"
+                                                target="_blank">github page</a> and double click to open Mongoclient.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="update_linux">2. Update Linux Portable</h6>
+                                        <p>
+                                            Mongoclient keeps it's <b>internal mongodb's data path in</b> <code>%HOME%/var/local/Mongoclient/db</code>
+                                            folder across versions. Therefore you don't have to worry about version
+                                            update, you can simply download newer version from the <a
+                                                href="https://github.com/mongoclient/mongoclient/releases/latest"
+                                                target="_blank">github page</a> and double click to open Mongoclient.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="update_osx">3. Update OSx Portable</h6>
+                                        <p>
+                                            Mongoclient keeps it's <b>internal mongodb's data path in</b> <code>%HOME%/Library/Preferences/Mongoclient/db</code>
+                                            folder across versions. Therefore you don't have to worry about version
+                                            update, you can simply download newer version from the <a
+                                                href="https://github.com/mongoclient/mongoclient/releases/latest"
+                                                target="_blank">github page</a> and double click to open Mongoclient.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="update_docker">4. Update Docker</h6>
+                                        <p>
+                                            The easiest way to update Mongoclient is using Docker, if you're binding
+                                            proper volume to Mongoclient across its versions, everything should work
+                                            fine. <a href="#docker" class="scrollto">Check here</a> for more info.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <h6 id="update_other">5. Update Other Deployments/Compile From Source</h6>
+                                        <p>
+                                            If you're compiling Mongoclient from its source or doing another deployment,
+                                            you may find the relative data in the <code>my-deployment/local/db</code>,
+                                            so copying data path would be enough to keep everything.
+                                        </p>
+
+                                        <p>Except from that, it's always recommended to use <b>MONGO_URL</b> environment
+                                            variable, therefore you'll lose nothing across version updates.</p>
+                                    </div>
+                                </div>
+                            </div><!--//section-block-->
+                        </section>
 
                         <section id="deployments-section" class="doc-section">
                             <h2 class="section-title">Other Deployment Options</h2>
@@ -1276,6 +1383,7 @@
                                     <li><a class="scrollto" href="#compile">Compile Source</a></li>
                                 </ul><!--//nav-->
                             </li>
+                            <li><a class="scrollto" href="#update-section">Updating Mongoclient</a></li>
                             <li>
                                 <a class="scrollto" href="#deployments-section">Other Deployments</a>
                                 <ul class="nav doc-sub-menu">
