@@ -1,5 +1,5 @@
-## Mongoclient Documentation
-Keeps html pages and assets of the documentation of Mongoclient.
+## Nosqlclient Documentation
+Keeps html pages and assets of the documentation of Nosqlclient.
 
 
 ### License

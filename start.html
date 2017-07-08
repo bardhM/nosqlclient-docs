@@ -6,7 +6,7 @@
 <!--[if !IE]><!-->
 <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Mongoclient Documentation - Quick Start</title>
+    <title>Nosqlclient Documentation - Quick Start</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,7 +42,7 @@
                 <h1 class="logo">
                     <a href="index.html">
                         <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                        <span class="text-highlight">Mongo</span><span class="text-bold">Client</span>
+                        <span class="text-highlight">Nosql</span><span class="text-bold">Client</span>
                     </a>
                 </h1>
             </div><!--//branding-->
@@ -66,7 +66,7 @@
                             <div class="section-block">
                                 <p>
                                     Desktop distributions are electron applications and you can start
-                                    Mongoclient without installation thanks to electron. But desktop distributions come
+                                    Nosqlclient without installation thanks to electron. But desktop distributions come
                                     with pre-packaged <b>MongoDB</b> and <b>NodeJS</b> within them, that sometimes
                                     causes trouble. Feel free to open an issue on github if you encounter one. <b>It's
                                     recommended to use
@@ -80,7 +80,7 @@
                                     your environment.
                                 </p>
                                 <a class="btn btn-green btn-cta"
-                                   href="https://github.com/mongoclient/mongoclient/releases/latest"
+                                   href="https://github.com/nosqlclient/nosqlclient/releases/latest"
                                    target="_blank"><i
                                         class="fa fa-download"></i> Desktop App</a>
                                 <a style="margin-left: 5px" class="btn btn-green btn-cta" href="#docker"
@@ -96,7 +96,7 @@
                             <h2 class="section-title">Pricing & Features</h2>
                             <div class="section-block">
                                 <p>
-                                    No worries, Mongoclient is <b>completely free, open-source and it will be
+                                    No worries, Nosqlclient is <b>completely free, open-source and it will be
                                     forever</b>.
                                     But if you need an <b>in-house deployment, special feature implementation or
                                     enterprise
@@ -172,8 +172,8 @@
                                 </div>
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Docker is one of the best ways to quickly start using a Mongoclient instance.
-                                            Mongoclient offers a pre-built docker container which you can just pull and
+                                        <p>Docker is one of the best ways to quickly start using a Nosqlclient instance.
+                                            Nosqlclient offers a pre-built docker container which you can just pull and
                                             start using. The
                                             container
                                             depends below frameworks, but you don't have to explicitly setup these, it
@@ -182,13 +182,13 @@
                                         </p>
 
                                         <p>Also since it isolates your environment from container it gives you to
-                                            advantage of using Mongoclient regardless of your system and hosting service
+                                            advantage of using Nosqlclient regardless of your system and hosting service
                                             (AWS, Digital Ocean etc...)</p>
 
                                         <p>Inside of image, there's a new user named <b>node</b>, to apply best
                                             practices of docker (not starting with root) node user is capable of
                                             managing mongodb that's installed to inside of container as well as managing
-                                            built Mongoclient application</p>
+                                            built Nosqlclient application</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -234,19 +234,19 @@
                                                 <tr>
                                                     <th scope="row">1</th>
                                                     <td>ROOT_URL</td>
-                                                    <td>Useful to start mongoclient from another base URL, <b>by default
+                                                    <td>Useful to start nosqlclient from another base URL, <b>by default
                                                         uses root</b></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">2</th>
                                                     <td>MONGO_URL</td>
-                                                    <td>Set an external mongodb URL to use for mongoclient, <b>by
+                                                    <td>Set an external mongodb URL to use for nosqlclient, <b>by
                                                         default an internal mongodb is being used</b></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">3</th>
                                                     <td>MONGO_OPLOG_URL</td>
-                                                    <td>To track mongoclient's mongo operations set an external mongodb
+                                                    <td>To track nosqlclient's mongo operations set an external mongodb
                                                         URL, <b>by
                                                             default there's no tracking</b></td>
                                                 </tr>
@@ -259,7 +259,7 @@
                                                 <tr>
                                                     <th scope="row">5</th>
                                                     <td>MONGOCLIENT_AUTH</td>
-                                                    <td>Enable basic authentication for Mongoclient, <b>by
+                                                    <td>Enable basic authentication for Nosqlclient, <b>by
                                                         default it's set to false</b>
                                                     </td>
                                                 </tr>
@@ -283,7 +283,7 @@
                                                     <th scope="row">8</th>
                                                     <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
                                                     <td>You can specify a default connection url, that will be injected
-                                                        into Mongoclient at startup so that, you won't have to create
+                                                        into Nosqlclient at startup so that, you won't have to create
                                                         connection manually after installation.
                                                     </td>
                                                 </tr>
@@ -342,11 +342,11 @@
                                             <tr>
                                                 <th scope="row">4</th>
                                                 <td><code>docker run -d -p 3000:3000 \<br/>
-                                                    -e ROOT_URL=http://example.com/mongoclient \<br/>
+                                                    -e ROOT_URL=http://example.com/nosqlclient \<br/>
                                                     mongoclient/mongoclient</code>
                                                 </td>
                                                 <td>
-                                                    Set <b>ROOT_URL</b> environment variable to start Mongoclient from
+                                                    Set <b>ROOT_URL</b> environment variable to start Nosqlclient from
                                                     another base url
                                                 </td>
                                             </tr>
@@ -357,7 +357,7 @@
                             </div><!--//section-block-->
                             <div id="compile" class="section-block">
                                 <h3 class="block-title">Compile as Meteor Application (WEB)</h3>
-                                <p>This is a hard way to start using Mongoclient, but if you're already a <a
+                                <p>This is a hard way to start using Nosqlclient, but if you're already a <a
                                         href="https://www.meteor.com/">MeteorJS</a> developer and want to try some
                                     experimental stuff that you've implemented you can choose this way
                                 </p>
@@ -369,12 +369,12 @@
                                                 platforms)
                                             </li>
                                             <li>Download latest <a
-                                                    href="https://github.com/mongoclient/mongoclient/archive/master.zip">
-                                                Mongoclient source</a></li>
-                                            <li>Unzip source code and navigate into <b>mongoclient-master</b></li>
+                                                    href="https://github.com/nosqlclient/nosqlclient/archive/master.zip">
+                                                Nosqlclient source</a></li>
+                                            <li>Unzip source code and navigate into <b>nosqlclient-master</b></li>
                                             <li>Execute <code>meteor npm install</code></li>
                                             <li>Execute <code>meteor --port 3000</code></li>
-                                            <li>All set, now you can reach Mongoclient from your browser <b>localhost:3000</b>
+                                            <li>All set, now you can reach Nosqlclient from your browser <b>localhost:3000</b>
                                             </li>
                                         </ol>
                                     </div>
@@ -382,7 +382,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Mongoclient uses MeteorJS version 1.4.4.2 as of version 2.1.0. To read
+                                        <p>Nosqlclient uses MeteorJS version 1.4.4.2 as of version 2.1.0. To read
                                             complete MeteorJS guide you can follow <a href="http://docs.meteor.com/">
                                                 this link</a>. To read more about code guideline, and how to contribute,
                                             you can <a
@@ -406,13 +406,13 @@
                                                 <tr>
                                                     <th scope="row">1</th>
                                                     <td>ROOT_URL</td>
-                                                    <td>Useful to start mongoclient from another base URL, <b>by default
+                                                    <td>Useful to start nosqlclient from another base URL, <b>by default
                                                         uses root</b></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">2</th>
                                                     <td>MONGO_URL</td>
-                                                    <td>Set an external mongodb URL to use for mongoclient, <b>by
+                                                    <td>Set an external mongodb URL to use for nosqlclient, <b>by
                                                         default an internal mongodb is being used by meteor itself</b>
                                                     </td>
                                                 </tr>
@@ -426,7 +426,7 @@
                                                 <tr>
                                                     <th scope="row">4</th>
                                                     <td>MONGOCLIENT_AUTH</td>
-                                                    <td>Enable basic authentication for Mongoclient, <b>by
+                                                    <td>Enable basic authentication for Nosqlclient, <b>by
                                                         default it's set to false</b>
                                                     </td>
                                                 </tr>
@@ -450,7 +450,7 @@
                                                     <th scope="row">7</th>
                                                     <td>MONGOCLIENT_DEFAULT_CONNECTION_URL</td>
                                                     <td>You can specify a default connection url, that will be injected
-                                                        into Mongoclient at startup so that, you won't have to create
+                                                        into Nosqlclient at startup so that, you won't have to create
                                                         connection manually after installation.
                                                     </td>
                                                 </tr>
@@ -463,20 +463,20 @@
                         </section><!--//doc-section-->
 
                         <section id="update-section" class="doc-section">
-                            <h2 class="section-title">Updating Mongoclient From Previous Version</h2>
+                            <h2 class="section-title">Updating Nosqlclient From Previous Version</h2>
                             <div class="section-block">
                                 <p>
-                                    Mongoclient checks newer versions each time you select a collection from left panel.
+                                    Nosqlclient checks newer versions each time you select a collection from left panel.
                                     It's main cause is forcing people <b>to update the newest version all the time.</b>
                                 </p>
 
                                 <p>
-                                    Per deployment type, or distribution type Mongoclient offers a solution to migrate
+                                    Per deployment type, or distribution type Nosqlclient offers a solution to migrate
                                     your old connections and settings into new version.
                                 </p>
 
                                 <p>In case of migrating from 1.x version to 2.x version you may want to use <a
-                                        href="user_manual.html#mongoclient_data"
+                                        href="user_manual.html#nosqlclient_data"
                                         class="scrollto">Import/Export</a> feature, which will automatically
                                     migrate your data to 2.x versions regardless of your system or deployment.</p>
 
@@ -495,7 +495,7 @@
                                             <li><a class="scrollto" href="#update_other">Other deployments, compile from
                                                 source</a>
                                             </li>
-                                            <li><a target="_blank" href="user_manual.html#mongoclient_data">Platform
+                                            <li><a target="_blank" href="user_manual.html#nosqlclient_data">Platform
                                                 independent way</a>
                                             </li>
                                         </ol>
@@ -506,11 +506,11 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="update_windows">1. Update Windows Portable</h6>
                                         <p>
-                                            Mongoclient keeps it's <b>internal mongodb's data path in</b> <code>%appdata%/Mongoclient/db</code>
+                                            Nosqlclient keeps it's <b>internal mongodb's data path in</b> <code>%appdata%/mongoclient/db</code>
                                             folder across versions. Therefore you don't have to worry about version
                                             update, you can simply download newer version from the <a
-                                                href="https://github.com/mongoclient/mongoclient/releases/latest"
-                                                target="_blank">github page</a> and double click to open Mongoclient.
+                                                href="https://github.com/nosqlclient/nosqlclient/releases/latest"
+                                                target="_blank">github page</a> and double click to open Nosqlclient.
                                         </p>
                                     </div>
                                 </div>
@@ -519,11 +519,11 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="update_linux">2. Update Linux Portable</h6>
                                         <p>
-                                            Mongoclient keeps it's <b>internal mongodb's data path in</b> <code>%HOME%/var/local/Mongoclient/db</code>
+                                            Nosqlclient keeps it's <b>internal mongodb's data path in</b> <code>%HOME%/var/local/mongoclient/db</code>
                                             folder across versions. Therefore you don't have to worry about version
                                             update, you can simply download newer version from the <a
-                                                href="https://github.com/mongoclient/mongoclient/releases/latest"
-                                                target="_blank">github page</a> and double click to open Mongoclient.
+                                                href="https://github.com/nosqlclient/nosqlclient/releases/latest"
+                                                target="_blank">github page</a> and double click to open Nosqlclient.
                                         </p>
                                     </div>
                                 </div>
@@ -532,11 +532,11 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="update_osx">3. Update OSx Portable</h6>
                                         <p>
-                                            Mongoclient keeps it's <b>internal mongodb's data path in</b> <code>%HOME%/Library/Preferences/Mongoclient/db</code>
+                                            Nosqlclient keeps it's <b>internal mongodb's data path in</b> <code>%HOME%/Library/Preferences/Mongoclient/db</code>
                                             folder across versions. Therefore you don't have to worry about version
                                             update, you can simply download newer version from the <a
-                                                href="https://github.com/mongoclient/mongoclient/releases/latest"
-                                                target="_blank">github page</a> and double click to open Mongoclient.
+                                                href="https://github.com/nosqlclient/nosqlclient/releases/latest"
+                                                target="_blank">github page</a> and double click to open Nosqlclient.
                                         </p>
                                     </div>
                                 </div>
@@ -545,8 +545,8 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="update_docker">4. Update Docker</h6>
                                         <p>
-                                            The easiest way to update Mongoclient is using Docker, if you're binding
-                                            proper volume to Mongoclient across its versions, everything should work
+                                            The easiest way to update Nosqlclient is using Docker, if you're binding
+                                            proper volume to Nosqlclient across its versions, everything should work
                                             fine. <a href="#docker" class="scrollto">Check here</a> for more info.
                                         </p>
                                     </div>
@@ -556,7 +556,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="update_other">5. Update Other Deployments/Compile From Source</h6>
                                         <p>
-                                            If you're compiling Mongoclient from its source or doing another deployment,
+                                            If you're compiling Nosqlclient from its source or doing another deployment,
                                             you may find the relative data in the <code>my-deployment/local/db</code>,
                                             so copying data path would be enough to keep everything.
                                         </p>
@@ -573,10 +573,10 @@
                             <div class="section-block">
                                 <p>
                                     If you're not familiar with Docker and don't want to struggle with compiling
-                                    Mongoclient as
+                                    Nosqlclient as
                                     MeteorJS application you can consider using one of these deployment options, some of
-                                    them lets you to deploy Mongoclient platform, as a service, (PaaS) and for the rest
-                                    you need to manually setup Mongoclient
+                                    them lets you to deploy Nosqlclient platform, as a service, (PaaS) and for the rest
+                                    you need to manually setup Nosqlclient
                                 </p>
 
                             </div><!--//section-block-->
@@ -587,23 +587,23 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6>TL;DR</h6>
                                         <ol class="list">
-                                            <li>Clone Mongoclient <code>
-                                                git clone https://github.com/mongoclient/mongoclient.git</code>
+                                            <li>Clone Nosqlclient <code>
+                                                git clone https://github.com/nosqlclient/nosqlclient.git</code>
                                             </li>
                                             <li>Install <a href="https://www.meteor.com/install" target="_blank">MeteorJS</a>
                                             </li>
                                             <li>Navigate to systemd folder <code>cd /etc/systemd/system/</code>
                                             </li>
-                                            <li>Create file <b>mongoclient.service</b> with the content:<br/><br/>
+                                            <li>Create file <b>nosqlclient.service</b> with the content:<br/><br/>
                                                 <code>
                                                     [Unit]<br/>
                                                     Description=MongoDB management tool<br/>
                                                     After=network-online.target<br/>
 
                                                     [Service]<br/>
-                                                    User=mongoclient<br/>
-                                                    Group=mongoclient<br/>
-                                                    WorkingDirectory=/path/to/clone/mongoclient/<br/>
+                                                    User=nosqlclient<br/>
+                                                    Group=nosqlclient<br/>
+                                                    WorkingDirectory=/path/to/clone/nosqlclient/<br/>
                                                     Environment=MONGOCLIENT_AUTH=true<br/>
                                                     Environment=MONGOCLIENT_USERNAME=MYUSERNAME<br/>
                                                     Environment=MONGOCLIENT_PASSWORD=MYPASSWORD<br/>
@@ -613,7 +613,7 @@
                                                     WantedBy=multi-user.target
                                                 </code>
                                             </li>
-                                            <li>Execute <code>systemctl enable mongoclient.service</code></li>
+                                            <li>Execute <code>systemctl enable nosqlclient.service</code></li>
                                         </ol>
                                     </div>
                                 </div>
@@ -641,7 +641,7 @@
                                                 <tr>
                                                     <th scope="row">1</th>
                                                     <td>ROOT_URL</td>
-                                                    <td>Useful to start mongoclient from another base
+                                                    <td>Useful to start nosqlclient from another base
                                                         URL, <b>by
                                                             default
                                                             uses root if empty</b></td>
@@ -650,14 +650,14 @@
                                                     <th scope="row">2</th>
                                                     <td>MONGO_URL</td>
                                                     <td>Set an external mongodb URL to use for
-                                                        mongoclient, <b>by
+                                                        nosqlclient, <b>by
                                                             default it uses an internal one that comes from Meteor</b>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">3</th>
                                                     <td>MONGOCLIENT_AUTH</td>
-                                                    <td>Enable basic authentication for Mongoclient, <b>by
+                                                    <td>Enable basic authentication for Nosqlclient, <b>by
                                                         default it's set to false</b>
                                                     </td>
                                                 </tr>
@@ -685,7 +685,7 @@
                                                     <td>You can specify a default connection url, that
                                                         will be
                                                         injected
-                                                        into Mongoclient at startup so that, you won't
+                                                        into Nosqlclient at startup so that, you won't
                                                         have to
                                                         create
                                                         connection manually after installation.
@@ -703,7 +703,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6>TL;DR</h6>
-                                        <a href="https://heroku.com/deploy?template=https://github.com/mongoclient/mongoclient">
+                                        <a href="https://heroku.com/deploy?template=https://github.com/nosqlclient/nosqlclient">
                                             <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
                                         </a>
                                     </div>
@@ -713,12 +713,12 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <p>Heroku is a cloud platform as a service (PaaS) and bypasses
                                             infrastructure
-                                            stuff. Mongoclient takes advantage of <code>heroku-16</code>
-                                            stack which comes with Ubuntu 16.04. Since Mongoclient's shell and
+                                            stuff. Nosqlclient takes advantage of <code>heroku-16</code>
+                                            stack which comes with Ubuntu 16.04. Since Nosqlclient's shell and
                                             schema
                                             analyzer depends on <b>Mongo</b> executable 3.4 and the executable
                                             depends
-                                            on GLIBC's 2.23 version, this stack suits Mongoclient most.</p>
+                                            on GLIBC's 2.23 version, this stack suits Nosqlclient most.</p>
 
                                         <p>There's only one configuration you have to do while deploying to
                                             <b>Heroku</b></p>
@@ -753,7 +753,7 @@
                                         <div class="row">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <h6>MongoDB Dependency</h6>
-                                                <p>As Mongoclient needs a running mongodb instance to persist
+                                                <p>As Nosqlclient needs a running mongodb instance to persist
                                                     your
                                                     connections and settings, it uses <a
                                                             href="https://elements.heroku.com/addons/mongolab">mLab
@@ -773,10 +773,10 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6>TL;DR</h6>
                                         <ol class="list">
-                                            <li>Clone Mongoclient <code>
-                                                git clone https://github.com/mongoclient/mongoclient.git</code>
+                                            <li>Clone Nosqlclient <code>
+                                                git clone https://github.com/nosqlclient/nosqlclient.git</code>
                                             </li>
-                                            <li>Navigate into it <code>cd mongoclient</code>
+                                            <li>Navigate into it <code>cd nosqlclient</code>
                                             </li>
                                             <li>Execute <code>mv manifest.yml.sample manifest.yml</code>
                                             </li>
@@ -799,7 +799,7 @@
                                             from <a
                                                     href="https://console.ng.bluemix.net/">IBM Bluemix</a>
                                             or <a href="https://console.run.pivotal.io/">Pivotal</a>. Since
-                                            Mongoclient
+                                            Nosqlclient
                                             needs a MongoDB instance to persist your connections and settings,
                                             you need
                                             an external mongodb which can be acquired from <a
@@ -828,7 +828,7 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>Useful to start mongoclient from another base
+                                                            <td>Useful to start nosqlclient from another base
                                                                 URL, <b>by
                                                                     default
                                                                     uses root if empty</b></td>
@@ -837,14 +837,14 @@
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
                                                             <td>Set an external mongodb URL to use for
-                                                                mongoclient, <b>by
+                                                                nosqlclient, <b>by
                                                                     default it's empty and has to be set</b>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">3</th>
                                                             <td>MONGOCLIENT_AUTH</td>
-                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                            <td>Enable basic authentication for Nosqlclient, <b>by
                                                                 default it's set to false</b>
                                                             </td>
                                                         </tr>
@@ -872,7 +872,7 @@
                                                             <td>You can specify a default connection url, that
                                                                 will be
                                                                 injected
-                                                                into Mongoclient at startup so that, you won't
+                                                                into Nosqlclient at startup so that, you won't
                                                                 have to
                                                                 create
                                                                 connection manually after installation.
@@ -897,10 +897,10 @@
                                                 (supports all
                                                 platforms)
                                             </li>
-                                            <li>Clone Mongoclient <code>
-                                                git clone https://github.com/mongoclient/mongoclient.git</code>
+                                            <li>Clone Nosqlclient <code>
+                                                git clone https://github.com/nosqlclient/nosqlclient.git</code>
                                             </li>
-                                            <li>Navigate into it <code>cd mongoclient</code>
+                                            <li>Navigate into it <code>cd nosqlclient</code>
                                             </li>
                                             <li>Create a <b>settings.json</b> file with content:
                                                 <code>
@@ -948,7 +948,7 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient
+                                                            <td>If you want to change base url of Nosqlclient
                                                                 you can
                                                                 use this parameter.
                                                             </td>
@@ -957,7 +957,7 @@
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
                                                             <td>This has to be set to deploy galaxy, since
-                                                                Mongoclient
+                                                                Nosqlclient
                                                                 depends on a MongoDB instance to persist
                                                                 connections and
                                                                 settings
@@ -966,7 +966,7 @@
                                                         <tr>
                                                             <th scope="row">3</th>
                                                             <td>MONGOCLIENT_AUTH</td>
-                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                            <td>Enable basic authentication for Nosqlclient, <b>by
                                                                 default it's set to false</b>
                                                             </td>
                                                         </tr>
@@ -994,7 +994,7 @@
                                                             <td>You can specify a default connection url, that
                                                                 will be
                                                                 injected
-                                                                into Mongoclient at startup so that, you won't
+                                                                into Nosqlclient at startup so that, you won't
                                                                 have to
                                                                 create
                                                                 connection manually after installation.
@@ -1025,7 +1025,7 @@
                                                 --name db -d
                                                 mongo
                                                 --smallfiles</code></li>
-                                            <li>Install and run Mongoclient docker image <code>docker run --name
+                                            <li>Install and run Nosqlclient docker image <code>docker run --name
                                                 mongoclient -d -p
                                                 3000:3000 -e MONGO_URL=mongodb://localhost:27017/meteor
                                                 mongoclient/mongoclient</code>
@@ -1048,7 +1048,7 @@
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <p>GCP offers a flexibility to setup a server instance with a few
-                                            clicks. And then you can just manage your mongoclient with docker,
+                                            clicks. And then you can just manage your nosqlclient with docker,
                                             even can
                                             set nginx and letsencrypt for SSL</p>
 
@@ -1068,7 +1068,7 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient
+                                                            <td>If you want to change base url of Nosqlclient
                                                                 you can
                                                                 use this parameter.
                                                             </td>
@@ -1076,7 +1076,7 @@
                                                         <tr>
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
-                                                            <td>This has to be set, since Mongoclient
+                                                            <td>This has to be set, since Nosqlclient
                                                                 depends on a MongoDB instance to persist
                                                                 connections and
                                                                 settings, and you're setting up an another
@@ -1087,7 +1087,7 @@
                                                         <tr>
                                                             <th scope="row">3</th>
                                                             <td>MONGOCLIENT_AUTH</td>
-                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                            <td>Enable basic authentication for Nosqlclient, <b>by
                                                                 default it's set to false</b>
                                                             </td>
                                                         </tr>
@@ -1115,7 +1115,7 @@
                                                             <td>You can specify a default connection url, that
                                                                 will be
                                                                 injected
-                                                                into Mongoclient at startup so that, you won't
+                                                                into Nosqlclient at startup so that, you won't
                                                                 have to
                                                                 create
                                                                 connection manually after installation.
@@ -1147,7 +1147,7 @@
 
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Since docker is best way to isolate system from Mongoclient, all
+                                        <p>Since docker is best way to isolate system from Nosqlclient, all
                                             manual
                                             deployments should be done via docker, regardless of the hosting
                                             service
@@ -1169,7 +1169,7 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient
+                                                            <td>If you want to change base url of Nosqlclient
                                                                 you can
                                                                 use this parameter.
                                                             </td>
@@ -1177,7 +1177,7 @@
                                                         <tr>
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
-                                                            <td>This has to be set, since Mongoclient
+                                                            <td>This has to be set, since Nosqlclient
                                                                 depends on a MongoDB instance to persist
                                                                 connections and
                                                                 settings, and you're setting up an another
@@ -1188,7 +1188,7 @@
                                                         <tr>
                                                             <th scope="row">3</th>
                                                             <td>MONGOCLIENT_AUTH</td>
-                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                            <td>Enable basic authentication for Nosqlclient, <b>by
                                                                 default it's set to false</b>
                                                             </td>
                                                         </tr>
@@ -1216,7 +1216,7 @@
                                                             <td>You can specify a default connection url, that
                                                                 will be
                                                                 injected
-                                                                into Mongoclient at startup so that, you won't
+                                                                into Nosqlclient at startup so that, you won't
                                                                 have to
                                                                 create
                                                                 connection manually after installation.
@@ -1245,7 +1245,7 @@
                                             <li>Enter container via <a
                                                     href="https://docs.jelastic.com/ssh-access">SSH</a></li>
                                             <li>Start MongoDB <code>/opt/mongodb/bin/mongod</code></li>
-                                            <li>Start Mongoclient <code>node
+                                            <li>Start Nosqlclient <code>node
                                                 /opt/meteor/dist/bundle/main.js</code></li>
                                             <li>Create an endpoint for your environment and select <b>3000</b>
                                                 as
@@ -1273,7 +1273,7 @@
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>ROOT_URL</td>
-                                                            <td>If you want to change base url of Mongoclient
+                                                            <td>If you want to change base url of Nosqlclient
                                                                 you can
                                                                 use this parameter.
                                                             </td>
@@ -1281,12 +1281,12 @@
                                                         <tr>
                                                             <th scope="row">2</th>
                                                             <td>MONGO_URL</td>
-                                                            <td>This has to be set, since Mongoclient
+                                                            <td>This has to be set, since Nosqlclient
                                                                 depends on a MongoDB instance to persist
                                                                 connections and
                                                                 settings, you can create an another app on
                                                                 jelastic and
-                                                                change <b>Mongoclient's MongoDB</b> to there
+                                                                change <b>Nosqlclient's MongoDB</b> to there
                                                                 with this
                                                                 URL.
                                                             </td>
@@ -1294,7 +1294,7 @@
                                                         <tr>
                                                             <th scope="row">3</th>
                                                             <td>MONGOCLIENT_AUTH</td>
-                                                            <td>Enable basic authentication for Mongoclient, <b>by
+                                                            <td>Enable basic authentication for Nosqlclient, <b>by
                                                                 default it's set to false</b>
                                                             </td>
                                                         </tr>
@@ -1322,7 +1322,7 @@
                                                             <td>You can specify a default connection url, that
                                                                 will be
                                                                 injected
-                                                                into Mongoclient at startup so that, you won't
+                                                                into Nosqlclient at startup so that, you won't
                                                                 have to
                                                                 create
                                                                 connection manually after installation.
@@ -1351,13 +1351,13 @@
                                 <div style="margin-top: 30px" class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <p>
-                                            Mongoclient has a very simple single health check endpoint.
+                                            Nosqlclient has a very simple single health check endpoint.
                                             You can simply navigate to
                                             <code>http(s)://&lt;ROOT_URL&gt;:&lt;PORT&gt;/healthcheck</code> and expect
                                             to get
                                             <b>200 HTTP OK</b>, If so, everything is alright. Such simple endpoint makes
                                             it easy
-                                            to deploy Mongoclient with third party deployment tools such as <a
+                                            to deploy Nosqlclient with third party deployment tools such as <a
                                                 href="https://github.com/mesosphere/marathon">marathon</a> without
                                             worrying
                                             about deployment errors.
@@ -1383,7 +1383,7 @@
                                     <li><a class="scrollto" href="#compile">Compile Source</a></li>
                                 </ul><!--//nav-->
                             </li>
-                            <li><a class="scrollto" href="#update-section">Updating Mongoclient</a></li>
+                            <li><a class="scrollto" href="#update-section">Updating Nosqlclient</a></li>
                             <li>
                                 <a class="scrollto" href="#deployments-section">Other Deployments</a>
                                 <ul class="nav doc-sub-menu">

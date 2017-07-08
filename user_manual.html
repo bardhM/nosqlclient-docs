@@ -6,7 +6,7 @@
 <!--[if !IE]><!-->
 <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Mongoclient Documentation - User Manual</title>
+    <title>Nosqlclient Documentation - User Manual</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +43,7 @@
                 <h1 class="logo">
                     <a href="index.html">
                         <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                        <span class="text-highlight">Mongo</span><span class="text-bold">Client</span>
+                        <span class="text-highlight">Nosql</span><span class="text-bold">Client</span>
                     </a>
                 </h1>
             </div><!--//branding-->
@@ -66,7 +66,7 @@
                             <h2 class="section-title">Table of Contents</h2>
                             <div class="section-block">
                                 <p>
-                                    This guide covers, <b>how to</b> use Mongoclient. Each section in here is
+                                    This guide covers, <b>how to</b> use Nosqlclient. Each section in here is
                                     marked as one of <b>Novice/Proficient/Expert</b> levels, based on how deep knowledge
                                     is required to understand section content.
                                 </p>
@@ -76,7 +76,7 @@
                                     e-mail with the details of what you're looking for
                                     to <a href="mailto:info@mongoclient.com" target="_top">info@mongoclient.com</a></p>
 
-                                <p>Check all features of mongoclient, <a href="start.html#features-section"> click
+                                <p>Check all features of nosqlclient, <a href="start.html#features-section"> click
                                     here</a></p>
                             </div>
                         </section><!--//doc-section-->
@@ -86,7 +86,7 @@
                             <div class="section-block">
                                 <h6>Novice Section</h6>
                                 <p>
-                                    There're some keywords you need to know before using Mongoclient and before reading
+                                    There're some keywords you need to know before using Nosqlclient and before reading
                                     this guide to understand
                                     fully
                                     what you're doing. This section is more likely for beginners, if you wish, you can
@@ -110,7 +110,7 @@
                                                 <tr>
                                                     <th id="keywords-1" scope="row">1</th>
                                                     <td>Connection</td>
-                                                    <td>A Connection in Mongoclient is a <b>combination of settings that
+                                                    <td>A Connection in Nosqlclient is a <b>combination of settings that
                                                         are required to connect to a MongoDB</b>. Some of these settings
                                                         are
                                                         <i>authentication type, hostname, port, db name, password,
@@ -135,7 +135,7 @@
                                                     <td>
                                                         JSON can only represent a subset of the types supported by <b>BSON</b>.
                                                         To preserve type information, MongoDB adds some
-                                                        extensions to the JSON format, and <b>Mongoclient takes
+                                                        extensions to the JSON format, and <b>Nosqlclient takes
                                                         advantage
                                                         of these extensions for queries.</b>
                                                     </td>
@@ -162,7 +162,7 @@
                                                     <td>
                                                         The mongo shell is an interactive JavaScript interface to
                                                         MongoDB. As some people may prefer to work with shell,
-                                                        Mongoclient
+                                                        Nosqlclient
                                                         offers <b>the same shell with auto completion feature</b>.
                                                     </td>
                                                 </tr>
@@ -171,7 +171,7 @@
                                                     <td>Aggregation</td>
                                                     <td>
                                                         Aggregation operations process data records and return computed
-                                                        results. Mongoclient offers a nice intuitive tool to
+                                                        results. Nosqlclient offers a nice intuitive tool to
                                                         <b>combine/reorder and execute
                                                             aggregation stages of MongoDB</b>.
                                                     </td>
@@ -184,14 +184,14 @@
                                                         Without indexes, MongoDB must perform a collection scan, i.e.
                                                         scan every document in a collection, to select those documents
                                                         that match the query statement. You can easily <b>see and manage
-                                                        your indexes (with their usages)</b> via Mongoclient.
+                                                        your indexes (with their usages)</b> via Nosqlclient.
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th id="keywords-9" scope="row">9</th>
                                                     <td>Administration</td>
                                                     <td>
-                                                        Mongoclient has a section for <b>administration operations</b>
+                                                        Nosqlclient has a section for <b>administration operations</b>
                                                         in
                                                         MongoDB, these are <i>user management, dump/restore/import, and
                                                         some sort of administration queries</i>
@@ -201,7 +201,7 @@
                                                     <th id="keywords-10" scope="row">10</th>
                                                     <td>Database Stats</td>
                                                     <td>
-                                                        If you have the required privileges, Mongoclient offers nicely
+                                                        If you have the required privileges, Nosqlclient offers nicely
                                                         designed charts to show your operations, memory, active
                                                         read/writes and <i>some other statistics</i> These are explained
                                                         more briefly in
@@ -226,7 +226,7 @@
                                                     <td>
                                                         Since MongoDB is a schemaless database, you may want to know
                                                         what's the structure of your collection, and the distribution of
-                                                        the fields and their types. Mongoclient uses <a
+                                                        the fields and their types. Nosqlclient uses <a
                                                             href="https://github.com/variety/variety"> variety</a> to
                                                         show these to you.
                                                     </td>
@@ -237,14 +237,14 @@
                                                     <td>
                                                         There is a special system collection named system.js that can
                                                         store JavaScript functions for reuse, here you can use
-                                                        <b>Mongoclient to manage these functions with a few clicks.</b>
+                                                        <b>Nosqlclient to manage these functions with a few clicks.</b>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <th id="keywords-14" scope="row">14</th>
                                                     <td>Query</td>
                                                     <td>
-                                                        Mongoclient lets you to pick one of the queries regarding your
+                                                        Nosqlclient lets you to pick one of the queries regarding your
                                                         wish whenever you choose a collection from left panel, some of
                                                         these are <b>find, findOne, updateMany, delete, count,
                                                         insertMany...</b>
@@ -255,7 +255,7 @@
                                                     <td>Query Option</td>
                                                     <td>
                                                         Most of the queries has it's own options that you can pick in
-                                                        Mongoclient. For
+                                                        Nosqlclient. For
                                                         example <b>find</b> query includes options such as <i>sort,
                                                         projection, limit etc</i>
                                                     </td>
@@ -284,7 +284,7 @@
                                                     <th id="keywords-18" scope="row">18</th>
                                                     <td>Connection URL</td>
                                                     <td>To connect a mongod/mongos instance, you can create a URL and
-                                                        use it in MongoDB shell or in Mongoclient, you can read more <a
+                                                        use it in MongoDB shell or in Nosqlclient, you can read more <a
                                                                 href="https://docs.mongodb.com/manual/reference/connection-string/#connection-string-uri-format">from
                                                             here</a> about URL formats
                                                     </td>
@@ -298,20 +298,20 @@
                         </section><!--//doc-section-->
 
                         <section id="design-section" class="doc-section">
-                            <h2 class="section-title">Mongoclient Features</h2>
+                            <h2 class="section-title">Nosqlclient Features</h2>
                             <div class="section-block">
                                 <h6>Multiple Levels Section (Novice/Proficient/Expert)</h6>
                                 <p>
-                                    Mongoclient has been designed by emphasising on end user's need, so it offers an
+                                    Nosqlclient has been designed by emphasising on end user's need, so it offers an
                                     intuitive design and lets you to query your database with a few clicks. There's no
                                     over-thought-out buttons or labels anywhere.
                                 </p>
                                 <p>
-                                    Mongoclient is a combination of two panels at its simplest. <b>Left panel</b> keeps
+                                    Nosqlclient is a combination of two panels at its simplest. <b>Left panel</b> keeps
                                     feature menus, your collections, and shortcuts.
                                     <b>Right panel</b> keeps the content of the selected menu from the left side.
                                 </p>
-                                <p>This section includes multiple level information about Mongoclient and MongoDB, you
+                                <p>This section includes multiple level information about Nosqlclient and MongoDB, you
                                     can see these
                                     levels near the title of the corresponding section. </p>
 
@@ -320,7 +320,7 @@
                                         <h4 id="connections">Connections (Novice Level)</h4>
                                         <p>When you first <a class="scrollto" href="start.html#installation-section">
                                             deploy, install</a>
-                                            or open Mongoclient an empty screen with two
+                                            or open Nosqlclient an empty screen with two
                                             buttons at right upper corner welcomes you.</p>
                                         <div class="row">
                                             <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
@@ -428,7 +428,7 @@
 
                                         <p><a href="#keywords-18" class="scrollto"> <b>Connection URL</b></a> lets
                                             you to use your URL instead of entering all parameters to connect to
-                                            your instance. As a huge flexibility, <b>Mongoclient</b> fills
+                                            your instance. As a huge flexibility, <b>Nosqlclient</b> fills
                                             possible parameters as read-only in the tabs whenever you enter the
                                             connection url. There's an example URL below that will fill the options
                                             in the list after it.
@@ -462,7 +462,7 @@
                                         </p>
                                         <p>
                                             <b>Database Name</b> is database that you want to connect, <b>it's
-                                            required for Mongoclient</b> since Mongoclient depends on this name for
+                                            required for Nosqlclient</b> since Nosqlclient depends on this name for
                                             some features. You can switch to another database anytime after you connect.
                                         </p>
                                     </div>
@@ -472,7 +472,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="authentication_tab">3. Authentication Tab</h6>
                                         <p>
-                                            MongoDB supports a few authentiation types, and Mongoclient supports all of
+                                            MongoDB supports a few authentiation types, and Nosqlclient supports all of
                                             them including <b>enterprise authentication types</b>
                                         </p>
 
@@ -523,7 +523,7 @@
                                         <p>Starting from version MongoDB >= 2.6, MongoDB supports x.509 certificate
                                             authentication for client authentication and internal authentication of the
                                             members of replica sets and sharded clusters. X.509 certificate
-                                            authentication requires a secure <b>TLS/SSL connection</b>, and <b>Mongoclient</b>
+                                            authentication requires a secure <b>TLS/SSL connection</b>, and <b>Nosqlclient</b>
                                             provides secure connection.</p>
 
                                         <p><b>Username</b> field indicates the subject from the certificate</p>
@@ -539,7 +539,7 @@
 
                                         <p><b>Certificate Key File</b> is for the private key if client has one</p>
 
-                                        <p><b>Disable Hostname Verification</b>, by default, <b>Mongoclient</b> ensures
+                                        <p><b>Disable Hostname Verification</b>, by default, <b>Nosqlclient</b> ensures
                                             that the
                                             hostname included in the server’s SSL certificate(s) matches the hostname(s)
                                             provided in the URI connection string. If you need to disable the hostname
@@ -570,7 +570,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="ssl_tab">4. SSL Tab</h6>
                                         <p>
-                                            MongoDB & Mongoclient supports using SSL even without X509 authentication.
+                                            MongoDB & Nosqlclient supports using SSL even without X509 authentication.
                                             <b>If you're already using X509 authentication this tab will be disabled
                                                 automatically since internally it will use SSL for X509</b> Fields
                                             that's placed here
@@ -583,7 +583,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="ssh_tab">5. SSH Tab</h6>
                                         <p>
-                                            Mongoclient supports SSH tunneling for your connections, but in SSH
+                                            Nosqlclient supports SSH tunneling for your connections, but in SSH
                                             tunneling connections you can't use <b>Dump</b>
                                             section for now. Enabling SSH tunnel changes nothing for the other options,
                                             so you need to fill other connection options and tabs just like you're
@@ -620,12 +620,12 @@
                                         </p>
 
                                         <p><b>Connection Timeout</b> is the time in milliseconds to attempt a connection
-                                            before timing out. <b>This overrides Mongoclient's default</b> <a
+                                            before timing out. <b>This overrides Nosqlclient's default</b> <a
                                                     class="scrollto" href="#settings">settings</a>
 
                                         <p><b>Socket Timeout</b> is the time in milliseconds to attempt a send or
                                             receive on a socket before the attempt times out. <b>This overrides
-                                                Mongoclient's default</b> <a
+                                                Nosqlclient's default</b> <a
                                                     class="scrollto" href="#settings">settings</a>
 
                                         <p><b>Username</b> is the username that you want to use while connecting to
@@ -634,7 +634,7 @@
                                                 mongodb</a> instance is running on.</p>
 
                                         <p><b>Replica Name</b>, if you're trying to connect to a replica set, you <b>must</b>
-                                            enter this to make Mongoclient aware of it.</p>
+                                            enter this to make Nosqlclient aware of it.</p>
 
                                         <p><b>Read Preference</b> field specifies the replica set read preference for
                                             this connection.<b>By default it's set to primary</b>
@@ -648,7 +648,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="settings">Settings (Proficient Level)</h4>
-                                        <p>Mongoclient has its own settings which can be set when either you're
+                                        <p>Nosqlclient has its own settings which can be set when either you're
                                             connected to
                                             a <a
                                                     href="#connections" class="scrollto">connection</a> or disconnected
@@ -682,18 +682,18 @@
                                                         options </a><b>0=No timeout</b></p>
                                             </li>
                                             <li><b>Database statistics scheduler</b>
-                                                <p>Mongoclient populates <a href="#db_stats" class="scrollto">database
+                                                <p>Nosqlclient populates <a href="#db_stats" class="scrollto">database
                                                     stats</a>
                                                     charts at this interval it's in <b>miliseconds</b></p>
                                             </li>
                                             <li><b>Size information in</b>
-                                                <p>At certain sections, Mongoclient shows size information, you can
+                                                <p>At certain sections, Nosqlclient shows size information, you can
                                                     switch
                                                     these
                                                     information between <b>KB, MB or bytes.</b></p>
                                             </li>
                                             <li><b>Default result view</b>
-                                                <p>Mongoclient uses JSONEditor and ACEEditor to show result views, you
+                                                <p>Nosqlclient uses JSONEditor and ACEEditor to show result views, you
                                                     can
                                                     change the default result view with this setting </p>
                                             </li>
@@ -701,7 +701,7 @@
                                                 <p>Enable/disable autocomplete feature on queries, it can cause trouble
                                                     on
                                                     huge
-                                                    collections, since Mongoclient needs to scan collection fields for
+                                                    collections, since Nosqlclient needs to scan collection fields for
                                                     autocompletion</p>
                                             </li>
                                             <li><b>Single tab for results</b>
@@ -710,7 +710,7 @@
                                                     behaviour by enabling this</p>
                                             </li>
                                             <li><b>Show live chat</b>
-                                                <p>Enable live support from inside of Mongoclient !</p></li>
+                                                <p>Enable live support from inside of Nosqlclient !</p></li>
 
                                             <li><b>Show database statistics</b>
                                                 <p>To prevent querying database at regular intervals at the <a
@@ -720,7 +720,7 @@
                                                     disable this feature</p>
                                             </li>
                                             <li><b>Local dump path</b>
-                                                <p>Mongoclient saves dumps to your local machine if you use the <a
+                                                <p>Nosqlclient saves dumps to your local machine if you use the <a
                                                         href="#dump_restore_import" class="scrollto">dump</a> section,
                                                     you can
                                                     specify
@@ -733,7 +733,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="switch_db">Switch Database (Novice Level)</h4>
-                                        <p>Mongoclient depends on database name for especially user management section,
+                                        <p>Nosqlclient depends on database name for especially user management section,
                                             therefore you can connect to only one database at once. But switching to
                                             another
                                             database is just two click away from you after connecting to your <a
@@ -757,8 +757,8 @@
                                                 class="fa fa-database"></i> Switch Database</b>
                                             button you'll be able to select any of the databeses from the table, or you
                                             can
-                                            write down a new database name to input field below of the table. <b>Mongoclient
-                                                uses input field's value.</b> To fetch databases Mongoclient executes <a
+                                            write down a new database name to input field below of the table. <b>Nosqlclient
+                                                uses input field's value.</b> To fetch databases Nosqlclient executes <a
                                                     href="https://docs.mongodb.com/manual/reference/command/listDatabases/"
                                                     target="_blank">listDatabases</a> query.</p>
                                     </div>
@@ -766,24 +766,24 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <h4 id="mongoclient_data">Import/Export Mongoclient Data (Novice Level)</h4>
+                                        <h4 id="nosqlclient_data">Import/Export Nosqlclient Data (Novice Level)</h4>
                                         <p>If you prefer to use <a href="start.html#download-section"
                                                                    target="_blank">desktop distribution</a> of
-                                            Mongoclient,
+                                            Nosqlclient,
                                             you may want to keep your connections and settings for each update of
-                                            Mongoclient. With <b>Export Mongoclient Data</b> button you can export your
+                                            Nosqlclient. With <b>Export Nosqlclient Data</b> button you can export your
                                             connections and settings, and import them to another version by choosing <b>Import
-                                                Mongoclient Data</b> <a href="start.html#docker"
+                                                Nosqlclient Data</b> <a href="start.html#docker"
                                                                         target="_blank">Docker </a> build is always a
                                             better
-                                            choice to use Mongoclient</p>
+                                            choice to use Nosqlclient</p>
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="db_stats">Database Stats (Expert Level)</h4>
-                                        <p>Mongoclient queries your database at regular intervals to populate
+                                        <p>Nosqlclient queries your database at regular intervals to populate
                                             performance
                                             charts and tables at the <b>Database Stats</b> page</p> This feature can be
                                         disabled, or regular interval can be configured at <a class="scrollto"
@@ -889,7 +889,7 @@
 
                                         <p><b>Collections Read/Write table</b> shows calculated data that comes from <a
                                                 href="https://docs.mongodb.com/manual/reference/command/top/"
-                                                target="_blank">top query</a> by Mongoclient.
+                                                target="_blank">top query</a> by Nosqlclient.
                                             <br/>
                                             <b>Read</b> column is being calculated with the following formula:
                                             <b>(readTime - previousReadTime) / (readCount - previousReadCount)</b>
@@ -905,7 +905,7 @@
                                         <h4 id="user_management">User Management (Proficient Level)</h4>
                                         <p>You can either manage your <code>admin</code> or <b>connected database's</b>
                                             users/roles in
-                                            Mongoclient. If you check <b>right upper corner checkbox</b>, and click <b>Refresh</b>
+                                            Nosqlclient. If you check <b>right upper corner checkbox</b>, and click <b>Refresh</b>
                                             button at the very bottom of the page, it means you've switched to
                                             <b>admin</b>
                                             database instead of the current. User management tree is being populated via
@@ -918,7 +918,7 @@
                                                     href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
                                                     target="_blank">here</a>
                                             <br/>
-                                            Mongoclient crawls latest documentation for you from the MongoDB official
+                                            Nosqlclient crawls latest documentation for you from the MongoDB official
                                             documentation whenever you click one of the <b>role, resource or
                                                 privilege</b>
                                             elements from the tree. So you don't have to search MongoDB documentation
@@ -984,7 +984,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="manage_roles">Manage Roles</h6>
                                         <p>To populate table that's placed in the <b>Manage Roles</b> window,
-                                            Mongoclient executes <code>{ rolesInfo: 1, showBuiltinRoles: true }</code>
+                                            Nosqlclient executes <code>{ rolesInfo: 1, showBuiltinRoles: true }</code>
                                             on
                                             the database (admin/selected). <a
                                                     href="https://docs.mongodb.com/manual/reference/command/rolesInfo/"
@@ -1000,7 +1000,7 @@
                                                     section.
                                                     Whenever you click the <i class="fa fa-edit"></i> icon for a custom
                                                     role,
-                                                    Mongoclient executes <code>{ rolesInfo: {role: roleName, db:
+                                                    Nosqlclient executes <code>{ rolesInfo: {role: roleName, db:
                                                     dbName},
                                                     showPrivileges: true}</code> command on the selected database. This
                                                     section
@@ -1029,7 +1029,7 @@
                                                         target="_blank">MongoDB official documentation</a>, but no
                                                     worries,
                                                     this
-                                                    crawling operation happens once, and Mongoclient caches these
+                                                    crawling operation happens once, and Nosqlclient caches these
                                                     actions in
                                                     it's MongoDB to show afterwards.
                                                 </p>
@@ -1062,7 +1062,7 @@
 
                                             <li><b>Delete custom role</b>, (built-in roles can not be deleted)
                                                 <p>
-                                                    Mongoclient executes <code>{dropRole: roleName}</code> on the
+                                                    Nosqlclient executes <code>{dropRole: roleName}</code> on the
                                                     mentioned
                                                     database to drop role, you can read more about this command by <a
                                                         href="https://docs.mongodb.com/manual/reference/command/dropRole/#dbcmd.dropRole"
@@ -1091,7 +1091,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h6 id="manage_users">Manage Users</h6>
                                         <p>To populate table that's placed in the <b>Manage Users</b>,
-                                            Mongoclient executes <code>{ usersInfo: 1, showCredentials: true}</code> on
+                                            Nosqlclient executes <code>{ usersInfo: 1, showCredentials: true}</code> on
                                             the database (admin/selected). <a
                                                     href="https://docs.mongodb.com/manual/reference/command/usersInfo/"
                                                     target="_blank">Click here</a> for more info about this command.</p>
@@ -1111,7 +1111,7 @@
                                                     <br/>
                                                     Changes in this section will be applied after you click the
                                                     <b>Save</b>
-                                                    button, Mongoclient executes <code>updateUser</code> command to save
+                                                    button, Nosqlclient executes <code>updateUser</code> command to save
                                                     user. <a
                                                         href="https://docs.mongodb.com/manual/reference/command/updateUser/"
                                                         target="_blank"> Click here </a>for more info.
@@ -1120,7 +1120,7 @@
                                                 <p>To change the username or password of selected user you need to fill
                                                     input fields at the top of <b>Edit User</b> window. If you <b>leave
                                                         password input empty</b>, password won't be updated by
-                                                    Mongoclient
+                                                    Nosqlclient
                                                 </p>
 
                                                 <h6>Roles</h6>
@@ -1162,7 +1162,7 @@
                                             </li>
                                             <li><b>Delete user</b>
                                                 <p>
-                                                    Mongoclient executes <code>{dropUser: userName}</code> on the
+                                                    Nosqlclient executes <code>{dropUser: userName}</code> on the
                                                     mentioned
                                                     database to drop user, you can read more about this command by <a
                                                         href="https://docs.mongodb.com/manual/reference/command/dropUser"
@@ -1196,7 +1196,7 @@
                                                 <h4 class="callout-title">Warning</h4>
                                                 <p>This section is <b>NOT FOR PRODUCTION USE </b> as of current version
                                                     of
-                                                    Mongoclient, and can be used on <b>TEST</b> or <b>LOCAL</b>
+                                                    Nosqlclient, and can be used on <b>TEST</b> or <b>LOCAL</b>
                                                     environments.
                                                 </p>
                                             </div><!--//content-->
@@ -1251,7 +1251,7 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="file_management">File Management (Novice Level)</h4>
                                         <p>
-                                            Mongoclient comes with ease of managing your GridFS collections with a few
+                                            Nosqlclient comes with ease of managing your GridFS collections with a few
                                             clicks, instead of queries. At the file management section, you can <b>download,
                                             upload, delete, filter</b> your files with the buttons.
                                         </p>
@@ -1280,7 +1280,7 @@
                                             and <code>bucketName.chunks</code> collections internally.</p>
                                         <ul class="list">
                                             <li id="listing_filtering_files"><b>Listing and filtering files</b>
-                                                <p>To fetch and filter files, Mongoclient executes <b>find</b> query on
+                                                <p>To fetch and filter files, Nosqlclient executes <b>find</b> query on
                                                     the
                                                     <code>selectedBucket.files</code> collection</p>
                                             </li>
@@ -1290,13 +1290,13 @@
                                                                                   class="scrollto">listing and filtering
                                                     files </a> , so when you try to see a file information by selecting
                                                     a
-                                                    file from table and clicking <i class="fa fa-book"></i> Mongoclient
+                                                    file from table and clicking <i class="fa fa-book"></i> Nosqlclient
                                                     executes <b>findOne</b> and for the save process executes
                                                     <b>updateOne</b> queries.
                                                 </p>
                                             </li>
                                             <li><b>Deleting a file</b>
-                                                <p>Differently from above operations, Mongoclient calls
+                                                <p>Differently from above operations, Nosqlclient calls
                                                     <code>delete</code>
                                                     operation for the selected file's id on GridFS level, so you don't
                                                     have
@@ -1306,7 +1306,7 @@
                                                             class="fa fa-remove"></i> button</p></li>
 
                                             <li><b>Downloading a file</b>
-                                                <p>Mongoclient sends you to a new route <b>download</b> with the
+                                                <p>Nosqlclient sends you to a new route <b>download</b> with the
                                                     parameters
                                                     <b>fileId</b> and <b>bucket name</b> and starts piping bytes to you
                                                     to download a file. This is a low level operation and uses streams
@@ -1323,7 +1323,7 @@
                                                     to keep uplaoding or not. If you answer this question <b>yes</b>
                                                     then
                                                     you can manually fill other informations of your <b>GridFS</b> file
-                                                    before uploading it. Mongoclient pipes stream to your database's <b>GridFS</b>
+                                                    before uploading it. Nosqlclient pipes stream to your database's <b>GridFS</b>
                                                     bucket to upload a file. Before uploading you can fill <b>fileName,
                                                     contentType, metaData, aliases</b> information.
                                                 </p>
@@ -1335,7 +1335,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="index_management">Index Management (Expert Level)</h4>
-                                        <p>Mongoclient has a very unique way to manage indexes. Each index type is being
+                                        <p>Nosqlclient has a very unique way to manage indexes. Each index type is being
                                             coloured differently and you can add new indexes with a few click without
                                             struggling design obstacles and queries. Changing collection from the
                                             combobox
@@ -1362,7 +1362,7 @@
                                             below.</p>
                                         <ul class="list">
                                             <li><b>Listing indexes</b>
-                                                <p>Mongoclient executes <b>three</b> queries to populate whole data of
+                                                <p>Nosqlclient executes <b>three</b> queries to populate whole data of
                                                     index
                                                     management section. These are <a
                                                             href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
@@ -1379,7 +1379,7 @@
                                                 <p>After selecting an index from table and clicking <i
                                                         class="fa fa-book"></i> button, you'll be able to see the
                                                     details of
-                                                    the index in an another window. Mongoclient executes <a
+                                                    the index in an another window. Nosqlclient executes <a
                                                             href="https://docs.mongodb.com/v3.0/reference/method/db.collection.getIndexes/#db.collection.getIndexes"
                                                             target="_blank">getIndexes</a> with the selected index name
                                                     to
@@ -1397,7 +1397,7 @@
 
                                             <li><b>Dropping index</b>
                                                 <p>
-                                                    If you click <i class="fa fa-remove"></i> button, Mongoclient
+                                                    If you click <i class="fa fa-remove"></i> button, Nosqlclient
                                                     executes
                                                     <a href="https://docs.mongodb.com/manual/reference/method/db.collection.dropIndex/"
                                                        target="_blank">dropIndex</a> to drop the selected index.
@@ -1442,7 +1442,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="admin_queries">Admin Queries (Expert Level)</h4>
-                                        <p>Mongoclient separates queries as <b>Admin</b> and <b>Normal</b> queries. If
+                                        <p>Nosqlclient separates queries as <b>Admin</b> and <b>Normal</b> queries. If
                                             you're a developer and want to just query your database, you have nothing to
                                             do
                                             with this section.</p>
@@ -1465,7 +1465,7 @@
 
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p>Below, you can find following MongoDB queries that Mongoclient executes for
+                                        <p>Below, you can find following MongoDB queries that Nosqlclient executes for
                                             the
                                             corresponding <b>admin query</b>.</p>
                                         <h6>Queries</h6>
@@ -1513,7 +1513,7 @@
                                         <p>MongoDB offers a nice shell if you're familiar with linux or mac terminal,
                                             it's a
                                             nice feature to have such a tool. But lack of syntax highlighting and auto
-                                            completion can be a huge disadvantage, Mongoclient changes this disadvantage
+                                            completion can be a huge disadvantage, Nosqlclient changes this disadvantage
                                             to
                                             advantage for its users.</p>
                                         <p><b>CTRL+SPACE</b> on the shell can be used for auto completion.
@@ -1521,7 +1521,7 @@
                                             <b>ENTER</b> button executes the query.
                                         </p>
 
-                                        <p>Mongoclient internally brings MongoDB shell (for linux/windows/osx) for this
+                                        <p>Nosqlclient internally brings MongoDB shell (for linux/windows/osx) for this
                                             feature, and current version
                                             of the shell is <b>v3.4.4</b> But a new binary can be assignable through
                                             settings for the shell and schema analyzer, just in case if you want to use
@@ -1538,7 +1538,7 @@
                                                     href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/"
                                                     target="_blank">here</a></p>
 
-                                        <p>Mongoclient comes with a tool that lets you to execute your aggregation
+                                        <p>Nosqlclient comes with a tool that lets you to execute your aggregation
                                             pipeline
                                             at any stage level, re-order stages and add as many as stages you wish.
                                             <br/>
@@ -1555,7 +1555,7 @@
                                         </p>
 
                                         <p>With version <b>2.1.0</b> you can now see histories of your aggregation
-                                            pipelines and use those. Apart from that, Mongoclient now opens per tab for
+                                            pipelines and use those. Apart from that, Nosqlclient now opens per tab for
                                             per execution, which can be closed by right click menus or <b>x</b> button.
                                         </p>
                                     </div>
@@ -1567,10 +1567,10 @@
                                         <p>There is a special system collection named <code>system.js</code> that can
                                             store
                                             JavaScript
-                                            functions for reuse in MongoDB. With Mongoclient you can manage your
+                                            functions for reuse in MongoDB. With Nosqlclient you can manage your
                                             functions
                                             easily.</p>
-                                        <p>Mongoclient lists all current functions via executing <code>find</code> query
+                                        <p>Nosqlclient lists all current functions via executing <code>find</code> query
                                             on
                                             collection <b>system.js</b>, to add functions calls <b>insertMany</b>, to
                                             update
@@ -1588,12 +1588,12 @@
                                         <p>Since MongoDB is <a href="#keywords-11" class="scrollto">schemaless</a>, you
                                             may
                                             want to analyze your collection's schema and see what data types have your
-                                            fields. Mongoclient uses <a href="https://github.com/variety/variety"
+                                            fields. Nosqlclient uses <a href="https://github.com/variety/variety"
                                                                         target="_blank">variety.js</a> to present
                                             you this feature.</p>
                                         <p>It's always good <b>not to use this on huge collections</b>.</p>
 
-                                        <p>Mongoclient internally brings MongoDB shell (for linux/windows/osx) for this
+                                        <p>Nosqlclient internally brings MongoDB shell (for linux/windows/osx) for this
                                             feature, and current version
                                             of the schema analyzer binary is <b>v3.4.4</b> But a new binary can be
                                             assignable through
@@ -1613,7 +1613,7 @@
                                     </div><!--//icon-holder-->
                                     <div class="content">
                                         <h4 class="callout-title">Useful Tip</h4>
-                                        <p>Mongoclient <b>converts your fields to the corresponding type </b> by
+                                        <p>Nosqlclient <b>converts your fields to the corresponding type </b> by
                                             following impure and extended json rules explained below. The
                                             conversion happens before doing a call to MongoDB. Therefore you
                                             don't have to worry about your field types, if you've provided a
@@ -1623,7 +1623,7 @@
                                     </div><!--//content-->
                                 </div>
                                 <p>
-                                    Mongoclient lists your all collections at the left navigation panel for quick
+                                    Nosqlclient lists your all collections at the left navigation panel for quick
                                     navigation, and internally executes <a
                                         href="https://docs.mongodb.com/manual/reference/command/listCollections/"
                                         target="_blank">listCollections</a> for that.
@@ -1723,9 +1723,9 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <p>Most of the queries has their own options, for example <b>find</b> has
                                             options such as <b>limit, projection, sort</b> etc... Whenever you select a
-                                            query from the input that's placed at the very top of the page, Mongoclient
+                                            query from the input that's placed at the very top of the page, Nosqlclient
                                             renders its options automatically.</p>
-                                        <p>As an ease of use, Mongoclient stores Selector data across your session, so
+                                        <p>As an ease of use, Nosqlclient stores Selector data across your session, so
                                             you can switch between collections without losing <b>Selector</b> value.</p>
                                     </div>
                                 </div>
@@ -1737,15 +1737,15 @@
                                             data type for
                                             its <a href="#keywords-4" class="scrollto">documents</a>, that's why most of
                                             the JSON editors are not capable of showing, editing these values.
-                                            Mongoclient uses advantage of <a href="#keywords-3" class="scrollto">extended
+                                            Nosqlclient uses advantage of <a href="#keywords-3" class="scrollto">extended
                                                 json</a> to show query results or write queries.</p>
 
-                                        <p>Mongoclient uses <b>strict mode</b> for extended jsons, you can read more by
+                                        <p>Nosqlclient uses <b>strict mode</b> for extended jsons, you can read more by
                                             <a
                                                     href="https://docs.mongodb.com/manual/reference/mongodb-extended-json/#mongodb-extended-json"
                                                     target="_blank">clicking here</a>. But for the most commonly used
                                             two
-                                            types, Mongoclient lets you to use <b>mongo shell mode</b>, these are <a
+                                            types, Nosqlclient lets you to use <b>mongo shell mode</b>, these are <a
                                                     href="https://docs.mongodb.com/manual/reference/mongodb-extended-json/#data_oid"
                                                     target="_blank">ObjectID</a>
                                             and
@@ -1753,7 +1753,7 @@
                                                target="_blank">ISODate</a>. Therefore you can use various types of
                                             queries for those two types.
                                         </p>
-                                        <p>For example all the following queries are valid for Mongoclient.</p>
+                                        <p>For example all the following queries are valid for Nosqlclient.</p>
                                         <ul class="list">
                                             <li><code>{_id:{$oid:"507f191e810c19729de860ea"}}</code></li>
                                             <li><code>{myDate:{$gte:{$date:"2017-01-01T12:25:05Z"}}}</code></li>
@@ -1774,8 +1774,8 @@
                                             you have to wrap your object's key with double quotes, and wrap your object
                                             with brackets etc. </p>
 
-                                        <p>Mongoclient lets you to write your queries without thinking of these
-                                            restrictions. All the following queries are valid for Mongoclient.</p>
+                                        <p>Nosqlclient lets you to write your queries without thinking of these
+                                            restrictions. All the following queries are valid for Nosqlclient.</p>
 
                                         <ul class="list">
                                             <li><code>{_id: objectID ("507f191e810c19729de860ea")}</code></li>
@@ -1791,12 +1791,12 @@
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="col_stats">Collection Stats (Novice Level)</h4>
                                         <p>At the right upper corner of very top of the page, you'll see some
-                                            statistics. Mongoclient executes <a
+                                            statistics. Nosqlclient executes <a
                                                     href="https://docs.mongodb.com/manual/reference/method/db.collection.stats/"
                                                     target="_blank">stats</a> query
                                             each time you select a collection from the left navigation panel.</p>
 
-                                        <p>Within the result of <b>stats</b> query, Mongoclient extracts following
+                                        <p>Within the result of <b>stats</b> query, Nosqlclient extracts following
                                             statistics.</p>
                                         <ul class="list">
                                             <li><b>Count</b>, comes from <i>count</i> field of the query result, and
@@ -1806,11 +1806,11 @@
                                                 and represents total collection's index count.
                                             </li>
                                             <li><b>Size</b>, comes from <i>size</i> field of the query result, and
-                                                represents the total collection size. Mongoclient converts this data to
+                                                represents the total collection size. Nosqlclient converts this data to
                                                 corresponding type of measure by using your selection from <a
                                                         href="#settings" class="scrollto">settings </a></li>
                                             <li><b>Total Index Size</b>, comes from <i>totalIndexSize</i> field of the
-                                                query result, and represents the total index size. Mongoclient does same
+                                                query result, and represents the total index size. Nosqlclient does same
                                                 measure type conversion here just how it does to show <b>size</b>
                                                 information.
                                             </li>
@@ -1846,14 +1846,14 @@
                                             export your query result without seeing on the browser. Syntax highlighting
                                             can be challenging for those queries and it may be a good idea to directly
                                             export result to a file instead of seeing result. To do this export,
-                                            Mongoclient internally executes <b>find</b> qurey with the <b>selector</b>
+                                            Nosqlclient internally executes <b>find</b> qurey with the <b>selector</b>
                                             value and the options you've selected anyway.</p>
 
-                                        <p>Mongoclient offers <b>JSON and CSV</b> exports for your query results, by
+                                        <p>Nosqlclient offers <b>JSON and CSV</b> exports for your query results, by
                                             pressing
                                             <i class="fa fa-upload"></i> button that's placed at the right upper corner
                                             of the query section, you'll see a dropdown that lets you to pick between
-                                            CSV and JSON to export your data. For <b>JSON</b>, Mongoclient uses <a
+                                            CSV and JSON to export your data. For <b>JSON</b>, Nosqlclient uses <a
                                                     href="#extended_json" class="scrollto">extended json</a></p>
                                     </div>
                                 </div>
@@ -1874,7 +1874,7 @@
                                                 </p>
                                             </div><!--//content-->
                                         </div>
-                                        <p>Mongoclient uses <a href="http://jsoneditoronline.org/" target="_blank">JsonEditor</a>
+                                        <p>Nosqlclient uses <a href="http://jsoneditoronline.org/" target="_blank">JsonEditor</a>
                                             by default to show query result. But you can switch to use <a
                                                     href="https://ace.c9.io/#nav=about"
                                                     target="_blank">AceEditor</a>
@@ -1882,7 +1882,7 @@
                                             result view from <a href="#settings" class="scrollto">settings.</a>
                                         </p>
 
-                                        <p>As an ease of use, Mongoclient opens a new tab for each execution and saves
+                                        <p>As an ease of use, Nosqlclient opens a new tab for each execution and saves
                                             query state for each tab. So that you can <b>switch back to an existing tab
                                                 and
                                                 see your old query and never lose it unless you close the tab</b>.</p>
@@ -1905,7 +1905,7 @@
                                             has been changed if you've used <a class="scrollto" href="#impure_json">impure
                                                 json</a> or <b>mongo shell type</b> <a href="#extended_json"
                                                                                        class="scrollto"> extended
-                                                json</a>, that's because the conversion that Mongoclient does during
+                                                json</a>, that's because the conversion that Nosqlclient does during
                                             execution. But no worries, the query is same as you wrote.
                                         </p>
                                         <p>Additionally you can <b>close all tabs</b>, or <b>close other tabs</b> by <b>right-clicking</b>
@@ -1916,7 +1916,7 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="query_history">Query History (Novice Level)</h4>
-                                        <p>Mongoclient keeps latest <b>20</b> queries for <b>each collection</b> and you
+                                        <p>Nosqlclient keeps latest <b>20</b> queries for <b>each collection</b> and you
                                             can execute your latest queries again.
                                             To do that you can use <i class="fa fa-history"></i> button that's placed at
                                             the right upper corner of the <b>query section.</b></p>
@@ -1930,7 +1930,7 @@
                             <h2 class="section-title">Managing Collections</h2>
                             <div class="section-block">
                                 <p>
-                                    Managing your collections via MongoDB queries can be challenging, Mongoclient solves
+                                    Managing your collections via MongoDB queries can be challenging, Nosqlclient solves
                                     this with a <b>context menu</b>. There are two context menus for collections.
                                 </p>
 
@@ -1955,7 +1955,7 @@
                                 <p>The following actions can be done via these context-menus.</p>
                                 <ul class="list">
                                     <li><b>Manage - Show Collection/View</b>
-                                        <p>Mongoclient executes <a
+                                        <p>Nosqlclient executes <a
                                                 href="https://docs.mongodb.com/manual/reference/command/listCollections/"
                                                 target="_blank">listCollections</a> and
                                             fetches corresponding collection from this query's result to show you it's
@@ -1964,7 +1964,7 @@
                                     <li><b>Manage - Convert to Capped</b>
                                         <p>
                                             You can convert your not capped collection to capped with this command,
-                                            Mongoclient executes <code>{
+                                            Nosqlclient executes <code>{
                                             convertToCapped: collection,
                                             size: size
                                             }</code> command for this operation.
@@ -1972,7 +1972,7 @@
                                     </li>
 
                                     <li><b>Manage - Rename</b>
-                                        <p>Mongoclient executes <a
+                                        <p>Nosqlclient executes <a
                                                 href="https://docs.mongodb.com/manual/reference/method/db.collection.renameCollection/"
                                                 target="_blank">renameCollection</a>
                                             for this operation. </p>
@@ -1980,33 +1980,33 @@
 
                                     <li><b>Manage - Edit Validation Rules</b>
                                         <p>
-                                            Mongoclient executes <code>{"command":[{"collMod":"categories","validator":{},"validationLevel":"","validationAction":""}</code>
+                                            Nosqlclient executes <code>{"command":[{"collMod":"categories","validator":{},"validationLevel":"","validationAction":""}</code>
                                             command for this operation.
                                         </p>
                                     </li>
 
                                     <li><b>Manage - Clear Collection</b>
-                                        <p>Mongoclient executes <a
+                                        <p>Nosqlclient executes <a
                                                 href="https://docs.mongodb.com/manual/reference/method/db.collection.deleteMany/"
                                                 target="_blank">deleteMany</a>
                                             with an empty <b>selector</b> for this operation. </p>
                                     </li>
 
                                     <li><b>Manage - Drop Collection</b>
-                                        <p>Mongoclient executes <a
+                                        <p>Nosqlclient executes <a
                                                 href="https://docs.mongodb.com/manual/reference/method/db.collection.drop/"
                                                 target="_blank">drop</a> for this operation. </p>
                                     </li>
 
                                     <li><b>Add Collection/View</b>
-                                        <p>Mongoclient executes <a
+                                        <p>Nosqlclient executes <a
                                                 href="https://docs.mongodb.com/manual/reference/method/db.createCollection/"
                                                 target="_blank">createCollection</a> with the all options you've
                                             selected for this operation. </p>
                                     </li>
 
                                     <li><b>Filter Collections</b>
-                                        <p>This is an internal operation Mongoclient does for you, to filter collection
+                                        <p>This is an internal operation Nosqlclient does for you, to filter collection
                                             names and show only filtered ones at the left panel. You can either
                                             de-select unwanted collection names from the list or write a regex to apply
                                             filter.</p>
@@ -2019,7 +2019,7 @@
                                     </li>
 
                                     <li><b>Drop All Collections</b>
-                                        <p>Mongoclient drops your all collections one by one by executing <a
+                                        <p>Nosqlclient drops your all collections one by one by executing <a
                                                 href="https://docs.mongodb.com/manual/reference/method/db.collection.drop/"
                                                 target="_blank">drop</a>
                                             query. </p>
@@ -2044,14 +2044,14 @@
                                         <p><code>docker logs -f &lt;container_name&gt;</code></p>
                                     </li>
                                     <li><b>Windows Distribution</b>
-                                        <p><code>C:\mongoclient\Mongoclient.exe</code>
+                                        <p><code>C:\nosqlclient\Nosqlclient.exe</code>
                                         </p>
                                     </li>
                                     <li><b>Linux Distribution</b>
-                                        <p><code>/home/sercan/mongoclient/Mongoclient</code></p>
+                                        <p><code>/home/sercan/nosqlclient/Nosqlclient</code></p>
                                     </li>
                                     <li><b>OSX Distribution</b>
-                                        <p><code>/path/debug/build/Mongoclient.app/Contents/MacOS/MyProgram</code></p>
+                                        <p><code>/path/debug/build/Nosqlclient.app/Contents/MacOS/MyProgram</code></p>
                                     </li>
                                 </ul>
 
@@ -2070,7 +2070,7 @@
                                     <li><a class="scrollto" href="#connections">Connections</a></li>
                                     <li><a class="scrollto" href="#settings">Settings</a></li>
                                     <li><a class="scrollto" href="#switch_db">Switch Database</a></li>
-                                    <li><a class="scrollto" href="#mongoclient_data">Import/Export Mongoclient Data</a>
+                                    <li><a class="scrollto" href="#nosqlclient_data">Import/Export Nosqlclient Data</a>
                                     </li>
                                     <li><a class="scrollto" href="#db_stats">Database Stats</a>
                                     </li>
