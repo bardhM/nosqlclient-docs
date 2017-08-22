@@ -57,7 +57,7 @@
         <div class="container">
             <div id="doc-header" class="doc-header text-center">
                 <h1 class="doc-title"><i class="icon fa fa-archive"></i> User Manual</h1>
-                <div class="meta"><i class="fa fa-clock-o"></i> Version 2.1.0</div>
+                <div class="meta"><i class="fa fa-clock-o"></i> Version 2.2.0</div>
             </div><!--//doc-header-->
             <div class="doc-body">
                 <div class="doc-content">
@@ -505,6 +505,8 @@
                                             empty
                                             if user is defined in the database that you wish to connect
                                         </p>
+                                        <p>Within <b>2.2.0 and higher</b> versions, you may leave username <b>or</b>
+                                            password empty, nosqlclient will prompt for them while connecting.</p>
                                     </div>
                                 </div>
 
@@ -514,6 +516,8 @@
                                         <p>MongoDB CR was the default authentication mechanism for MongoDB < 3.0.
                                             There're three fields to fill for this authentication type just like <a
                                                     href="#authentication_scram" class="scrollto">Scram-SHA-1</a></p>
+                                        <p>Within <b>2.2.0 and higher</b> versions, you may leave username <b>or</b>
+                                            password empty, nosqlclient will prompt for them while connecting.</p>
                                     </div>
                                 </div>
 
@@ -697,12 +701,18 @@
                                                     can
                                                     change the default result view with this setting </p>
                                             </li>
-                                            <li><b>Autocomplete feature for selectors</b>
-                                                <p>Enable/disable autocomplete feature on queries, it can cause trouble
-                                                    on
-                                                    huge
-                                                    collections, since Nosqlclient needs to scan collection fields for
-                                                    autocompletion</p>
+                                            <li><b>Autocomplete samples count</b>
+                                                <p>Nosqlclient takes random samples and clarifies auto complete fields
+                                                    with those, you
+                                                    may set whatever count you want for samples, <b>0</b> disables auto
+                                                    complete.
+                                                </p>
+                                            </li>
+                                            <li><b>Autocomplete shortcut</b>
+                                                <p>Change auto complete shortcut with this setting, by default it's <b>Ctrl-Space</b>.
+                                                    This setting is also being applied at shell section.
+                                                    <i>Combinations should be separated by dash.</i>
+                                                </p>
                                             </li>
                                             <li><b>Single tab for results</b>
                                                 <p>By default each query execution opens another tab, you can change
@@ -719,12 +729,16 @@
                                                     stats page</a> for statistics, you can
                                                     disable this feature</p>
                                             </li>
-                                            <li><b>Local dump path</b>
-                                                <p>Nosqlclient saves dumps to your local machine if you use the <a
-                                                        href="#dump_restore_import" class="scrollto">dump</a> section,
-                                                    you can
-                                                    specify
-                                                    the main path with this setting </p>
+                                            <li><b>Max. chart points</b>
+                                                <p>Database stats charts have certain number of points which can be
+                                                    changeable via this setting, by default it's <b>15</b></p>
+                                            </li>
+                                            <li><b>Mongo binaries path</b>
+                                                <p>Nosqlclient uses native mongo binaries for <b>dump, shell, schema
+                                                    analyzer</b> sections, unless you're using docker you need to set
+                                                    binary path to here.<i> E.g.
+                                                        /home/sercan/my_apps/mongodb3.4/bin</i>
+                                                </p>
                                             </li>
                                         </ul>
                                     </div>
@@ -783,6 +797,16 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="db_stats">Database Stats (Expert Level)</h4>
+                                        <div class="callout-block callout-success">
+                                            <div class="icon-holder">
+                                                <i class="fa fa-thumbs-up"></i>
+                                            </div><!--//icon-holder-->
+                                            <div class="content">
+                                                <h4 class="callout-title">Useful Tip</h4>
+                                                <p>You can zoom in/out or change position of any chart, via mouse wheel and dragging.
+                                                </p>
+                                            </div><!--//content-->
+                                        </div>
                                         <p>Nosqlclient queries your database at regular intervals to populate
                                             performance
                                             charts and tables at the <b>Database Stats</b> page</p> This feature can be
@@ -1188,19 +1212,6 @@
                                 <div class="row">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                         <h4 id="dump_restore_import">Dump/Restore/Import (Novice Level)</h4>
-                                        <div class="callout-block callout-danger">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-warning"></i>
-                                            </div><!--//icon-holder-->
-                                            <div class="content">
-                                                <h4 class="callout-title">Warning</h4>
-                                                <p>This section is <b>NOT FOR PRODUCTION USE </b> as of current version
-                                                    of
-                                                    Nosqlclient, and can be used on <b>TEST</b> or <b>LOCAL</b>
-                                                    environments.
-                                                </p>
-                                            </div><!--//content-->
-                                        </div>
                                         <div class="row">
                                             <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-md-6 col-sm-6 col-xs-6">
                                                 <div class="screenshot-holder">
@@ -1215,35 +1226,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p>This section consists of two parts.</p>
-                                        <ul class="list">
-                                            <li><b>Import Data</b>
-                                                <p>
-                                                    If you have an extended JSON file which has been exported via <a
-                                                        href="https://docs.mongodb.com/manual/reference/program/mongoexport/"
-                                                        target="_blank">mongoexport</a>
-                                                    with <b>--jsonArray</b> flag, you can use this section to import
-                                                    this
-                                                    extended JSON into one of your collections.
-                                                </p>
-                                            </li>
-
-                                            <li><b>Dump/Restore</b>
-                                                <p>
-                                                    If you want to take a dump of your currently connected database, you
-                                                    can
-                                                    simply click <b>Take Dump</b> button. The local path that dump is
-                                                    written can be changed from <a class="scrollto"
-                                                                                   href="#settings">settings</a>
-                                                    <br/>
-                                                    Since dump process uses a <a
-                                                        href="https://docs.mongodb.com/manual/reference/command/parallelCollectionScan/"
-                                                        target="_blank">paralel scan of collections</a> , it's always
-                                                    good
-                                                    not to use this feature on production.
-                                                </p>
-                                            </li>
-                                        </ul>
+                                        <p><b>Within 2.2.0 and higher versions</b>, nosqlclient uses mongo binaries for
+                                            dump, restore,
+                                            import and export. Therefore no need to worry about any issue that can be
+                                            caused by nosqlclient.</p>
+                                        <p>Each section has it's own arguments which can be selected by choosing one or
+                                            entering new. Per selection you may see a new input field regarding your
+                                            argument, or there can be no input if it doesn't need any. </p>
+                                        <p>You need to set those binaries path from settings, unless you're using docker
+                                            edition, it's packaged with binaries. </p>
                                     </div>
                                 </div>
 
@@ -1554,7 +1545,8 @@
                                             that's placed at the right upper corner of the corresponding stage panel.
                                         </p>
 
-                                        <p>With version <b>2.1.0</b> you can now see histories of your aggregation
+                                        <p>With version <b>2.1.0</b> and higher versions, you can now see histories of
+                                            your aggregation
                                             pipelines and use those. Apart from that, Nosqlclient now opens per tab for
                                             per execution, which can be closed by right click menus or <b>x</b> button.
                                         </p>
@@ -1976,6 +1968,11 @@
                                                 href="https://docs.mongodb.com/manual/reference/method/db.collection.renameCollection/"
                                                 target="_blank">renameCollection</a>
                                             for this operation. </p>
+                                    </li>
+
+                                    <li><b>Manage - Clone</b>
+                                        <p>Nosqlclient executes <code>[{$match: {}}, {$out: cloned_name}]</code>
+                                            aggregation query for this operation.</p>
                                     </li>
 
                                     <li><b>Manage - Edit Validation Rules</b>
